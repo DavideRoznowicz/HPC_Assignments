@@ -129,7 +129,8 @@ int main(int argc,char* argv[]) {
     printf("ERRORE ERRORE MANCA IL NOME DEL FILE\n");
     return -1;
   }
-  int d=3;
+  int d;
+/*  
   if(argc>2) {
     d=atoi(argv[2]);
     if( d%2==0) {
@@ -141,14 +142,17 @@ int main(int argc,char* argv[]) {
   else {
     printf("DIM KERNEL DEFAULT=3\n");
   }
-  
+*/
+
+
+  d=atoi(argv[2]);  
   FILE* f;
   char c;
   char type[2];
   int stop=0;
   f=fopen(argv[1],"r");//parsing tipo immagine
   fscanf(f,"%s\n",type);  //parsing magic number
-  printf("tipo: %s\n",type);
+  //printf("tipo: %s\n",type);
 
   //parsing commenti
   while(!stop) { //entro nel loop
@@ -170,14 +174,14 @@ int main(int argc,char* argv[]) {
   int nx;
   int ny;
   fscanf(f,"%d %d\n",&nx,&ny);
-  printf("nx %d ny %d\n",nx,ny);
+  //printf("nx %d ny %d\n",nx,ny);
 
 
   //parsing livello massimo: maxval
   int maxval=0;
   fscanf(f,"%d\n",&maxval);
-  printf("maxval max %d\n",maxval);
-  printf("SPESSORE BORDO ESTERNO %d\n",d/2);
+  //printf("maxval max %d\n",maxval);
+  //printf("SPESSORE BORDO ESTERNO %d\n",d/2);
   int offset=d/2;
   int nx_o=nx+d-1;
   int ny_o=ny+d-1;
@@ -391,7 +395,7 @@ int main(int argc,char* argv[]) {
 } // end of parallel
 
   tend = CPU_TIME; // end time for parallel region
-  printf("\ntime for %d threads : %g sec\n\n", tot_threads, tend-tstart);
+  printf("%g", tend-tstart); //printf("\ntime for %d threads : %g sec\n\n", tot_threads, tend-tstart);
   
 return 0;  
 

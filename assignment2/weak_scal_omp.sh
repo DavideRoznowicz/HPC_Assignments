@@ -1,5 +1,5 @@
 # -l nodes=1:ppn=24
-# PBS -l walltime=23:00:00
+# PBS -l walltime=06:00:00
 
 cd /u/dssc/s275995/Davide/mynewgit/assignment2
 
@@ -11,10 +11,14 @@ echo THIS IS OPENMP RUNNING...
 
 
 
-image_name=earth-large.pgm
+image_name=wblack.pgm
 mpi_cfile=omp_blur_scal  		# C file to launch: without .c or .x
-output_file=ss_omp.csv  		# where results should be written
+output_file=ww_omp.csv  		# where results should be written
 max_cores=24				# max cores to perform scalability on
+creation_file=create_image              # file that generates the suitable image for n cores: the image is almost a square
+default_left=4409                       # length of the generated image for one core
+default_right=4409                      # height of the generated image for one core
+
 
 
 #export OMP_NUM_THREADS=3
@@ -22,6 +26,9 @@ max_cores=24				# max cores to perform scalability on
 
 # compiling in openmp 
 #gcc -O3 -std=gnu99 -fopenmp ${mpi_cfile}.c -o ${mpi_cfile}.x
+
+#compiling create_image file
+gcc -O3 ${creation_file}.c -o ${creation_file}.x -lm;  # linking math library
 
 
 #printf "kernel : ${kernel_dim}\nimage : ${image_name}\ncfile : ${mpi_cfile}.c\n" 2>>${output_file} 1>>${output_file}
@@ -36,7 +43,8 @@ rm ${output_file}
 printf "#threads,kernel_dim,iter1,iter2,iter3\n" 2>>${output_file} 1>>${output_file}  # Header .csv
 #echo Using a kernel of dimension ${kernel_dim} 2>>${output_file} 1>>${output_file}
 for kernel_dim in 11 101; do
-	for procs in $(seq 1 ${max_cores}); do
+	for procs in $(seq 1 ${max_cores}); do  # loop over threads
+		./${creation_file}.x ${procs} ${default_left} ${default_right}  # need to generate a new image every time procs changes
 		export OMP_NUM_THREADS=${procs}
 		gcc -O3 -std=gnu99 -fopenmp ${mpi_cfile}.c -o ${mpi_cfile}.x
 		printf "${procs},${kernel_dim}"  2>>${output_file} 1>>${output_file}

@@ -1,7 +1,8 @@
 # -l nodes=1:ppn=24
 # PBS -l walltime=06:00:00
 
-cd $PBS_O_WORKDIR
+cd /u/dssc/s275995/Davide/mynewgit/assignment2
+
 module load openmpi/4.0.3/gnu/9.3.0
 # repeat changing:  kernel, openmp-mpi, weak-strong
 
@@ -20,7 +21,7 @@ default_right=4409  			# height of the generated image for one core
 
 
 #delete previous version of the file
-#rm ${output_file}
+rm ${output_file}
 
 #script for blurring via mpi 
 echo THIS IS MPI RUNNING ...   #2>>${output_file} 1>>${output_file}
@@ -50,8 +51,8 @@ for kernel_dim in 11 101; do
 done
 
 
-printf "\n\n"
-lscpu 2>>${output_file}  1>>${output_file}
+#printf "\n\n" 2>>${output_file}  1>>${output_file}
+#lscpu 2>>${output_file}  1>>${output_file}
 
 
 

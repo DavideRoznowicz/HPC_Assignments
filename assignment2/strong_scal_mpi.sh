@@ -1,12 +1,12 @@
 # -l nodes=1:ppn=24
-# PBS -l walltime=24:00:00
+# PBS -l walltime=23:00:00
 
-cd $PBS_O_WORKDIR
+cd /u/dssc/s275995/Davide/mynewgit/assignment2
+
 module load openmpi/4.0.3/gnu/9.3.0
 # repeat changing:  kernel, openmp-mpi, weak-strong
 
 
-#kernel_dim="11"
 image_name=earth-large.pgm
 mpi_cfile=mpi_blur_scal  # C file to launch: without .c or .x
 output_file=ss_mpi.csv  # where results should be written
@@ -19,7 +19,7 @@ max_cores=24  # max cores to perform scalability on
 
 
 #delete previous version of the file
-#rm ${output_file}
+rm ${output_file}
 
 #script for blurring via mpi 
 echo THIS IS MPI RUNNING ...   #2>>${output_file} 1>>${output_file}
@@ -44,8 +44,8 @@ for kernel_dim in 11 101; do
 done
 
 
-printf "\n\n"
-lscpu 2>>${output_file}  1>>${output_file}
+#printf "\n\n" 2>>${output_file}  1>>${output_file}
+#lscpu 2>>${output_file}  1>>${output_file}
 
 
 
