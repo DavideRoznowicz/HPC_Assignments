@@ -19,7 +19,7 @@ max_cores=24  # max cores to perform scalability on
 
 
 #delete previous version of the file
-rm ${output_file}
+#rm ${output_file}
 
 #script for blurring via mpi 
 echo THIS IS MPI RUNNING ...   #2>>${output_file} 1>>${output_file}
@@ -45,7 +45,7 @@ done
 
 
 #printf "\n\n" 2>>${output_file}  1>>${output_file}
-#lscpu 2>>${output_file}  1>>${output_file}
+echo $PBS_NODEFILE 2>>${output_file}  1>>${output_file}
 
 
 

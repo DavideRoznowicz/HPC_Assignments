@@ -1,5 +1,8 @@
 # -l nodes=1:ppn=24
-# PBS -l walltime=06:00:00
+#PBS -l walltime=23:00:00
+#PBS -M davide.roznowicz@gmail.com
+
+
 
 cd /u/dssc/s275995/Davide/mynewgit/assignment2
 
@@ -21,7 +24,7 @@ default_right=4409  			# height of the generated image for one core
 
 
 #delete previous version of the file
-rm ${output_file}
+#rm ${output_file}
 
 #script for blurring via mpi 
 echo THIS IS MPI RUNNING ...   #2>>${output_file} 1>>${output_file}
@@ -40,6 +43,7 @@ printf "#P,kernel_dim,iter1,iter2,iter3\n" 2>>${output_file} 1>>${output_file}  
 for kernel_dim in 11 101; do
 	for procs in $(seq 1 ${max_cores}); do
 		./${creation_file}.x ${procs} ${default_left} ${default_right}  # need to generate a new image every time procs changes
+		sleep 20
 		printf "${procs},${kernel_dim}"  2>>${output_file} 1>>${output_file}
 		for i in 1 2 3; do
 			printf "," 2>>${output_file} 1>>${output_file}
@@ -52,7 +56,7 @@ done
 
 
 #printf "\n\n" 2>>${output_file}  1>>${output_file}
-#lscpu 2>>${output_file}  1>>${output_file}
+echo $PBS_NODEFILE 2>>${output_file}  1>>${output_file}
 
 
 

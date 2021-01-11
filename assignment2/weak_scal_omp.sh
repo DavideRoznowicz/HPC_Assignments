@@ -1,5 +1,5 @@
 # -l nodes=1:ppn=24
-# PBS -l walltime=06:00:00
+# PBS -l walltime=08:00:00
 
 cd /u/dssc/s275995/Davide/mynewgit/assignment2
 
@@ -36,7 +36,7 @@ gcc -O3 ${creation_file}.c -o ${creation_file}.x -lm;  # linking math library
 
 
 #delete previous version of the file
-rm ${output_file}
+#rm ${output_file}
 
 
 
@@ -59,7 +59,7 @@ done
 
 
 #printf "\n\n" 2>>${output_file}  1>>${output_file}
-#lscpu 2>>${output_file}  1>>${output_file}
+echo $PBS_NODEFILE 2>>${output_file}  1>>${output_file}
 
 
 

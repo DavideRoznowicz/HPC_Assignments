@@ -1,72 +1,2851 @@
 #P,kernel_dim,iter1,iter2,iter3
-1,11,0.0237942,0.0260467,0.0259608
-2,11,0.0275918,0.0269384,0.0278378
-3,11,0.0289357,0.0289748,0.0280431
-4,11,0.0297154,0.0302251,0.0307631
-5,11,0.0304536,0.0318152,0.0304163
-1,101,2.08393,2.08428,2.08405
-2,101,2.09878,2.10249,2.09015
-3,101,2.0881,2.08861,
-4,101,,,
-5,101,,,
-Architecture:          x86_64
-CPU op-mode(s):        32-bit, 64-bit
-Byte Order:            Little Endian
-CPU(s):                24
-On-line CPU(s) list:   0-23
-Thread(s) per core:    1
-Core(s) per socket:    12
-Socket(s):             2
-NUMA node(s):          2
-Vendor ID:             GenuineIntel
-CPU family:            6
-Model:                 85
-Model name:            Intel(R) Xeon(R) Gold 6126 CPU @ 2.60GHz
-Stepping:              4
-CPU MHz:               3299.999
-CPU max MHz:           3700.0000
-CPU min MHz:           1000.0000
-BogoMIPS:              5200.00
-L1d cache:             32K
-L1i cache:             32K
-L2 cache:              1024K
-L3 cache:              19712K
-NUMA node0 CPU(s):     0,2,4,6,8,10,12,14,16,18,20,22
-NUMA node1 CPU(s):     1,3,5,7,9,11,13,15,17,19,21,23
-Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d
+1,11,2.76504,2.76876,2.76558
+2,11,2.83709,2.77256,2.83751
+3,11,2.84347,2.89031,2.93536
+4,11,3.02153,2.97506,2.92069
+5,11,3.05145,3.12242,3.16007
+6,11,3.21466,3.03114,3.0832
+7,11,5.20657,3.12715,3.06536
+8,11,6.23237,3.99282,4.89067
+9,11,4.16933,3.3135,3.24719
+10,11,9.70599,4.67683,3.45708
+11,11,3.78278,3.6626,3.36551
+12,11,3.52153,3.73786,4.00164
+13,11,3.41568,3.41302,3.29907
+14,11,3.91877,3.43555,4.119
+15,11,3.4897,3.50802,3.53748
+16,11,3.5122,3.98215,4.00928
+17,11,4.45223,4.51981,3.65686
+18,11,9.5946,3.53965,3.7098
+19,11,6.19463,3.73206,3.84738
+20,11,7.10395,4.74565,4.21874
+21,11,9.90926,4.18651,4.11937
+22,11,14.7011,5.81949,3.62997
+23,11,10.6005,5.90698,3.88529
+24,11,14.8727,3.97662,4.15538
+1,101,242.335,2417.71,3141.19
+2,101,242.286,2179.15,2421.99
+3,101,241.961,242.156,243.025
+4,101,241.884,242.295,243.159
+5,101,241.895,243.336,243.297
+6,101,242.012,243.471,243.519
+7,101,242.122,242.155,243.273
+8,101,242.273,243.62,243.571
+9,101,242.378,243.51,243.456
+10,101,242.328,242.447,243.86
+11,101,242.293,244.764,246.502
+12,101,242.89,242.236,242.389
+13,101,242.391,242.321,243.845
+14,101,242.6,245.018,243.951
+15,101,242.327,244.414,242.56
+16,101,242.48,244.631,244.169
+17,101,------------------------------------------------------------
+A process or daemon was unable to complete a TCP connection
+to another process:
+  Local host:    ct1pt-tnode005
+  Remote host:   ct1pt-tnode010
+This is usually caused by a firewall on the remote host. Please
+check that any firewall (e.g., iptables) has been disabled and
+try again.
+------------------------------------------------------------
+------------------------------------------------------------
+A process or daemon was unable to complete a TCP connection
+to another process:
+  Local host:    ct1pt-tnode005
+  Remote host:   ct1pt-tnode003
+This is usually caused by a firewall on the remote host. Please
+check that any firewall (e.g., iptables) has been disabled and
+try again.
+------------------------------------------------------------
 #P,kernel_dim,iter1,iter2,iter3
-1,11,0.025811,0.0257744,0.0258044
-2,11,0.0341518,0.0263721,0.0269764
-3,11,0.0282346,0.0285714,0.0281537
-4,11,0.0301235,0.0282682,0.029998
-5,11,0.0298899,0.16286,0.0551956
-1,15,0.046815,0.0469363,0.0468526
-2,15,0.0483621,0.0481639,0.048962
-3,15,0.0499593,0.0499241,0.0497211
-4,15,0.0507243,0.0519914,0.0508053
-5,15,0.0521903,0.0524826,0.0515379
-Architecture:          x86_64
-CPU op-mode(s):        32-bit, 64-bit
-Byte Order:            Little Endian
-CPU(s):                24
-On-line CPU(s) list:   0-23
-Thread(s) per core:    1
-Core(s) per socket:    12
-Socket(s):             2
-NUMA node(s):          2
-Vendor ID:             GenuineIntel
-CPU family:            6
-Model:                 85
-Model name:            Intel(R) Xeon(R) Gold 6126 CPU @ 2.60GHz
-Stepping:              4
-CPU MHz:               3300.000
-CPU max MHz:           3700.0000
-CPU min MHz:           1000.0000
-BogoMIPS:              5200.00
-L1d cache:             32K
-L1i cache:             32K
-L2 cache:              1024K
-L3 cache:              19712K
-NUMA node0 CPU(s):     0,2,4,6,8,10,12,14,16,18,20,22
-NUMA node1 CPU(s):     1,3,5,7,9,11,13,15,17,19,21,23
-Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d
+1,11,2.71062,2.71,2.70599
+2,11,2.7692,1.54659,1.48434
+3,11,2.88157,3.17916,4.15179
+4,11,3.61188,1.82766,1.5167
+5,11,3.94375,5.80736,2.88278
+6,11,3.31475,3.73642,1.64206
+7,11,3.62385,4.20195,2.95279
+8,11,3.96622,2.67237,1.82116
+9,11,4.26035,3.00794,3.12281
+10,11,[ct1pt-tnode002:15131:0:15131] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15119:0:15119] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15120:0:15120] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15127:0:15127] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15118:0:15118] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15134:0:15134] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15121:0:15121] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15125:0:15125] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15123:0:15123] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:  15131) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15131] *** Process received signal ***
+[ct1pt-tnode002:15131] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15131] Signal code:  (-6)
+[ct1pt-tnode002:15131] Failing at address: 0x99cf0400003b1b
+[ct1pt-tnode002:15131] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x1533342635f0]
+[ct1pt-tnode002:15131] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x153333f15bdb]
+[ct1pt-tnode002:15131] [ 2] /lib64/libc.so.6(+0x7a70e)[0x153333f0070e]
+[ct1pt-tnode002:15131] [ 3] /lib64/libc.so.6(fread+0x8f)[0x153333ef510f]
+[ct1pt-tnode002:15131] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15131] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x153333ea8505]
+[ct1pt-tnode002:15131] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15131] *** End of error message ***
+==== backtrace (tid:  15119) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15119] *** Process received signal ***
+[ct1pt-tnode002:15119] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15119] Signal code:  (-6)
+[ct1pt-tnode002:15119] Failing at address: 0x99cf0400003b0f
+[ct1pt-tnode002:15119] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x151342a7b5f0]
+[ct1pt-tnode002:15119] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x15134272dbdb]
+[ct1pt-tnode002:15119] [ 2] /lib64/libc.so.6(+0x7a70e)[0x15134271870e]
+[ct1pt-tnode002:15119] [ 3] /lib64/libc.so.6(fread+0x8f)[0x15134270d10f]
+[ct1pt-tnode002:15119] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15119] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x1513426c0505]
+[ct1pt-tnode002:15119] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15119] *** End of error message ***
+==== backtrace (tid:  15120) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15120] *** Process received signal ***
+[ct1pt-tnode002:15120] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15120] Signal code:  (-6)
+[ct1pt-tnode002:15120] Failing at address: 0x99cf0400003b10
+[ct1pt-tnode002:15120] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14599720e5f0]
+[ct1pt-tnode002:15120] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x145996ec0bdb]
+[ct1pt-tnode002:15120] [ 2] /lib64/libc.so.6(+0x7a70e)[0x145996eab70e]
+[ct1pt-tnode002:15120] [ 3] /lib64/libc.so.6(fread+0x8f)[0x145996ea010f]
+[ct1pt-tnode002:15120] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15120] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x145996e53505]
+[ct1pt-tnode002:15120] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15120] *** End of error message ***
+==== backtrace (tid:  15127) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+==== backtrace (tid:  15118) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15127] *** Process received signal ***
+[ct1pt-tnode002:15118] *** Process received signal ***
+[ct1pt-tnode002:15118] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15118] Signal code:  (-6)
+[ct1pt-tnode002:15118] Failing at address: 0x99cf0400003b0e
+[ct1pt-tnode002:15127] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15127] Signal code:  (-6)
+[ct1pt-tnode002:15127] Failing at address: 0x99cf0400003b17
+[ct1pt-tnode002:15127] [ 0] [ct1pt-tnode002:15118] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14df711dc5f0]
+[ct1pt-tnode002:15127] [ 1] /lib64/libpthread.so.0(+0xf5f0)[0x1552863085f0]
+[ct1pt-tnode002:15118] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14df70e8ebdb]
+[ct1pt-tnode002:15127] [ 2] /lib64/libc.so.6(+0x8fbdb)[0x155285fbabdb]
+[ct1pt-tnode002:15118] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14df70e7970e]
+[ct1pt-tnode002:15127] [ 3] /lib64/libc.so.6(+0x7a70e)[0x155285fa570e]
+[ct1pt-tnode002:15118] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14df70e6e10f]
+[ct1pt-tnode002:15127] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15127] [ 5] /lib64/libc.so.6(fread+0x8f)[0x155285f9a10f]
+[ct1pt-tnode002:15118] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15118] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14df70e21505]
+[ct1pt-tnode002:15127] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15127] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x155285f4d505]
+[ct1pt-tnode002:15118] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15118] *** End of error message ***
+==== backtrace (tid:  15134) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040147e main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15134] *** Process received signal ***
+[ct1pt-tnode002:15134] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15134] Signal code:  (-6)
+[ct1pt-tnode002:15134] Failing at address: 0x99cf0400003b1e
+[ct1pt-tnode002:15134] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x150f057ba5f0]
+[ct1pt-tnode002:15134] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x150f0546cbdb]
+[ct1pt-tnode002:15134] [ 2] /lib64/libc.so.6(+0x7a70e)[0x150f0545770e]
+[ct1pt-tnode002:15134] [ 3] /lib64/libc.so.6(fread+0x8f)[0x150f0544c10f]
+[ct1pt-tnode002:15134] [ 4] ./mpi_blur_scal.x[0x40147e]
+[ct1pt-tnode002:15134] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x150f053ff505]
+[ct1pt-tnode002:15134] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15134] *** End of error message ***
+==== backtrace (tid:  15121) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15121] *** Process received signal ***
+[ct1pt-tnode002:15121] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15121] Signal code:  (-6)
+[ct1pt-tnode002:15121] Failing at address: 0x99cf0400003b11
+[ct1pt-tnode002:15121] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x1469a55b65f0]
+[ct1pt-tnode002:15121] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x1469a5268bdb]
+[ct1pt-tnode002:15121] [ 2] /lib64/libc.so.6(+0x7a70e)[0x1469a525370e]
+[ct1pt-tnode002:15121] [ 3] /lib64/libc.so.6(fread+0x8f)[0x1469a524810f]
+[ct1pt-tnode002:15121] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15121] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x1469a51fb505]
+[ct1pt-tnode002:15121] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15121] *** End of error message ***
+==== backtrace (tid:  15125) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15125] *** Process received signal ***
+[ct1pt-tnode002:15125] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15125] Signal code:  (-6)
+[ct1pt-tnode002:15125] Failing at address: 0x99cf0400003b15
+[ct1pt-tnode002:15125] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x145fcfe2d5f0]
+[ct1pt-tnode002:15125] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x145fcfadfbdb]
+[ct1pt-tnode002:15125] [ 2] /lib64/libc.so.6(+0x7a70e)[0x145fcfaca70e]
+[ct1pt-tnode002:15125] [ 3] /lib64/libc.so.6(fread+0x8f)[0x145fcfabf10f]
+[ct1pt-tnode002:15125] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15125] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x145fcfa72505]
+[ct1pt-tnode002:15125] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15125] *** End of error message ***
+==== backtrace (tid:  15123) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15123] *** Process received signal ***
+[ct1pt-tnode002:15123] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15123] Signal code:  (-6)
+[ct1pt-tnode002:15123] Failing at address: 0x99cf0400003b13
+[ct1pt-tnode002:15123] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14b0c1eaf5f0]
+[ct1pt-tnode002:15123] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14b0c1b61bdb]
+[ct1pt-tnode002:15123] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14b0c1b4c70e]
+[ct1pt-tnode002:15123] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14b0c1b4110f]
+[ct1pt-tnode002:15123] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15123] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14b0c1af4505]
+[ct1pt-tnode002:15123] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15123] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+------------------------------------------------------------
+A process or daemon was unable to complete a TCP connection
+to another process:
+  Local host:    ct1pt-tnode002
+  Remote host:   ct1pt-tnode005
+This is usually caused by a firewall on the remote host. Please
+check that any firewall (e.g., iptables) has been disabled and
+try again.
+------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 4 with PID 0 on node ct1pt-tnode002 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+,[ct1pt-tnode002:15215:0:15215] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15217:0:15217] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15212:0:15212] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15221:0:15221] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15225:0:15225] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15214:0:15214] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15228:0:15228] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15213:0:15213] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15219:0:15219] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:  15215) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15215] *** Process received signal ***
+[ct1pt-tnode002:15215] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15215] Signal code:  (-6)
+[ct1pt-tnode002:15215] Failing at address: 0x99cf0400003b6f
+[ct1pt-tnode002:15215] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x1488d4ab35f0]
+[ct1pt-tnode002:15215] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x1488d4765bdb]
+[ct1pt-tnode002:15215] [ 2] /lib64/libc.so.6(+0x7a70e)[0x1488d475070e]
+[ct1pt-tnode002:15215] [ 3] /lib64/libc.so.6(fread+0x8f)[0x1488d474510f]
+[ct1pt-tnode002:15215] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15215] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x1488d46f8505]
+[ct1pt-tnode002:15215] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15215] *** End of error message ***
+==== backtrace (tid:  15217) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15217] *** Process received signal ***
+[ct1pt-tnode002:15217] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15217] Signal code:  (-6)
+[ct1pt-tnode002:15217] Failing at address: 0x99cf0400003b71
+[ct1pt-tnode002:15217] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x147eb2afc5f0]
+[ct1pt-tnode002:15217] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x147eb27aebdb]
+[ct1pt-tnode002:15217] [ 2] /lib64/libc.so.6(+0x7a70e)[0x147eb279970e]
+[ct1pt-tnode002:15217] [ 3] /lib64/libc.so.6(fread+0x8f)[0x147eb278e10f]
+[ct1pt-tnode002:15217] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15217] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x147eb2741505]
+[ct1pt-tnode002:15217] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15217] *** End of error message ***
+==== backtrace (tid:  15212) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15212] *** Process received signal ***
+==== backtrace (tid:  15221) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15212] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15212] Signal code:  (-6)
+[ct1pt-tnode002:15212] Failing at address: 0x99cf0400003b6c
+[ct1pt-tnode002:15221] *** Process received signal ***
+[ct1pt-tnode002:15221] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15221] Signal code:  (-6)
+[ct1pt-tnode002:15221] Failing at address: 0x99cf0400003b75
+[ct1pt-tnode002:15212] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14e19d6305f0]
+[ct1pt-tnode002:15212] [ 1] [ct1pt-tnode002:15221] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x1468012e85f0]
+[ct1pt-tnode002:15221] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14e19d2e2bdb]
+[ct1pt-tnode002:15212] [ 2] /lib64/libc.so.6(+0x8fbdb)[0x146800f9abdb]
+[ct1pt-tnode002:15221] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14e19d2cd70e]
+[ct1pt-tnode002:15212] [ 3] /lib64/libc.so.6(+0x7a70e)[0x146800f8570e]
+[ct1pt-tnode002:15221] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14e19d2c210f]
+[ct1pt-tnode002:15212] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15212] /lib64/libc.so.6(fread+0x8f)[0x146800f7a10f]
+[ct1pt-tnode002:15221] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15221] [ 5] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14e19d275505]
+[ct1pt-tnode002:15212] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15212] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x146800f2d505]
+[ct1pt-tnode002:15221] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15221] *** End of error message ***
+==== backtrace (tid:  15225) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15225] *** Process received signal ***
+[ct1pt-tnode002:15225] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15225] Signal code:  (-6)
+[ct1pt-tnode002:15225] Failing at address: 0x99cf0400003b79
+[ct1pt-tnode002:15225] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14e5c19455f0]
+[ct1pt-tnode002:15225] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14e5c15f7bdb]
+[ct1pt-tnode002:15225] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14e5c15e270e]
+[ct1pt-tnode002:15225] [ 3] ==== backtrace (tid:  15214) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+/lib64/libc.so.6(fread+0x8f)[0x14e5c15d710f]
+[ct1pt-tnode002:15225] [ 4] ./mpi_blur_scal.x[0x401c30]
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+[ct1pt-tnode002:15225] [ 5]  6 0x0000000000400cf9 _start()  ???:0
+=================================
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x14e5c158a505]
+[ct1pt-tnode002:15225] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15225] *** End of error message ***
+[ct1pt-tnode002:15214] *** Process received signal ***
+[ct1pt-tnode002:15214] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15214] Signal code:  (-6)
+[ct1pt-tnode002:15214] Failing at address: 0x99cf0400003b6e
+[ct1pt-tnode002:15214] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x152378e8b5f0]
+[ct1pt-tnode002:15214] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x152378b3dbdb]
+[ct1pt-tnode002:15214] [ 2] /lib64/libc.so.6(+0x7a70e)[0x152378b2870e]
+[ct1pt-tnode002:15214] [ 3] /lib64/libc.so.6(fread+0x8f)[0x152378b1d10f]
+[ct1pt-tnode002:15214] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15214] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x152378ad0505]
+[ct1pt-tnode002:15214] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15214] *** End of error message ***
+==== backtrace (tid:  15228) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040147e main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15228] *** Process received signal ***
+[ct1pt-tnode002:15228] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15228] Signal code:  (-6)
+[ct1pt-tnode002:15228] Failing at address: 0x99cf0400003b7c
+[ct1pt-tnode002:15228] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14d6395bf5f0]
+[ct1pt-tnode002:15228] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14d639271bdb]
+[ct1pt-tnode002:15228] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14d63925c70e]
+[ct1pt-tnode002:15228] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14d63925110f]
+[ct1pt-tnode002:15228] [ 4] ./mpi_blur_scal.x[0x40147e]
+[ct1pt-tnode002:15228] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14d639204505]
+[ct1pt-tnode002:15228] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15228] *** End of error message ***
+==== backtrace (tid:  15213) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15213] *** Process received signal ***
+[ct1pt-tnode002:15213] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15213] Signal code:  (-6)
+[ct1pt-tnode002:15213] Failing at address: 0x99cf0400003b6d
+[ct1pt-tnode002:15213] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x145f743a15f0]
+[ct1pt-tnode002:15213] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x145f74053bdb]
+[ct1pt-tnode002:15213] [ 2] /lib64/libc.so.6(+0x7a70e)[0x145f7403e70e]
+[ct1pt-tnode002:15213] [ 3] /lib64/libc.so.6(fread+0x8f)[0x145f7403310f]
+[ct1pt-tnode002:15213] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15213] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x145f73fe6505]
+[ct1pt-tnode002:15213] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15213] *** End of error message ***
+==== backtrace (tid:  15219) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15219] *** Process received signal ***
+[ct1pt-tnode002:15219] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15219] Signal code:  (-6)
+[ct1pt-tnode002:15219] Failing at address: 0x99cf0400003b73
+[ct1pt-tnode002:15219] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14f2e39865f0]
+[ct1pt-tnode002:15219] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14f2e3638bdb]
+[ct1pt-tnode002:15219] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14f2e362370e]
+[ct1pt-tnode002:15219] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14f2e361810f]
+[ct1pt-tnode002:15219] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15219] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14f2e35cb505]
+[ct1pt-tnode002:15219] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15219] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+------------------------------------------------------------
+A process or daemon was unable to complete a TCP connection
+to another process:
+  Local host:    ct1pt-tnode002
+  Remote host:   ct1pt-tnode005
+This is usually caused by a firewall on the remote host. Please
+check that any firewall (e.g., iptables) has been disabled and
+try again.
+------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 2 with PID 0 on node ct1pt-tnode002 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+,2.63425
+11,11,6.17299,3.13708,1.96947
+12,11,[ct1pt-tnode002:15701:0:15701] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15699:0:15699] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15704:0:15704] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15711:0:15711] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15696:0:15696] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15694:0:15694] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15693:0:15693] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15714:0:15714] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15707:0:15707] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15695:0:15695] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15717:0:15717] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15697:0:15697] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:  15699) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15699] *** Process received signal ***
+[ct1pt-tnode002:15699] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15699] Signal code:  (-6)
+[ct1pt-tnode002:15699] Failing at address: 0x99cf0400003d53
+[ct1pt-tnode002:15699] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14ba5c9c75f0]
+[ct1pt-tnode002:15699] [ 1] ==== backtrace (tid:  15701) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+/lib64/libc.so.6(+0x8fbdb)[0x14ba5c679bdb]
+[ct1pt-tnode002:15699] [ 2]  2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+/lib64/libc.so.6(+0x7a70e)[0x14ba5c66470e]
+[ct1pt-tnode002:15699] [ 3] [ct1pt-tnode002:15701] *** Process received signal ***
+[ct1pt-tnode002:15701] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15701] Signal code:  (-6)
+[ct1pt-tnode002:15701] Failing at address: 0x99cf0400003d55
+/lib64/libc.so.6(fread+0x8f)[0x14ba5c65910f]
+[ct1pt-tnode002:15699] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15699] [ 5] [ct1pt-tnode002:15701] [ 0] ==== backtrace (tid:  15711) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x14ba5c60c505]
+[ct1pt-tnode002:15699] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15699] *** End of error message ***
+/lib64/libpthread.so.0(+0xf5f0)[0x1504cddaa5f0]
+[ct1pt-tnode002:15701] [ 1]  1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+==== backtrace (tid:  15704) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+/lib64/libc.so.6(+0x8fbdb)[0x1504cda5cbdb]
+[ct1pt-tnode002:15701] [ 2] =================================
+[ct1pt-tnode002:15711] *** Process received signal ***
+=================================
+[ct1pt-tnode002:15704] *** Process received signal ***
+[ct1pt-tnode002:15711] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15711] Signal code:  (-6)
+[ct1pt-tnode002:15711] Failing at address: 0x99cf0400003d5f
+[ct1pt-tnode002:15704] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15704] Signal code:  (-6)
+[ct1pt-tnode002:15704] Failing at address: 0x99cf0400003d58
+[ct1pt-tnode002:15711] [ 0] /lib64/libc.so.6(+0x7a70e)[0x1504cda4770e]
+[ct1pt-tnode002:15701] [ 3] [ct1pt-tnode002:15704] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x150749d3c5f0]
+[ct1pt-tnode002:15711] [ 1] /lib64/libpthread.so.0(+0xf5f0)[0x14e4df3345f0]
+[ct1pt-tnode002:15704] [ 1] /lib64/libc.so.6(fread+0x8f)[0x1504cda3c10f]
+[ct1pt-tnode002:15701] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15701] [ 5] /lib64/libc.so.6(+0x8fbdb)[0x14e4defe6bdb]
+[ct1pt-tnode002:15704] [ 2] /lib64/libc.so.6(+0x8fbdb)[0x1507499eebdb]
+[ct1pt-tnode002:15711] [ 2] /lib64/libc.so.6(__libc_start_main+0xf5)[0x1504cd9ef505]
+[ct1pt-tnode002:15701] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15701] *** End of error message ***
+/lib64/libc.so.6(+0x7a70e)[0x1507499d970e]
+[ct1pt-tnode002:15711] [ 3] /lib64/libc.so.6(+0x7a70e)[0x14e4defd170e]
+[ct1pt-tnode002:15704] [ 3] /lib64/libc.so.6(fread+0x8f)[0x1507499ce10f]
+[ct1pt-tnode002:15711] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15711] [ 5] /lib64/libc.so.6(fread+0x8f)[0x14e4defc610f]
+[ct1pt-tnode002:15704] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15704] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x150749981505]
+[ct1pt-tnode002:15711] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15711] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x14e4def79505]
+[ct1pt-tnode002:15704] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15704] *** End of error message ***
+==== backtrace (tid:  15696) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15696] *** Process received signal ***
+[ct1pt-tnode002:15696] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15696] Signal code:  (-6)
+[ct1pt-tnode002:15696] Failing at address: 0x99cf0400003d50
+[ct1pt-tnode002:15696] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x1516f36fe5f0]
+[ct1pt-tnode002:15696] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x1516f33b0bdb]
+[ct1pt-tnode002:15696] [ 2] /lib64/libc.so.6(+0x7a70e)[0x1516f339b70e]
+[ct1pt-tnode002:15696] [ 3] /lib64/libc.so.6(fread+0x8f)[0x1516f339010f]
+[ct1pt-tnode002:15696] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15696] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x1516f3343505]
+[ct1pt-tnode002:15696] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15696] *** End of error message ***
+==== backtrace (tid:  15694) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15694] *** Process received signal ***
+[ct1pt-tnode002:15694] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15694] Signal code:  (-6)
+[ct1pt-tnode002:15694] Failing at address: 0x99cf0400003d4e
+[ct1pt-tnode002:15694] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x150ad08735f0]
+[ct1pt-tnode002:15694] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x150ad0525bdb]
+[ct1pt-tnode002:15694] [ 2] /lib64/libc.so.6(+0x7a70e)[0x150ad051070e]
+[ct1pt-tnode002:15694] [ 3] /lib64/libc.so.6(fread+0x8f)[0x150ad050510f]
+[ct1pt-tnode002:15694] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15694] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x150ad04b8505]
+[ct1pt-tnode002:15694] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15694] *** End of error message ***
+==== backtrace (tid:  15693) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15693] *** Process received signal ***
+[ct1pt-tnode002:15693] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15693] Signal code:  (-6)
+[ct1pt-tnode002:15693] Failing at address: 0x99cf0400003d4d
+[ct1pt-tnode002:15693] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x152f31feb5f0]
+[ct1pt-tnode002:15693] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x152f31c9dbdb]
+[ct1pt-tnode002:15693] [ 2] /lib64/libc.so.6(+0x7a70e)[0x152f31c8870e]
+[ct1pt-tnode002:15693] [ 3] /lib64/libc.so.6(fread+0x8f)[0x152f31c7d10f]
+[ct1pt-tnode002:15693] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15693] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x152f31c30505]
+[ct1pt-tnode002:15693] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15693] *** End of error message ***
+==== backtrace (tid:  15714) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15714] *** Process received signal ***
+[ct1pt-tnode002:15714] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15714] Signal code:  (-6)
+[ct1pt-tnode002:15714] Failing at address: 0x99cf0400003d62
+[ct1pt-tnode002:15714] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x150ffe0bd5f0]
+[ct1pt-tnode002:15714] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x150ffdd6fbdb]
+[ct1pt-tnode002:15714] [ 2] /lib64/libc.so.6(+0x7a70e)[0x150ffdd5a70e]
+[ct1pt-tnode002:15714] [ 3] /lib64/libc.so.6(fread+0x8f)[0x150ffdd4f10f]
+[ct1pt-tnode002:15714] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15714] [ 5] ==== backtrace (tid:  15707) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x150ffdd02505]
+[ct1pt-tnode002:15714] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15714] *** End of error message ***
+=================================
+[ct1pt-tnode002:15707] *** Process received signal ***
+[ct1pt-tnode002:15707] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15707] Signal code:  (-6)
+[ct1pt-tnode002:15707] Failing at address: 0x99cf0400003d5b
+[ct1pt-tnode002:15707] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14a72f0c95f0]
+[ct1pt-tnode002:15707] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14a72ed7bbdb]
+[ct1pt-tnode002:15707] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14a72ed6670e]
+[ct1pt-tnode002:15707] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14a72ed5b10f]
+[ct1pt-tnode002:15707] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15707] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14a72ed0e505]
+[ct1pt-tnode002:15707] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15707] *** End of error message ***
+==== backtrace (tid:  15695) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15695] *** Process received signal ***
+[ct1pt-tnode002:15695] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15695] Signal code:  (-6)
+[ct1pt-tnode002:15695] Failing at address: 0x99cf0400003d4f
+[ct1pt-tnode002:15695] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x1482651075f0]
+[ct1pt-tnode002:15695] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x148264db9bdb]
+[ct1pt-tnode002:15695] [ 2] /lib64/libc.so.6(+0x7a70e)[0x148264da470e]
+[ct1pt-tnode002:15695] [ 3] /lib64/libc.so.6(fread+0x8f)[0x148264d9910f]
+[ct1pt-tnode002:15695] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15695] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x148264d4c505]
+[ct1pt-tnode002:15695] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15695] *** End of error message ***
+==== backtrace (tid:  15717) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15717] *** Process received signal ***
+[ct1pt-tnode002:15717] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15717] Signal code:  (-6)
+[ct1pt-tnode002:15717] Failing at address: 0x99cf0400003d65
+[ct1pt-tnode002:15717] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x147ab0adb5f0]
+[ct1pt-tnode002:15717] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x147ab078dbdb]
+[ct1pt-tnode002:15717] [ 2] /lib64/libc.so.6(+0x7a70e)[0x147ab077870e]
+[ct1pt-tnode002:15717] [ 3] /lib64/libc.so.6(fread+0x8f)[0x147ab076d10f]
+[ct1pt-tnode002:15717] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15717] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x147ab0720505]
+[ct1pt-tnode002:15717] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15717] *** End of error message ***
+==== backtrace (tid:  15697) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15697] *** Process received signal ***
+[ct1pt-tnode002:15697] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15697] Signal code:  (-6)
+[ct1pt-tnode002:15697] Failing at address: 0x99cf0400003d51
+[ct1pt-tnode002:15697] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x1461411905f0]
+[ct1pt-tnode002:15697] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x146140e42bdb]
+[ct1pt-tnode002:15697] [ 2] /lib64/libc.so.6(+0x7a70e)[0x146140e2d70e]
+[ct1pt-tnode002:15697] [ 3] /lib64/libc.so.6(fread+0x8f)[0x146140e2210f]
+[ct1pt-tnode002:15697] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15697] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x146140dd5505]
+[ct1pt-tnode002:15697] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15697] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+------------------------------------------------------------
+A process or daemon was unable to complete a TCP connection
+to another process:
+  Local host:    ct1pt-tnode002
+  Remote host:   ct1pt-tnode005
+This is usually caused by a firewall on the remote host. Please
+check that any firewall (e.g., iptables) has been disabled and
+try again.
+------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 4 with PID 0 on node ct1pt-tnode002 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+,[ct1pt-tnode002:15829:0:15829] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15826:0:15826] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15820:0:15820] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15823:0:15823] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15810:0:15810] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15808:0:15808] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15817:0:15817] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15806:0:15806] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15809:0:15809] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15812:0:15812] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15814:0:15814] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:15807:0:15807] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:  15829) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15829] *** Process received signal ***
+[ct1pt-tnode002:15829] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15829] Signal code:  (-6)
+[ct1pt-tnode002:15829] Failing at address: 0x99cf0400003dd5
+[ct1pt-tnode002:15829] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x146cd16ae5f0]
+[ct1pt-tnode002:15829] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x146cd1360bdb]
+[ct1pt-tnode002:15829] [ 2] /lib64/libc.so.6(+0x7a70e)[0x146cd134b70e]
+[ct1pt-tnode002:15829] [ 3] ==== backtrace (tid:  15826) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+/lib64/libc.so.6(fread+0x8f)[0x146cd134010f]
+[ct1pt-tnode002:15829] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15829] [ 5]  4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x146cd12f3505]
+[ct1pt-tnode002:15829] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15829] *** End of error message ***
+[ct1pt-tnode002:15826] *** Process received signal ***
+[ct1pt-tnode002:15826] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15826] Signal code:  (-6)
+[ct1pt-tnode002:15826] Failing at address: 0x99cf0400003dd2
+[ct1pt-tnode002:15826] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x1547e88425f0]
+[ct1pt-tnode002:15826] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x1547e84f4bdb]
+[ct1pt-tnode002:15826] [ 2] /lib64/libc.so.6(+0x7a70e)[0x1547e84df70e]
+[ct1pt-tnode002:15826] [ 3] /lib64/libc.so.6(fread+0x8f)[0x1547e84d410f]
+[ct1pt-tnode002:15826] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15826] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x1547e8487505]
+[ct1pt-tnode002:15826] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15826] *** End of error message ***
+==== backtrace (tid:  15820) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15820] *** Process received signal ***
+[ct1pt-tnode002:15820] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15820] Signal code:  (-6)
+[ct1pt-tnode002:15820] Failing at address: 0x99cf0400003dcc
+[ct1pt-tnode002:15820] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14ccb82385f0]
+[ct1pt-tnode002:15820] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14ccb7eeabdb]
+[ct1pt-tnode002:15820] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14ccb7ed570e]
+[ct1pt-tnode002:15820] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14ccb7eca10f]
+[ct1pt-tnode002:15820] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15820] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14ccb7e7d505]
+[ct1pt-tnode002:15820] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15820] *** End of error message ***
+==== backtrace (tid:  15823) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15823] *** Process received signal ***
+[ct1pt-tnode002:15823] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15823] Signal code:  (-6)
+[ct1pt-tnode002:15823] Failing at address: 0x99cf0400003dcf
+[ct1pt-tnode002:15823] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x15090c76c5f0]
+[ct1pt-tnode002:15823] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x15090c41ebdb]
+[ct1pt-tnode002:15823] [ 2] /lib64/libc.so.6(+0x7a70e)[0x15090c40970e]
+[ct1pt-tnode002:15823] [ 3] ==== backtrace (tid:  15810) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+/lib64/libc.so.6(fread+0x8f)[0x15090c3fe10f]
+[ct1pt-tnode002:15823] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15823] [ 5]  2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x15090c3b1505]
+[ct1pt-tnode002:15823] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15823] *** End of error message ***
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15810] *** Process received signal ***
+[ct1pt-tnode002:15810] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15810] Signal code:  (-6)
+[ct1pt-tnode002:15810] Failing at address: 0x99cf0400003dc2
+[ct1pt-tnode002:15810] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x150aa424b5f0]
+[ct1pt-tnode002:15810] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x150aa3efdbdb]
+[ct1pt-tnode002:15810] [ 2] /lib64/libc.so.6(+0x7a70e)[0x150aa3ee870e]
+[ct1pt-tnode002:15810] [ 3] /lib64/libc.so.6(fread+0x8f)[0x150aa3edd10f]
+[ct1pt-tnode002:15810] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15810] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x150aa3e90505]
+[ct1pt-tnode002:15810] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15810] *** End of error message ***
+==== backtrace (tid:  15808) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15808] *** Process received signal ***
+[ct1pt-tnode002:15808] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15808] Signal code:  (-6)
+[ct1pt-tnode002:15808] Failing at address: 0x99cf0400003dc0
+[ct1pt-tnode002:15808] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x1504884fd5f0]
+[ct1pt-tnode002:15808] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x1504881afbdb]
+[ct1pt-tnode002:15808] [ 2] /lib64/libc.so.6(+0x7a70e)[0x15048819a70e]
+[ct1pt-tnode002:15808] [ 3] /lib64/libc.so.6(fread+0x8f)[0x15048818f10f]
+[ct1pt-tnode002:15808] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15808] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x150488142505]
+[ct1pt-tnode002:15808] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15808] *** End of error message ***
+==== backtrace (tid:  15817) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15817] *** Process received signal ***
+[ct1pt-tnode002:15817] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15817] Signal code:  (-6)
+[ct1pt-tnode002:15817] Failing at address: 0x99cf0400003dc9
+[ct1pt-tnode002:15817] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x151716dba5f0]
+[ct1pt-tnode002:15817] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x151716a6cbdb]
+[ct1pt-tnode002:15817] [ 2] /lib64/libc.so.6(+0x7a70e)[0x151716a5770e]
+[ct1pt-tnode002:15817] [ 3] /lib64/libc.so.6(fread+0x8f)[0x151716a4c10f]
+[ct1pt-tnode002:15817] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15817] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x1517169ff505]
+[ct1pt-tnode002:15817] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15817] *** End of error message ***
+==== backtrace (tid:  15806) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15806] *** Process received signal ***
+[ct1pt-tnode002:15806] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15806] Signal code:  (-6)
+[ct1pt-tnode002:15806] Failing at address: 0x99cf0400003dbe
+[ct1pt-tnode002:15806] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14a0a291f5f0]
+[ct1pt-tnode002:15806] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14a0a25d1bdb]
+[ct1pt-tnode002:15806] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14a0a25bc70e]
+[ct1pt-tnode002:15806] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14a0a25b110f]
+[ct1pt-tnode002:15806] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15806] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14a0a2564505]
+[ct1pt-tnode002:15806] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15806] *** End of error message ***
+==== backtrace (tid:  15812) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+==== backtrace (tid:  15809) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+[ct1pt-tnode002:15812] *** Process received signal ***
+[ct1pt-tnode002:15812] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15812] Signal code:  (-6)
+[ct1pt-tnode002:15812] Failing at address: 0x99cf0400003dc4
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15812] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14c009ebc5f0]
+[ct1pt-tnode002:15809] *** Process received signal ***
+[ct1pt-tnode002:15809] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15809] Signal code:  (-6)
+[ct1pt-tnode002:15809] Failing at address: 0x99cf0400003dc1
+[ct1pt-tnode002:15812] [ 1] [ct1pt-tnode002:15809] [ 0] /lib64/libc.so.6(+0x8fbdb)[0x14c009b6ebdb]
+[ct1pt-tnode002:15812] [ 2] /lib64/libpthread.so.0(+0xf5f0)[0x147f073415f0]
+[ct1pt-tnode002:15809] [ 1] /lib64/libc.so.6(+0x7a70e)[0x14c009b5970e]
+[ct1pt-tnode002:15812] [ 3] /lib64/libc.so.6(+0x8fbdb)[0x147f06ff3bdb]
+[ct1pt-tnode002:15809] [ 2] /lib64/libc.so.6(fread+0x8f)[0x14c009b4e10f]
+[ct1pt-tnode002:15812] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15812] [ 5] /lib64/libc.so.6(+0x7a70e)[0x147f06fde70e]
+[ct1pt-tnode002:15809] [ 3] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14c009b01505]
+[ct1pt-tnode002:15812] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15812] *** End of error message ***
+/lib64/libc.so.6(fread+0x8f)[0x147f06fd310f]
+[ct1pt-tnode002:15809] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15809] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x147f06f86505]
+[ct1pt-tnode002:15809] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15809] *** End of error message ***
+==== backtrace (tid:  15814) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:15814] *** Process received signal ***
+[ct1pt-tnode002:15814] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15814] Signal code:  (-6)
+[ct1pt-tnode002:15814] Failing at address: 0x99cf0400003dc6
+[ct1pt-tnode002:15814] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x147c3bf7b5f0]
+[ct1pt-tnode002:15814] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x147c3bc2dbdb]
+[ct1pt-tnode002:15814] [ 2] ==== backtrace (tid:  15807) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+/lib64/libc.so.6(+0x7a70e)[0x147c3bc1870e]
+[ct1pt-tnode002:15814] [ 3] [ct1pt-tnode002:15807] *** Process received signal ***
+[ct1pt-tnode002:15807] Signal: Segmentation fault (11)
+[ct1pt-tnode002:15807] Signal code:  (-6)
+[ct1pt-tnode002:15807] Failing at address: 0x99cf0400003dbf
+/lib64/libc.so.6(fread+0x8f)[0x147c3bc0d10f]
+[ct1pt-tnode002:15814] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15814] [ 5] [ct1pt-tnode002:15807] [ 0] /lib64/libc.so.6(__libc_start_main+0xf5)[0x147c3bbc0505]
+[ct1pt-tnode002:15814] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15814] *** End of error message ***
+/lib64/libpthread.so.0(+0xf5f0)[0x14ec6868c5f0]
+[ct1pt-tnode002:15807] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14ec6833ebdb]
+[ct1pt-tnode002:15807] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14ec6832970e]
+[ct1pt-tnode002:15807] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14ec6831e10f]
+[ct1pt-tnode002:15807] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:15807] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14ec682d1505]
+[ct1pt-tnode002:15807] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:15807] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+------------------------------------------------------------
+A process or daemon was unable to complete a TCP connection
+to another process:
+  Local host:    ct1pt-tnode002
+  Remote host:   ct1pt-tnode005
+This is usually caused by a firewall on the remote host. Please
+check that any firewall (e.g., iptables) has been disabled and
+try again.
+------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 1 with PID 0 on node ct1pt-tnode002 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+,2.94314
+13,11,8.38367,4.39715,3.1125
+14,11,3.08116,2.0462,2.33917
+15,11,2.11276,2.82426,2.18498
+16,11,4.36495,3.77241,2.22232
+17,11,[ct1pt-tnode002:17550:0:17550] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode005:3763 :0:3763] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17547:0:17547] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode005:3761 :0:3761] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17522:0:17522] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17531:0:17531] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode005:3762 :0:3762] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17541:0:17541] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17525:0:17525] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17521:0:17521] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17523:0:17523] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17527:0:17527] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17529:0:17529] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17544:0:17544] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17535:0:17535] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17538:0:17538] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17524:0:17524] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:  17550) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17550] *** Process received signal ***
+[ct1pt-tnode002:17550] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17550] Signal code:  (-6)
+[ct1pt-tnode002:17550] Failing at address: 0x99cf040000448e
+[ct1pt-tnode002:17550] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x153277f2d5f0]
+[ct1pt-tnode002:17550] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x153277bdfbdb]
+[ct1pt-tnode002:17550] [ 2] /lib64/libc.so.6(+0x7a70e)[0x153277bca70e]
+[ct1pt-tnode002:17550] [ 3] /lib64/libc.so.6(fread+0x8f)[0x153277bbf10f]
+[ct1pt-tnode002:17550] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17550] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x153277b72505]
+[ct1pt-tnode002:17550] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17550] *** End of error message ***
+==== backtrace (tid:   3761) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode005:03761] *** Process received signal ***
+[ct1pt-tnode005:03761] Signal: Segmentation fault (11)
+[ct1pt-tnode005:03761] Signal code:  (-6)
+[ct1pt-tnode005:03761] Failing at address: 0x99cf0400000eb1
+[ct1pt-tnode005:03761] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x155217b6a5f0]
+[ct1pt-tnode005:03761] [ 1] ==== backtrace (tid:   3763) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+/lib64/libc.so.6(+0x8fbdb)[0x15521781cbdb]
+[ct1pt-tnode005:03761] [ 2] [ct1pt-tnode005:03763] *** Process received signal ***
+[ct1pt-tnode005:03763] Signal: Segmentation fault (11)
+[ct1pt-tnode005:03763] Signal code:  (-6)
+[ct1pt-tnode005:03763] Failing at address: 0x99cf0400000eb3
+==== backtrace (tid:  17547) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+/lib64/libc.so.6(+0x7a70e)[0x15521780770e]
+[ct1pt-tnode005:03761] [ 3] /lib64/libc.so.6(fread+0x8f)[0x1552177fc10f]
+[ct1pt-tnode005:03761] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode005:03761] [ct1pt-tnode002:17547] *** Process received signal ***
+[ct1pt-tnode002:17547] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17547] Signal code:  (-6)
+[ct1pt-tnode002:17547] Failing at address: 0x99cf040000448b
+[ct1pt-tnode005:03763] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14ace736b5f0]
+[ct1pt-tnode005:03763] [ 1] [ct1pt-tnode002:17547] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14e8e09655f0]
+[ct1pt-tnode002:17547] [ 1] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x1552177af505]
+[ct1pt-tnode005:03761] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode005:03761] *** End of error message ***
+/lib64/libc.so.6(+0x8fbdb)[0x14ace701dbdb]
+[ct1pt-tnode005:03763] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14ace700870e]
+[ct1pt-tnode005:03763] [ 3] /lib64/libc.so.6(+0x8fbdb)[0x14e8e0617bdb]
+[ct1pt-tnode002:17547] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14e8e060270e]
+[ct1pt-tnode002:17547] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14ace6ffd10f]
+[ct1pt-tnode005:03763] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode005:03763] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14ace6fb0505]
+[ct1pt-tnode005:03763] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode005:03763] *** End of error message ***
+/lib64/libc.so.6(fread+0x8f)[0x14e8e05f710f]
+[ct1pt-tnode002:17547] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17547] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14e8e05aa505]
+[ct1pt-tnode002:17547] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17547] *** End of error message ***
+==== backtrace (tid:  17522) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+==== backtrace (tid:  17531) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+[ct1pt-tnode002:17522] *** Process received signal ***
+[ct1pt-tnode002:17522] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17522] Signal code:  (-6)
+[ct1pt-tnode002:17522] Failing at address: 0x99cf0400004472
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17531] *** Process received signal ***
+[ct1pt-tnode002:17522] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x15352b1c45f0]
+[ct1pt-tnode002:17522] [ct1pt-tnode002:17531] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17531] Signal code:  (-6)
+[ct1pt-tnode002:17531] Failing at address: 0x99cf040000447b
+[ 1] [ct1pt-tnode002:17531] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x1476aa36b5f0]
+[ct1pt-tnode002:17531] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x15352ae76bdb]
+[ct1pt-tnode002:17522] [ 2] /lib64/libc.so.6(+0x8fbdb)[0x1476aa01dbdb]
+[ct1pt-tnode002:17531] [ 2] /lib64/libc.so.6(+0x7a70e)[0x15352ae6170e]
+[ct1pt-tnode002:17522] [ 3] /lib64/libc.so.6(+0x7a70e)[0x1476aa00870e]
+[ct1pt-tnode002:17531] [ 3] /lib64/libc.so.6(fread+0x8f)[0x15352ae5610f]
+[ct1pt-tnode002:17522] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17522] [ 5] /lib64/libc.so.6(fread+0x8f)[0x1476a9ffd10f]
+[ct1pt-tnode002:17531] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17531] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x1476a9fb0505]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x15352ae09505]
+[ct1pt-tnode002:17522] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17522] *** End of error message ***
+==== backtrace (tid:   3762) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+[ct1pt-tnode002:17531] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17531] *** End of error message ***
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode005:03762] *** Process received signal ***
+[ct1pt-tnode005:03762] Signal: Segmentation fault (11)
+[ct1pt-tnode005:03762] Signal code:  (-6)
+[ct1pt-tnode005:03762] Failing at address: 0x99cf0400000eb2
+[ct1pt-tnode005:03762] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x15000fd395f0]
+[ct1pt-tnode005:03762] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x15000f9ebbdb]
+[ct1pt-tnode005:03762] [ 2] /lib64/libc.so.6(+0x7a70e)[0x15000f9d670e]
+[ct1pt-tnode005:03762] [ 3] /lib64/libc.so.6(fread+0x8f)[0x15000f9cb10f]
+[ct1pt-tnode005:03762] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode005:03762] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x15000f97e505]
+[ct1pt-tnode005:03762] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode005:03762] *** End of error message ***
+==== backtrace (tid:  17541) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17541] *** Process received signal ***
+[ct1pt-tnode002:17541] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17541] Signal code:  (-6)
+[ct1pt-tnode002:17541] Failing at address: 0x99cf0400004485
+[ct1pt-tnode002:17541] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x151e56c8b5f0]
+[ct1pt-tnode002:17541] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x151e5693dbdb]
+[ct1pt-tnode002:17541] [ 2] ==== backtrace (tid:  17525) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+/lib64/libc.so.6(+0x7a70e)[0x151e5692870e]
+[ct1pt-tnode002:17541] [ 3] [ct1pt-tnode002:17525] *** Process received signal ***
+[ct1pt-tnode002:17525] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17525] Signal code:  (-6)
+[ct1pt-tnode002:17525] Failing at address: 0x99cf0400004475
+/lib64/libc.so.6(fread+0x8f)[0x151e5691d10f]
+[ct1pt-tnode002:17541] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17541] [ 5] [ct1pt-tnode002:17525] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14adddec35f0]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x151e568d0505]
+[ct1pt-tnode002:17541] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17541] *** End of error message ***
+[ct1pt-tnode002:17525] [ 1] ==== backtrace (tid:  17521) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+/lib64/libc.so.6(+0x8fbdb)[0x14adddb75bdb]
+[ct1pt-tnode002:17525] [ 2]  2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17521] *** Process received signal ***
+[ct1pt-tnode002:17521] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17521] Signal code:  (-6)
+[ct1pt-tnode002:17521] Failing at address: 0x99cf0400004471
+/lib64/libc.so.6(+0x7a70e)[0x14adddb6070e]
+[ct1pt-tnode002:17525] [ 3] [ct1pt-tnode002:17521] [ 0] /lib64/libc.so.6(fread+0x8f)[0x14adddb5510f]
+[ct1pt-tnode002:17525] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17525] [ 5] /lib64/libpthread.so.0(+0xf5f0)[0x14681da085f0]
+[ct1pt-tnode002:17521] [ 1] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14adddb08505]
+[ct1pt-tnode002:17525] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17525] *** End of error message ***
+/lib64/libc.so.6(+0x8fbdb)[0x14681d6babdb]
+[ct1pt-tnode002:17521] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14681d6a570e]
+[ct1pt-tnode002:17521] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14681d69a10f]
+[ct1pt-tnode002:17521] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17521] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14681d64d505]
+[ct1pt-tnode002:17521] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17521] *** End of error message ***
+==== backtrace (tid:  17523) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17523] *** Process received signal ***
+[ct1pt-tnode002:17523] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17523] Signal code:  (-6)
+[ct1pt-tnode002:17523] Failing at address: 0x99cf0400004473
+[ct1pt-tnode002:17523] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x1538757795f0]
+[ct1pt-tnode002:17523] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x15387542bbdb]
+[ct1pt-tnode002:17523] [ 2] /lib64/libc.so.6(+0x7a70e)[0x15387541670e]
+[ct1pt-tnode002:17523] [ 3] /lib64/libc.so.6(fread+0x8f)[0x15387540b10f]
+[ct1pt-tnode002:17523] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17523] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x1538753be505]
+[ct1pt-tnode002:17523] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17523] *** End of error message ***
+==== backtrace (tid:  17527) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17527] *** Process received signal ***
+[ct1pt-tnode002:17527] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17527] Signal code:  (-6)
+[ct1pt-tnode002:17527] Failing at address: 0x99cf0400004477
+[ct1pt-tnode002:17527] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14b4ed41a5f0]
+[ct1pt-tnode002:17527] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14b4ed0ccbdb]
+[ct1pt-tnode002:17527] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14b4ed0b770e]
+[ct1pt-tnode002:17527] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14b4ed0ac10f]
+[ct1pt-tnode002:17527] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17527] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14b4ed05f505]
+[ct1pt-tnode002:17527] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17527] *** End of error message ***
+==== backtrace (tid:  17529) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17529] *** Process received signal ***
+[ct1pt-tnode002:17529] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17529] Signal code:  (-6)
+[ct1pt-tnode002:17529] Failing at address: 0x99cf0400004479
+[ct1pt-tnode002:17529] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x1468d80c05f0]
+[ct1pt-tnode002:17529] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x1468d7d72bdb]
+[ct1pt-tnode002:17529] [ 2] /lib64/libc.so.6(+0x7a70e)[0x1468d7d5d70e]
+[ct1pt-tnode002:17529] [ 3] /lib64/libc.so.6(fread+0x8f)[0x1468d7d5210f]
+[ct1pt-tnode002:17529] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17529] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x1468d7d05505]
+[ct1pt-tnode002:17529] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17529] *** End of error message ***
+==== backtrace (tid:  17544) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17544] *** Process received signal ***
+[ct1pt-tnode002:17544] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17544] Signal code:  (-6)
+[ct1pt-tnode002:17544] Failing at address: 0x99cf0400004488
+[ct1pt-tnode002:17544] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14a261bd05f0]
+[ct1pt-tnode002:17544] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14a261882bdb]
+[ct1pt-tnode002:17544] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14a26186d70e]
+[ct1pt-tnode002:17544] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14a26186210f]
+[ct1pt-tnode002:17544] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17544] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14a261815505]
+[ct1pt-tnode002:17544] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17544] *** End of error message ***
+==== backtrace (tid:  17535) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17535] *** Process received signal ***
+[ct1pt-tnode002:17535] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17535] Signal code:  (-6)
+[ct1pt-tnode002:17535] Failing at address: 0x99cf040000447f
+[ct1pt-tnode002:17535] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x146481ec35f0]
+[ct1pt-tnode002:17535] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x146481b75bdb]
+[ct1pt-tnode002:17535] [ 2] /lib64/libc.so.6(+0x7a70e)[0x146481b6070e]
+[ct1pt-tnode002:17535] [ 3] /lib64/libc.so.6(fread+0x8f)[0x146481b5510f]
+[ct1pt-tnode002:17535] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17535] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x146481b08505]
+[ct1pt-tnode002:17535] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17535] *** End of error message ***
+==== backtrace (tid:  17538) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17538] *** Process received signal ***
+[ct1pt-tnode002:17538] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17538] Signal code:  (-6)
+[ct1pt-tnode002:17538] Failing at address: 0x99cf0400004482
+[ct1pt-tnode002:17538] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14e5336b05f0]
+[ct1pt-tnode002:17538] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14e533362bdb]
+[ct1pt-tnode002:17538] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14e53334d70e]
+[ct1pt-tnode002:17538] [ 3] ==== backtrace (tid:  17524) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+/lib64/libc.so.6(fread+0x8f)[0x14e53334210f]
+[ct1pt-tnode002:17538] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17538] [ 5]  3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x14e5332f5505]
+[ct1pt-tnode002:17538] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17538] *** End of error message ***
+[ct1pt-tnode002:17524] *** Process received signal ***
+[ct1pt-tnode002:17524] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17524] Signal code:  (-6)
+[ct1pt-tnode002:17524] Failing at address: 0x99cf0400004474
+[ct1pt-tnode002:17524] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x15012ec075f0]
+[ct1pt-tnode002:17524] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x15012e8b9bdb]
+[ct1pt-tnode002:17524] [ 2] /lib64/libc.so.6(+0x7a70e)[0x15012e8a470e]
+[ct1pt-tnode002:17524] [ 3] /lib64/libc.so.6(fread+0x8f)[0x15012e89910f]
+[ct1pt-tnode002:17524] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17524] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x15012e84c505]
+[ct1pt-tnode002:17524] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17524] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 2 with PID 0 on node ct1pt-tnode002 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+,[ct1pt-tnode005:3811 :0:3811] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode005:3809 :0:3809] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode005:3810 :0:3810] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17650:0:17650] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17654:0:17654] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17659:0:17659] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17661:0:17661] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17665:0:17665] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17668:0:17668] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17649:0:17649] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17677:0:17677] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17651:0:17651] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17671:0:17671] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17648:0:17648] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17652:0:17652] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17656:0:17656] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17674:0:17674] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   3811) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode005:03811] *** Process received signal ***
+[ct1pt-tnode005:03811] Signal: Segmentation fault (11)
+[ct1pt-tnode005:03811] Signal code:  (-6)
+[ct1pt-tnode005:03811] Failing at address: 0x99cf0400000ee3
+[ct1pt-tnode005:03811] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x15358eb7a5f0]
+[ct1pt-tnode005:03811] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x15358e82cbdb]
+[ct1pt-tnode005:03811] [ 2] ==== backtrace (tid:   3809) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+/lib64/libc.so.6(+0x7a70e)[0x15358e81770e]
+[ct1pt-tnode005:03811] [ 3]  5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode005:03809] *** Process received signal ***
+[ct1pt-tnode005:03809] Signal: Segmentation fault (11)
+[ct1pt-tnode005:03809] Signal code:  (-6)
+[ct1pt-tnode005:03809] Failing at address: 0x99cf0400000ee1
+/lib64/libc.so.6(fread+0x8f)[0x15358e80c10f]
+[ct1pt-tnode005:03811] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode005:03811] [ 5] [ct1pt-tnode005:03809] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14d3c83c35f0]
+[ct1pt-tnode005:03809] [ 1] /lib64/libc.so.6(__libc_start_main+0xf5)[0x15358e7bf505]
+[ct1pt-tnode005:03811] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode005:03811] *** End of error message ***
+/lib64/libc.so.6(+0x8fbdb)[0x14d3c8075bdb]
+[ct1pt-tnode005:03809] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14d3c806070e]
+[ct1pt-tnode005:03809] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14d3c805510f]
+[ct1pt-tnode005:03809] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode005:03809] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14d3c8008505]
+[ct1pt-tnode005:03809] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode005:03809] *** End of error message ***
+==== backtrace (tid:   3810) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode005:03810] *** Process received signal ***
+[ct1pt-tnode005:03810] Signal: Segmentation fault (11)
+[ct1pt-tnode005:03810] Signal code:  (-6)
+[ct1pt-tnode005:03810] Failing at address: 0x99cf0400000ee2
+[ct1pt-tnode005:03810] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14dfd9ebc5f0]
+[ct1pt-tnode005:03810] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14dfd9b6ebdb]
+[ct1pt-tnode005:03810] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14dfd9b5970e]
+[ct1pt-tnode005:03810] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14dfd9b4e10f]
+[ct1pt-tnode005:03810] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode005:03810] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14dfd9b01505]
+[ct1pt-tnode005:03810] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode005:03810] *** End of error message ***
+==== backtrace (tid:  17671) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17671] *** Process received signal ***
+[ct1pt-tnode002:17671] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17671] Signal code:  (-6)
+[ct1pt-tnode002:17671] Failing at address: 0x99cf0400004507
+[ct1pt-tnode002:17671] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x145bac2d55f0]
+[ct1pt-tnode002:17671] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x145babf87bdb]
+[ct1pt-tnode002:17671] [ 2] /lib64/libc.so.6(+0x7a70e)[0x145babf7270e]
+[ct1pt-tnode002:17671] [ 3] /lib64/libc.so.6(fread+0x8f)[0x145babf6710f]
+[ct1pt-tnode002:17671] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17671] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x145babf1a505]
+[ct1pt-tnode002:17671] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17671] *** End of error message ***
+==== backtrace (tid:  17649) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17649] *** Process received signal ***
+[ct1pt-tnode002:17649] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17649] Signal code:  (-6)
+[ct1pt-tnode002:17649] Failing at address: 0x99cf04000044f1
+[ct1pt-tnode002:17649] [ 0] ==== backtrace (tid:  17677) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+/lib64/libpthread.so.0(+0xf5f0)[0x1461553e95f0]
+[ct1pt-tnode002:17649] [ 1]  4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+/lib64/libc.so.6(+0x8fbdb)[0x14615509bbdb]
+[ct1pt-tnode002:17649] [ 2] [ct1pt-tnode002:17677] *** Process received signal ***
+[ct1pt-tnode002:17677] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17677] Signal code:  (-6)
+[ct1pt-tnode002:17677] Failing at address: 0x99cf040000450d
+[ct1pt-tnode002:17677] [ 0] /lib64/libc.so.6(+0x7a70e)[0x14615508670e]
+[ct1pt-tnode002:17649] [ 3] ==== backtrace (tid:  17648) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+==== backtrace (tid:  17650) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+/lib64/libpthread.so.0(+0xf5f0)[0x1519cdbc45f0]
+[ct1pt-tnode002:17677] [ 1]  5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17650] *** Process received signal ***
+/lib64/libc.so.6(fread+0x8f)[0x14615507b10f]
+[ct1pt-tnode002:17649] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17649] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14615502e505]
+[ct1pt-tnode002:17649] =================================
+[ct1pt-tnode002:17648] *** Process received signal ***
+[ct1pt-tnode002:17648] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17648] Signal code:  (-6)
+[ct1pt-tnode002:17648] Failing at address: 0x99cf04000044f0
+/lib64/libc.so.6(+0x8fbdb)[0x1519cd876bdb]
+[ct1pt-tnode002:17677] [ 2] [ct1pt-tnode002:17650] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17650] Signal code:  (-6)
+[ct1pt-tnode002:17650] Failing at address: 0x99cf04000044f2
+[ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17649] *** End of error message ***
+==== backtrace (tid:  17659) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+==== backtrace (tid:  17665) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17648] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14a07a99b5f0]
+[ct1pt-tnode002:17648] [ 1] /lib64/libc.so.6(+0x7a70e)[0x1519cd86170e]
+[ct1pt-tnode002:17677] [ 3] /lib64/libc.so.6(fread+0x8f)[0x1519cd85610f]
+[ct1pt-tnode002:17677] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17677] [ 5] [ct1pt-tnode002:17650] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x147d9188f5f0]
+[ct1pt-tnode002:17650] [ 1] =================================
+[ct1pt-tnode002:17659] *** Process received signal ***
+[ct1pt-tnode002:17659] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17659] Signal code:  (-6)
+[ct1pt-tnode002:17659] Failing at address: 0x99cf04000044fb
+[ct1pt-tnode002:17665] *** Process received signal ***
+[ct1pt-tnode002:17665] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17665] Signal code:  (-6)
+[ct1pt-tnode002:17665] Failing at address: 0x99cf0400004501
+[ct1pt-tnode002:17659] [ 0] /lib64/libc.so.6(__libc_start_main+0xf5)[0x1519cd809505]
+[ct1pt-tnode002:17677] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17677] *** End of error message ***
+[ct1pt-tnode002:17665] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x1548c88775f0]
+[ct1pt-tnode002:17665] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14a07a64dbdb]
+[ct1pt-tnode002:17648] [ 2] /lib64/libpthread.so.0(+0xf5f0)[0x14d9608575f0]
+[ct1pt-tnode002:17659] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x147d91541bdb]
+[ct1pt-tnode002:17650] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14a07a63870e]
+[ct1pt-tnode002:17648] [ 3] /lib64/libc.so.6(+0x7a70e)[0x147d9152c70e]
+[ct1pt-tnode002:17650] [ 3] /lib64/libc.so.6(+0x8fbdb)[0x1548c8529bdb]
+[ct1pt-tnode002:17665] [ 2] /lib64/libc.so.6(+0x7a70e)[0x1548c851470e]
+/lib64/libc.so.6(fread+0x8f)[0x14a07a62d10f]
+[ct1pt-tnode002:17648] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17648] [ 5] /lib64/libc.so.6(+0x8fbdb)[0x14d960509bdb]
+[ct1pt-tnode002:17659] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14d9604f470e]
+[ct1pt-tnode002:17659] [ 3] /lib64/libc.so.6(fread+0x8f)[0x147d9152110f]
+[ct1pt-tnode002:17650] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17650] [ 5] [ct1pt-tnode002:17665] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14d9604e910f]
+[ct1pt-tnode002:17659] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17659] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x147d914d4505]
+[ct1pt-tnode002:17650] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17650] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x14a07a5e0505]
+[ct1pt-tnode002:17648] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17648] *** End of error message ***
+/lib64/libc.so.6(fread+0x8f)[0x1548c850910f]
+[ct1pt-tnode002:17665] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17665] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14d96049c505]
+[ct1pt-tnode002:17659] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17659] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x1548c84bc505]
+[ct1pt-tnode002:17665] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17665] *** End of error message ***
+==== backtrace (tid:  17674) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17674] *** Process received signal ***
+[ct1pt-tnode002:17674] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17674] Signal code:  (-6)
+[ct1pt-tnode002:17674] Failing at address: 0x99cf040000450a
+[ct1pt-tnode002:17674] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14fc3d7735f0]
+[ct1pt-tnode002:17674] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14fc3d425bdb]
+[ct1pt-tnode002:17674] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14fc3d41070e]
+[ct1pt-tnode002:17674] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14fc3d40510f]
+[ct1pt-tnode002:17674] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17674] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14fc3d3b8505]
+[ct1pt-tnode002:17674] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17674] *** End of error message ***
+==== backtrace (tid:  17668) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+==== backtrace (tid:  17652) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+==== backtrace (tid:  17651) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+==== backtrace (tid:  17656) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17656] *** Process received signal ***
+==== backtrace (tid:  17654) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+==== backtrace (tid:  17661) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17652] *** Process received signal ***
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17651] *** Process received signal ***
+[ct1pt-tnode002:17651] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17651] Signal code:  (-6)
+[ct1pt-tnode002:17651] Failing at address: 0x99cf04000044f3
+[ct1pt-tnode002:17668] *** Process received signal ***
+[ct1pt-tnode002:17668] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17668] Signal code:  (-6)
+[ct1pt-tnode002:17668] Failing at address: 0x99cf0400004504
+[ct1pt-tnode002:17656] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17656] Signal code:  (-6)
+[ct1pt-tnode002:17656] Failing at address: 0x99cf04000044f8
+[ct1pt-tnode002:17654] *** Process received signal ***
+[ct1pt-tnode002:17654] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17654] Signal code:  (-6)
+[ct1pt-tnode002:17654] Failing at address: 0x99cf04000044f6
+[ct1pt-tnode002:17661] *** Process received signal ***
+[ct1pt-tnode002:17661] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17661] Signal code:  (-6)
+[ct1pt-tnode002:17661] Failing at address: 0x99cf04000044fd
+[ct1pt-tnode002:17652] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17652] Signal code:  (-6)
+[ct1pt-tnode002:17652] Failing at address: 0x99cf04000044f4
+[ct1pt-tnode002:17652] [ct1pt-tnode002:17668] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14c46d8eb5f0]
+[ct1pt-tnode002:17668] [ 1] [ct1pt-tnode002:17651] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14bf3cf295f0]
+[ct1pt-tnode002:17651] [ 1] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14b3822165f0]
+[ct1pt-tnode002:17652] [ 1] [ct1pt-tnode002:17656] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14c6b1c045f0]
+[ct1pt-tnode002:17656] [ 1] [ct1pt-tnode002:17654] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14e3c37a95f0]
+[ct1pt-tnode002:17654] [ 1] [ct1pt-tnode002:17661] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x146b088e85f0]
+[ct1pt-tnode002:17661] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14c46d59dbdb]
+[ct1pt-tnode002:17668] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14c46d58870e]
+[ct1pt-tnode002:17668] [ 3] /lib64/libc.so.6(+0x8fbdb)[0x14bf3cbdbbdb]
+[ct1pt-tnode002:17651] [ 2] /lib64/libc.so.6(+0x8fbdb)[0x14b381ec8bdb]
+[ct1pt-tnode002:17652] [ 2] /lib64/libc.so.6(+0x8fbdb)[0x14c6b18b6bdb]
+[ct1pt-tnode002:17656] [ 2] /lib64/libc.so.6(+0x8fbdb)[0x14e3c345bbdb]
+[ct1pt-tnode002:17654] [ 2] /lib64/libc.so.6(+0x8fbdb)[0x146b0859abdb]
+[ct1pt-tnode002:17661] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14bf3cbc670e]
+[ct1pt-tnode002:17651] [ 3] /lib64/libc.so.6(+0x7a70e)[0x14b381eb370e]
+[ct1pt-tnode002:17652] [ 3] /lib64/libc.so.6(+0x7a70e)[0x14c6b18a170e]
+[ct1pt-tnode002:17656] [ 3] /lib64/libc.so.6(+0x7a70e)[0x14e3c344670e]
+[ct1pt-tnode002:17654] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14c46d57d10f]
+[ct1pt-tnode002:17668] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17668] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14c46d530505]
+[ct1pt-tnode002:17668] [ 6] ./mpi_blur_scal.x[0x400cf9]
+/lib64/libc.so.6(+0x7a70e)[0x146b0858570e]
+[ct1pt-tnode002:17661] [ 3] /lib64/libc.so.6(fread+0x8f)[0x146b0857a10f]
+[ct1pt-tnode002:17661] /lib64/libc.so.6(fread+0x8f)[0x14bf3cbbb10f]
+[ct1pt-tnode002:17651] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17651] [ 5] /lib64/libc.so.6(fread+0x8f)[0x14b381ea810f]
+[ct1pt-tnode002:17652] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17652] [ 5] /lib64/libc.so.6(fread+0x8f)[0x14c6b189610f]
+[ct1pt-tnode002:17656] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17656] [ 5] /lib64/libc.so.6(fread+0x8f)[0x14e3c343b10f]
+[ct1pt-tnode002:17654] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17654] [ 5] [ct1pt-tnode002:17668] *** End of error message ***
+[ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17661] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14bf3cb6e505]
+[ct1pt-tnode002:17651] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17651] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x14c6b1849505]
+[ct1pt-tnode002:17656] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17656] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x14b381e5b505]
+[ct1pt-tnode002:17652] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17652] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x14e3c33ee505]
+[ct1pt-tnode002:17654] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17654] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x146b0852d505]
+[ct1pt-tnode002:17661] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17661] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 3 with PID 0 on node ct1pt-tnode002 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+,[ct1pt-tnode005:3842 :0:3842] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode005:3844 :0:3844] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode005:3843 :0:3843] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17773:0:17773] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17778:0:17778] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17795:0:17795] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17801:0:17801] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17783:0:17783] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17780:0:17780] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17786:0:17786] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17798:0:17798] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17774:0:17774] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17776:0:17776] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17772:0:17772] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17775:0:17775] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17789:0:17789] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:17792:0:17792] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   3844) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode005:03844] *** Process received signal ***
+[ct1pt-tnode005:03844] Signal: Segmentation fault (11)
+[ct1pt-tnode005:03844] Signal code:  (-6)
+[ct1pt-tnode005:03844] Failing at address: 0x99cf0400000f04
+[ct1pt-tnode005:03844] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x150bd2c2c5f0]
+[ct1pt-tnode005:03844] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x150bd28debdb]
+[ct1pt-tnode005:03844] [ 2] /lib64/libc.so.6(+0x7a70e)[0x150bd28c970e]
+[ct1pt-tnode005:03844] [ 3] /lib64/libc.so.6(fread+0x8f)[0x150bd28be10f]
+[ct1pt-tnode005:03844] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode005:03844] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x150bd2871505]
+[ct1pt-tnode005:03844] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode005:03844] *** End of error message ***
+==== backtrace (tid:   3842) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+==== backtrace (tid:   3843) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+[ct1pt-tnode005:03842] *** Process received signal ***
+[ct1pt-tnode005:03842] Signal: Segmentation fault (11)
+[ct1pt-tnode005:03842] Signal code:  (-6)
+[ct1pt-tnode005:03842] Failing at address: 0x99cf0400000f02
+=================================
+[ct1pt-tnode005:03843] *** Process received signal ***
+[ct1pt-tnode005:03843] Signal: Segmentation fault (11)
+[ct1pt-tnode005:03843] Signal code:  (-6)
+[ct1pt-tnode005:03843] Failing at address: 0x99cf0400000f03
+[ct1pt-tnode005:03842] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x151f4a7075f0]
+[ct1pt-tnode005:03842] [ 1] [ct1pt-tnode005:03843] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x146bb82925f0]
+[ct1pt-tnode005:03843] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x151f4a3b9bdb]
+[ct1pt-tnode005:03842] [ 2] /lib64/libc.so.6(+0x8fbdb)[0x146bb7f44bdb]
+[ct1pt-tnode005:03843] [ 2] /lib64/libc.so.6(+0x7a70e)[0x151f4a3a470e]
+[ct1pt-tnode005:03842] [ 3] /lib64/libc.so.6(fread+0x8f)[0x151f4a39910f]
+[ct1pt-tnode005:03842] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode005:03842] [ 5] /lib64/libc.so.6(+0x7a70e)[0x146bb7f2f70e]
+[ct1pt-tnode005:03843] [ 3] /lib64/libc.so.6(fread+0x8f)[0x146bb7f2410f]
+[ct1pt-tnode005:03843] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode005:03843] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x151f4a34c505]
+[ct1pt-tnode005:03842] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode005:03842] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x146bb7ed7505]
+[ct1pt-tnode005:03843] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode005:03843] *** End of error message ***
+==== backtrace (tid:  17783) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17783] *** Process received signal ***
+[ct1pt-tnode002:17783] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17783] Signal code:  (-6)
+[ct1pt-tnode002:17783] Failing at address: 0x99cf0400004577
+[ct1pt-tnode002:17783] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14c581a9b5f0]
+[ct1pt-tnode002:17783] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14c58174dbdb]
+[ct1pt-tnode002:17783] [ 2] ==== backtrace (tid:  17795) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+/lib64/libc.so.6(+0x7a70e)[0x14c58173870e]
+[ct1pt-tnode002:17783] [ 3]  2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+/lib64/libc.so.6(fread+0x8f)[0x14c58172d10f]
+[ct1pt-tnode002:17783] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17783] [ 5] [ct1pt-tnode002:17795] *** Process received signal ***
+[ct1pt-tnode002:17795] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17795] Signal code:  (-6)
+[ct1pt-tnode002:17795] Failing at address: 0x99cf0400004583
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x14c5816e0505]
+[ct1pt-tnode002:17783] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17783] *** End of error message ***
+==== backtrace (tid:  17773) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+[ct1pt-tnode002:17795] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x1520203005f0]
+[ct1pt-tnode002:17795] [ 1]  5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+==== backtrace (tid:  17801) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+[ct1pt-tnode002:17773] *** Process received signal ***
+[ct1pt-tnode002:17773] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17773] Signal code:  (-6)
+[ct1pt-tnode002:17773] Failing at address: 0x99cf040000456d
+/lib64/libc.so.6(+0x8fbdb)[0x15201ffb2bdb]
+[ct1pt-tnode002:17795] [ 2]  2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+==== backtrace (tid:  17778) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17773] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14b1ac7825f0]
+[ct1pt-tnode002:17773] [ 1] [ct1pt-tnode002:17801] *** Process received signal ***
+[ct1pt-tnode002:17801] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17801] Signal code:  (-6)
+[ct1pt-tnode002:17801] Failing at address: 0x99cf0400004589
+==== backtrace (tid:  17776) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17778] *** Process received signal ***
+[ct1pt-tnode002:17778] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17778] Signal code:  (-6)
+[ct1pt-tnode002:17778] Failing at address: 0x99cf0400004572
+[ct1pt-tnode002:17778] [ 0] /lib64/libc.so.6(+0x7a70e)[0x15201ff9d70e]
+[ct1pt-tnode002:17795] [ 3] /lib64/libc.so.6(fread+0x8f)[0x15201ff9210f]
+[ct1pt-tnode002:17795] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17795] [ 5] /lib64/libc.so.6(+0x8fbdb)[0x14b1ac434bdb]
+[ct1pt-tnode002:17773] [ 2] [ct1pt-tnode002:17801] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x148b4c9a35f0]
+[ct1pt-tnode002:17801] [ 1] /lib64/libpthread.so.0(+0xf5f0)[0x14a3a0fa15f0]
+[ct1pt-tnode002:17778] [ 1] /lib64/libc.so.6(+0x7a70e)[0x14b1ac41f70e]
+[ct1pt-tnode002:17773] [ 3] [ct1pt-tnode002:17776] *** Process received signal ***
+[ct1pt-tnode002:17776] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17776] Signal code:  (-6)
+[ct1pt-tnode002:17776] Failing at address: 0x99cf0400004570
+/lib64/libc.so.6(+0x8fbdb)[0x148b4c655bdb]
+[ct1pt-tnode002:17801] [ 2] /lib64/libc.so.6(__libc_start_main+0xf5)[0x15201ff45505]
+[ct1pt-tnode002:17795] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17795] *** End of error message ***
+/lib64/libc.so.6(+0x8fbdb)[0x14a3a0c53bdb]
+[ct1pt-tnode002:17778] [ 2] /lib64/libc.so.6(fread+0x8f)[0x14b1ac41410f]
+[ct1pt-tnode002:17773] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17773] [ 5] [ct1pt-tnode002:17776] [ 0] /lib64/libc.so.6(+0x7a70e)[0x14a3a0c3e70e]
+[ct1pt-tnode002:17778] [ 3] /lib64/libc.so.6(+0x7a70e)[0x148b4c64070e]
+[ct1pt-tnode002:17801] [ 3] /lib64/libpthread.so.0(+0xf5f0)[0x14a7fe10f5f0]
+[ct1pt-tnode002:17776] [ 1] /lib64/libc.so.6(fread+0x8f)[0x148b4c63510f]
+[ct1pt-tnode002:17801] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17801] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14b1ac3c7505]
+[ct1pt-tnode002:17773] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17773] *** End of error message ***
+/lib64/libc.so.6(fread+0x8f)[0x14a3a0c3310f]
+[ct1pt-tnode002:17778] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17778] [ 5] /lib64/libc.so.6(+0x8fbdb)[0x14a7fddc1bdb]
+[ct1pt-tnode002:17776] [ 2] /lib64/libc.so.6(__libc_start_main+0xf5)[0x148b4c5e8505]
+[ct1pt-tnode002:17801] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17801] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x14a3a0be6505]
+[ct1pt-tnode002:17778] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17778] *** End of error message ***
+/lib64/libc.so.6(+0x7a70e)[0x14a7fddac70e]
+[ct1pt-tnode002:17776] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14a7fdda110f]
+[ct1pt-tnode002:17776] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17776] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14a7fdd54505]
+[ct1pt-tnode002:17776] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17776] *** End of error message ***
+==== backtrace (tid:  17786) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+==== backtrace (tid:  17780) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17780] *** Process received signal ***
+[ct1pt-tnode002:17780] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17780] Signal code:  (-6)
+[ct1pt-tnode002:17780] Failing at address: 0x99cf0400004574
+[ct1pt-tnode002:17786] *** Process received signal ***
+[ct1pt-tnode002:17786] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17786] Signal code:  (-6)
+[ct1pt-tnode002:17786] Failing at address: 0x99cf040000457a
+==== backtrace (tid:  17798) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+==== backtrace (tid:  17792) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+[ct1pt-tnode002:17786] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x150f6b7d45f0]
+[ct1pt-tnode002:17786] [ 1] ==== backtrace (tid:  17772) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17798] *** Process received signal ***
+[ct1pt-tnode002:17780] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x1536e0e1c5f0]
+[ct1pt-tnode002:17780] [ 1]  3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17792] *** Process received signal ***
+[ct1pt-tnode002:17772] *** Process received signal ***
+[ct1pt-tnode002:17772] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17772] Signal code:  (-6)
+[ct1pt-tnode002:17772] Failing at address: 0x99cf040000456c
+[ct1pt-tnode002:17798] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17798] Signal code:  (-6)
+[ct1pt-tnode002:17798] Failing at address: 0x99cf0400004586
+[ct1pt-tnode002:17792] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17792] Signal code:  (-6)
+[ct1pt-tnode002:17792] Failing at address: 0x99cf0400004580
+/lib64/libc.so.6(+0x8fbdb)[0x1536e0acebdb]
+[ct1pt-tnode002:17780] [ 2] /lib64/libc.so.6(+0x8fbdb)[0x150f6b486bdb]
+[ct1pt-tnode002:17786] [ 2] [ct1pt-tnode002:17798] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14c3e27835f0]
+[ct1pt-tnode002:17798] [ 1] [ct1pt-tnode002:17772] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14c56eb205f0]
+[ct1pt-tnode002:17772] [ 1] [ct1pt-tnode002:17792] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x145a0760f5f0]
+[ct1pt-tnode002:17792] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14c56e7d2bdb]
+[ct1pt-tnode002:17772] [ 2] /lib64/libc.so.6(+0x7a70e)[0x1536e0ab970e]
+[ct1pt-tnode002:17780] [ 3] /lib64/libc.so.6(fread+0x8f)[0x1536e0aae10f]
+[ct1pt-tnode002:17780] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17780] [ 5] /lib64/libc.so.6(+0x7a70e)[0x150f6b47170e]
+[ct1pt-tnode002:17786] [ 3] /lib64/libc.so.6(fread+0x8f)[0x150f6b46610f]
+[ct1pt-tnode002:17786] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17786] [ 5] /lib64/libc.so.6(+0x8fbdb)[0x14c3e2435bdb]
+[ct1pt-tnode002:17798] [ 2] ==== backtrace (tid:  17789) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+/lib64/libc.so.6(+0x8fbdb)[0x145a072c1bdb]
+[ct1pt-tnode002:17792] [ 2] [ct1pt-tnode002:17789] *** Process received signal ***
+[ct1pt-tnode002:17789] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17789] Signal code:  (-6)
+[ct1pt-tnode002:17789] Failing at address: 0x99cf040000457d
+/lib64/libc.so.6(+0x7a70e)[0x14c3e242070e]
+[ct1pt-tnode002:17798] [ 3] /lib64/libc.so.6(+0x7a70e)[0x145a072ac70e]
+[ct1pt-tnode002:17792] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14c3e241510f]
+[ct1pt-tnode002:17798] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17798] [ 5] /lib64/libc.so.6(+0x7a70e)[0x14c56e7bd70e]
+[ct1pt-tnode002:17772] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14c56e7b210f]
+[ct1pt-tnode002:17772] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17772] [ 5] ==== backtrace (tid:  17774) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x1536e0a61505]
+[ct1pt-tnode002:17780] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17780] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x150f6b419505]
+[ct1pt-tnode002:17786] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17786] *** End of error message ***
+[ct1pt-tnode002:17789] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x149456dc95f0]
+[ct1pt-tnode002:17789] [ 1] /lib64/libc.so.6(fread+0x8f)[0x145a072a110f]
+[ct1pt-tnode002:17792] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17792] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x145a07254505]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x14c3e23c8505]
+[ct1pt-tnode002:17798] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17798] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x14c56e765505]
+[ct1pt-tnode002:17772] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17772] *** End of error message ***
+[ct1pt-tnode002:17774] *** Process received signal ***
+[ct1pt-tnode002:17774] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17774] Signal code:  (-6)
+[ct1pt-tnode002:17774] Failing at address: 0x99cf040000456e
+==== backtrace (tid:  17775) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040167a main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:17792] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17792] *** End of error message ***
+[ct1pt-tnode002:17775] *** Process received signal ***
+[ct1pt-tnode002:17775] Signal: Segmentation fault (11)
+[ct1pt-tnode002:17775] Signal code:  (-6)
+[ct1pt-tnode002:17775] Failing at address: 0x99cf040000456f
+[ct1pt-tnode002:17774] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14d11157f5f0]
+[ct1pt-tnode002:17774] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x149456a7bbdb]
+[ct1pt-tnode002:17789] [ 2] [ct1pt-tnode002:17775] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14592d0cd5f0]
+/lib64/libc.so.6(+0x7a70e)[0x149456a6670e]
+[ct1pt-tnode002:17789] [ 3] [ct1pt-tnode002:17775] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14d111231bdb]
+[ct1pt-tnode002:17774] [ 2] /lib64/libc.so.6(+0x8fbdb)[0x14592cd7fbdb]
+[ct1pt-tnode002:17775] [ 2] /lib64/libc.so.6(fread+0x8f)[0x149456a5b10f]
+[ct1pt-tnode002:17789] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17789] [ 5] /lib64/libc.so.6(+0x7a70e)[0x14d11121c70e]
+[ct1pt-tnode002:17774] [ 3] /lib64/libc.so.6(__libc_start_main+0xf5)[0x149456a0e505]
+[ct1pt-tnode002:17789] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17789] *** End of error message ***
+/lib64/libc.so.6(+0x7a70e)[0x14592cd6a70e]
+[ct1pt-tnode002:17775] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14d11121110f]
+[ct1pt-tnode002:17774] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17774] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14d1111c4505]
+[ct1pt-tnode002:17774] [ 6] /lib64/libc.so.6(fread+0x8f)[0x14592cd5f10f]
+[ct1pt-tnode002:17775] [ 4] ./mpi_blur_scal.x[0x40167a]
+[ct1pt-tnode002:17775] [ 5] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17774] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x14592cd12505]
+[ct1pt-tnode002:17775] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:17775] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node ct1pt-tnode002 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+
+18,11,6.01912,4.83398,3.01775
+19,11,8.67696,4.82626,3.56398
+20,11,6.15653,4.13457,3.72666
+21,11,10.2239,3.70605,3.90367
+22,11,2.32201,8.19499,3.84679
+23,11,10.483,6.29759,4.32371
+24,11,[ct1pt-tnode005:5455 :0:5455] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:20230:0:20230] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode005:5440 :0:5440] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:20231:0:20231] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode005:5443 :0:5443] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:20239:0:20239] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode005:5442 :0:5442] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:20257:0:20257] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:20242:0:20242] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode005:5452 :0:5452] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:20236:0:20236] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode005:5444 :0:5444] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode005:5439 :0:5439] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:20234:0:20234] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode005:5447 :0:5447] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode005:5449 :0:5449] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:20254:0:20254] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode005:5441 :0:5441] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:20229:0:20229] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:20245:0:20245] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:20232:0:20232] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:20249:0:20249] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ct1pt-tnode002:20251:0:20251] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   5455) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x000000000040147e main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode005:05455] *** Process received signal ***
+[ct1pt-tnode005:05455] Signal: Segmentation fault (11)
+[ct1pt-tnode005:05455] Signal code:  (-6)
+[ct1pt-tnode005:05455] Failing at address: 0x99cf040000154f
+[ct1pt-tnode005:05455] [ 0] ==== backtrace (tid:   5440) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode005:05440] *** Process received signal ***
+/lib64/libpthread.so.0(+0xf5f0)[0x14cf326a65f0]
+[ct1pt-tnode005:05455] [ 1] [ct1pt-tnode005:05440] Signal: Segmentation fault (11)
+[ct1pt-tnode005:05440] Signal code:  (-6)
+[ct1pt-tnode005:05440] Failing at address: 0x99cf0400001540
+[ct1pt-tnode005:05440] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x15406f0605f0]
+[ct1pt-tnode005:05440] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14cf32358bdb]
+[ct1pt-tnode005:05455] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14cf3234370e]
+[ct1pt-tnode005:05455] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14cf3233810f]
+[ct1pt-tnode005:05455] [ 4] ./mpi_blur_scal.x[0x40147e]
+[ct1pt-tnode005:05455] [ 5] /lib64/libc.so.6(+0x8fbdb)[0x15406ed12bdb]
+[ct1pt-tnode005:05440] [ 2] /lib64/libc.so.6(+0x7a70e)[0x15406ecfd70e]
+[ct1pt-tnode005:05440] [ 3] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14cf322eb505]
+[ct1pt-tnode005:05455] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode005:05455] *** End of error message ***
+/lib64/libc.so.6(fread+0x8f)[0x15406ecf210f]
+[ct1pt-tnode005:05440] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode005:05440] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x15406eca5505]
+[ct1pt-tnode005:05440] ==== backtrace (tid:  20230) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode005:05440] *** End of error message ***
+[ct1pt-tnode002:20230] *** Process received signal ***
+[ct1pt-tnode002:20230] Signal: Segmentation fault (11)
+[ct1pt-tnode002:20230] Signal code:  (-6)
+[ct1pt-tnode002:20230] Failing at address: 0x99cf0400004f06
+[ct1pt-tnode002:20230] [ 0] ==== backtrace (tid:  20231) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+/lib64/libpthread.so.0(+0xf5f0)[0x14a8873805f0]
+[ct1pt-tnode002:20230] [ 1]  4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+/lib64/libc.so.6(+0x8fbdb)[0x14a887032bdb]
+[ct1pt-tnode002:20230] [ 2] [ct1pt-tnode002:20231] *** Process received signal ***
+[ct1pt-tnode002:20231] Signal: Segmentation fault (11)
+[ct1pt-tnode002:20231] Signal code:  (-6)
+[ct1pt-tnode002:20231] Failing at address: 0x99cf0400004f07
+/lib64/libc.so.6(+0x7a70e)[0x14a88701d70e]
+[ct1pt-tnode002:20230] [ 3] [ct1pt-tnode002:20231] [ 0] /lib64/libc.so.6(fread+0x8f)[0x14a88701210f]
+[ct1pt-tnode002:20230] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:20230] [ 5] /lib64/libpthread.so.0(+0xf5f0)[0x1498e77025f0]
+[ct1pt-tnode002:20231] [ 1] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14a886fc5505]
+[ct1pt-tnode002:20230] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:20230] *** End of error message ***
+/lib64/libc.so.6(+0x8fbdb)[0x1498e73b4bdb]
+[ct1pt-tnode002:20231] [ 2] /lib64/libc.so.6(+0x7a70e)[0x1498e739f70e]
+[ct1pt-tnode002:20231] [ 3] /lib64/libc.so.6(fread+0x8f)[0x1498e739410f]
+[ct1pt-tnode002:20231] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:20231] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x1498e7347505]
+[ct1pt-tnode002:20231] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:20231] *** End of error message ***
+==== backtrace (tid:   5443) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode005:05443] *** Process received signal ***
+[ct1pt-tnode005:05443] Signal: Segmentation fault (11)
+[ct1pt-tnode005:05443] Signal code:  (-6)
+[ct1pt-tnode005:05443] Failing at address: 0x99cf0400001543
+[ct1pt-tnode005:05443] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x154ba9c075f0]
+[ct1pt-tnode005:05443] [ 1] ==== backtrace (tid:  20239) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:20239] *** Process received signal ***
+[ct1pt-tnode002:20239] Signal: Segmentation fault (11)
+[ct1pt-tnode002:20239] Signal code:  (-6)
+[ct1pt-tnode002:20239] Failing at address: 0x99cf0400004f0f
+/lib64/libc.so.6(+0x8fbdb)[0x154ba98b9bdb]
+[ct1pt-tnode005:05443] [ 2] [ct1pt-tnode002:20239] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x151c888d55f0]
+[ct1pt-tnode002:20239] [ 1] /lib64/libc.so.6(+0x7a70e)[0x154ba98a470e]
+[ct1pt-tnode005:05443] [ 3] /lib64/libc.so.6(fread+0x8f)[0x154ba989910f]
+[ct1pt-tnode005:05443] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode005:05443] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x154ba984c505]
+[ct1pt-tnode005:05443] /lib64/libc.so.6(+0x8fbdb)[0x151c88587bdb]
+[ct1pt-tnode002:20239] [ 2] /lib64/libc.so.6(+0x7a70e)[0x151c8857270e]
+[ct1pt-tnode002:20239] [ 3] ==== backtrace (tid:   5442) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+/lib64/libc.so.6(fread+0x8f)[0x151c8856710f]
+[ct1pt-tnode002:20239] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:20239] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x151c8851a505]
+[ct1pt-tnode002:20239] [ 6] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode005:05443] *** End of error message ***
+==== backtrace (tid:  20257) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:20239] *** End of error message ***
+[ct1pt-tnode005:05442] *** Process received signal ***
+[ct1pt-tnode005:05442] Signal: Segmentation fault (11)
+[ct1pt-tnode005:05442] Signal code:  (-6)
+[ct1pt-tnode005:05442] Failing at address: 0x99cf0400001542
+[ct1pt-tnode005:05442] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x151a0cf955f0]
+[ct1pt-tnode005:05442] [ 1] [ct1pt-tnode002:20257] *** Process received signal ***
+[ct1pt-tnode002:20257] Signal: Segmentation fault (11)
+[ct1pt-tnode002:20257] Signal code:  (-6)
+[ct1pt-tnode002:20257] Failing at address: 0x99cf0400004f21
+/lib64/libc.so.6(+0x8fbdb)[0x151a0cc47bdb]
+[ct1pt-tnode005:05442] [ 2] [ct1pt-tnode002:20257] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14ef09a465f0]
+[ct1pt-tnode002:20257] [ 1] /lib64/libc.so.6(+0x7a70e)[0x151a0cc3270e]
+[ct1pt-tnode005:05442] [ 3] /lib64/libc.so.6(+0x8fbdb)[0x14ef096f8bdb]
+[ct1pt-tnode002:20257] [ 2] /lib64/libc.so.6(fread+0x8f)[0x151a0cc2710f]
+[ct1pt-tnode005:05442] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode005:05442] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x151a0cbda505]
+[ct1pt-tnode005:05442] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode005:05442] *** End of error message ***
+/lib64/libc.so.6(+0x7a70e)[0x14ef096e370e]
+[ct1pt-tnode002:20257] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14ef096d810f]
+[ct1pt-tnode002:20257] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:20257] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14ef0968b505]
+[ct1pt-tnode002:20257] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:20257] *** End of error message ***
+==== backtrace (tid:  20242) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:20242] *** Process received signal ***
+[ct1pt-tnode002:20242] Signal: Segmentation fault (11)
+[ct1pt-tnode002:20242] Signal code:  (-6)
+[ct1pt-tnode002:20242] Failing at address: 0x99cf0400004f12
+[ct1pt-tnode002:20242] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14fbd2a055f0]
+[ct1pt-tnode002:20242] [ 1] ==== backtrace (tid:   5452) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+/lib64/libc.so.6(+0x8fbdb)[0x14fbd26b7bdb]
+[ct1pt-tnode002:20242] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14fbd26a270e]
+[ct1pt-tnode002:20242] [ 3] [ct1pt-tnode005:05452] *** Process received signal ***
+[ct1pt-tnode005:05452] Signal: Segmentation fault (11)
+[ct1pt-tnode005:05452] Signal code:  (-6)
+[ct1pt-tnode005:05452] Failing at address: 0x99cf040000154c
+[ct1pt-tnode005:05452] [ 0] /lib64/libc.so.6(fread+0x8f)[0x14fbd269710f]
+[ct1pt-tnode002:20242] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:20242] [ 5] /lib64/libpthread.so.0(+0xf5f0)[0x14f1547125f0]
+[ct1pt-tnode005:05452] [ 1] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14fbd264a505]
+[ct1pt-tnode002:20242] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:20242] *** End of error message ***
+/lib64/libc.so.6(+0x8fbdb)[0x14f1543c4bdb]
+[ct1pt-tnode005:05452] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14f1543af70e]
+[ct1pt-tnode005:05452] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14f1543a410f]
+[ct1pt-tnode005:05452] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode005:05452] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14f154357505]
+[ct1pt-tnode005:05452] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode005:05452] *** End of error message ***
+==== backtrace (tid:  20236) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:20236] *** Process received signal ***
+[ct1pt-tnode002:20236] Signal: Segmentation fault (11)
+[ct1pt-tnode002:20236] Signal code:  (-6)
+[ct1pt-tnode002:20236] Failing at address: 0x99cf0400004f0c
+[ct1pt-tnode002:20236] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x1504da9cc5f0]
+[ct1pt-tnode002:20236] [ 1] ==== backtrace (tid:   5444) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+/lib64/libc.so.6(+0x8fbdb)[0x1504da67ebdb]
+[ct1pt-tnode002:20236] [ 2] /lib64/libc.so.6(+0x7a70e)[0x1504da66970e]
+[ct1pt-tnode002:20236] [ 3] /lib64/libc.so.6(fread+0x8f)[0x1504da65e10f]
+[ct1pt-tnode002:20236] [ct1pt-tnode005:05444] *** Process received signal ***
+[ct1pt-tnode005:05444] Signal: Segmentation fault (11)
+[ct1pt-tnode005:05444] Signal code:  (-6)
+[ct1pt-tnode005:05444] Failing at address: 0x99cf0400001544
+[ct1pt-tnode005:05444] [ 0] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:20236] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x1504da611505]
+[ct1pt-tnode002:20236] /lib64/libpthread.so.0(+0xf5f0)[0x15114370a5f0]
+[ct1pt-tnode005:05444] [ 1] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:20236] *** End of error message ***
+/lib64/libc.so.6(+0x8fbdb)[0x1511433bcbdb]
+[ct1pt-tnode005:05444] [ 2] /lib64/libc.so.6(+0x7a70e)[0x1511433a770e]
+[ct1pt-tnode005:05444] [ 3] /lib64/libc.so.6(fread+0x8f)[0x15114339c10f]
+[ct1pt-tnode005:05444] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode005:05444] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x15114334f505]
+[ct1pt-tnode005:05444] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode005:05444] *** End of error message ***
+==== backtrace (tid:   5439) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode005:05439] *** Process received signal ***
+[ct1pt-tnode005:05439] Signal: Segmentation fault (11)
+[ct1pt-tnode005:05439] Signal code:  (-6)
+[ct1pt-tnode005:05439] Failing at address: 0x99cf040000153f
+[ct1pt-tnode005:05439] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14bf2a1a35f0]
+[ct1pt-tnode005:05439] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14bf29e55bdb]
+[ct1pt-tnode005:05439] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14bf29e4070e]
+[ct1pt-tnode005:05439] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14bf29e3510f]
+[ct1pt-tnode005:05439] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode005:05439] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14bf29de8505]
+[ct1pt-tnode005:05439] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode005:05439] *** End of error message ***
+==== backtrace (tid:  20234) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:20234] *** Process received signal ***
+[ct1pt-tnode002:20234] Signal: Segmentation fault (11)
+[ct1pt-tnode002:20234] Signal code:  (-6)
+[ct1pt-tnode002:20234] Failing at address: 0x99cf0400004f0a
+[ct1pt-tnode002:20234] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x1549bacb75f0]
+[ct1pt-tnode002:20234] [ 1] ==== backtrace (tid:   5447) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode005:05447] *** Process received signal ***
+/lib64/libc.so.6(+0x8fbdb)[0x1549ba969bdb]
+[ct1pt-tnode002:20234] [ 2] /lib64/libc.so.6(+0x7a70e)[0x1549ba95470e]
+[ct1pt-tnode002:20234] [ 3] [ct1pt-tnode005:05447] Signal: Segmentation fault (11)
+[ct1pt-tnode005:05447] Signal code:  (-6)
+[ct1pt-tnode005:05447] Failing at address: 0x99cf0400001547
+/lib64/libc.so.6(fread+0x8f)[0x1549ba94910f]
+[ct1pt-tnode002:20234] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:20234] [ 5] [ct1pt-tnode005:05447] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14a3076a25f0]
+[ct1pt-tnode005:05447] [ 1] /lib64/libc.so.6(__libc_start_main+0xf5)[0x1549ba8fc505]
+[ct1pt-tnode002:20234] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:20234] *** End of error message ***
+/lib64/libc.so.6(+0x8fbdb)[0x14a307354bdb]
+[ct1pt-tnode005:05447] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14a30733f70e]
+[ct1pt-tnode005:05447] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14a30733410f]
+[ct1pt-tnode005:05447] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode005:05447] [ 5] ==== backtrace (tid:   5449) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x14a3072e7505]
+[ct1pt-tnode005:05447] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode005:05447] *** End of error message ***
+[ct1pt-tnode005:05449] *** Process received signal ***
+[ct1pt-tnode005:05449] Signal: Segmentation fault (11)
+[ct1pt-tnode005:05449] Signal code:  (-6)
+[ct1pt-tnode005:05449] Failing at address: 0x99cf0400001549
+[ct1pt-tnode005:05449] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x154b292275f0]
+[ct1pt-tnode005:05449] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x154b28ed9bdb]
+[ct1pt-tnode005:05449] [ 2] /lib64/libc.so.6(+0x7a70e)[0x154b28ec470e]
+[ct1pt-tnode005:05449] [ 3] /lib64/libc.so.6(fread+0x8f)[0x154b28eb910f]
+[ct1pt-tnode005:05449] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode005:05449] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x154b28e6c505]
+[ct1pt-tnode005:05449] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode005:05449] *** End of error message ***
+==== backtrace (tid:   5441) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode005:05441] *** Process received signal ***
+[ct1pt-tnode005:05441] Signal: Segmentation fault (11)
+[ct1pt-tnode005:05441] Signal code:  (-6)
+[ct1pt-tnode005:05441] Failing at address: 0x99cf0400001541
+==== backtrace (tid:  20254) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode005:05441] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14c8ba83f5f0]
+[ct1pt-tnode005:05441] [ 1] [ct1pt-tnode002:20254] *** Process received signal ***
+[ct1pt-tnode002:20254] Signal: Segmentation fault (11)
+[ct1pt-tnode002:20254] Signal code:  (-6)
+[ct1pt-tnode002:20254] Failing at address: 0x99cf0400004f1e
+/lib64/libc.so.6(+0x8fbdb)[0x14c8ba4f1bdb]
+[ct1pt-tnode005:05441] [ 2] [ct1pt-tnode002:20254] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x1554e18d45f0]
+[ct1pt-tnode002:20254] [ 1] /lib64/libc.so.6(+0x7a70e)[0x14c8ba4dc70e]
+[ct1pt-tnode005:05441] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14c8ba4d110f]
+[ct1pt-tnode005:05441] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode005:05441] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14c8ba484505]
+[ct1pt-tnode005:05441] /lib64/libc.so.6(+0x8fbdb)[0x1554e1586bdb]
+[ct1pt-tnode002:20254] [ 2] /lib64/libc.so.6(+0x7a70e)[0x1554e157170e]
+[ct1pt-tnode002:20254] [ 3] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode005:05441] *** End of error message ***
+/lib64/libc.so.6(fread+0x8f)[0x1554e156610f]
+[ct1pt-tnode002:20254] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:20254] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x1554e1519505]
+[ct1pt-tnode002:20254] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:20254] *** End of error message ***
+==== backtrace (tid:  20245) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+==== backtrace (tid:  20229) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:20245] *** Process received signal ***
+[ct1pt-tnode002:20245] Signal: Segmentation fault (11)
+[ct1pt-tnode002:20245] Signal code:  (-6)
+[ct1pt-tnode002:20245] Failing at address: 0x99cf0400004f15
+[ct1pt-tnode002:20229] *** Process received signal ***
+[ct1pt-tnode002:20229] Signal: Segmentation fault (11)
+[ct1pt-tnode002:20229] Signal code:  (-6)
+[ct1pt-tnode002:20229] Failing at address: 0x99cf0400004f05
+[ct1pt-tnode002:20245] [ 0] [ct1pt-tnode002:20229] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14e556cd55f0]
+[ct1pt-tnode002:20245] [ 1] /lib64/libpthread.so.0(+0xf5f0)[0x1496f03ab5f0]
+[ct1pt-tnode002:20229] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14e556987bdb]
+[ct1pt-tnode002:20245] [ 2] /lib64/libc.so.6(+0x8fbdb)[0x1496f005dbdb]
+[ct1pt-tnode002:20229] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14e55697270e]
+[ct1pt-tnode002:20245] [ 3] /lib64/libc.so.6(+0x7a70e)[0x1496f004870e]
+[ct1pt-tnode002:20229] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14e55696710f]
+[ct1pt-tnode002:20245] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:20245] [ 5] /lib64/libc.so.6(fread+0x8f)[0x1496f003d10f]
+[ct1pt-tnode002:20229] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:20229] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14e55691a505]
+[ct1pt-tnode002:20245] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:20245] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x1496efff0505]
+[ct1pt-tnode002:20229] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:20229] *** End of error message ***
+==== backtrace (tid:  20232) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:20232] *** Process received signal ***
+[ct1pt-tnode002:20232] Signal: Segmentation fault (11)
+[ct1pt-tnode002:20232] Signal code:  (-6)
+[ct1pt-tnode002:20232] Failing at address: 0x99cf0400004f08
+[ct1pt-tnode002:20232] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14f4881cd5f0]
+[ct1pt-tnode002:20232] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14f487e7fbdb]
+[ct1pt-tnode002:20232] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14f487e6a70e]
+[ct1pt-tnode002:20232] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14f487e5f10f]
+[ct1pt-tnode002:20232] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:20232] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14f487e12505]
+[ct1pt-tnode002:20232] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:20232] *** End of error message ***
+==== backtrace (tid:  20249) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:20249] *** Process received signal ***
+[ct1pt-tnode002:20249] Signal: Segmentation fault (11)
+[ct1pt-tnode002:20249] Signal code:  (-6)
+[ct1pt-tnode002:20249] Failing at address: 0x99cf0400004f19
+[ct1pt-tnode002:20249] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14f319f045f0]
+[ct1pt-tnode002:20249] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x14f319bb6bdb]
+[ct1pt-tnode002:20249] [ 2] /lib64/libc.so.6(+0x7a70e)[0x14f319ba170e]
+[ct1pt-tnode002:20249] [ 3] /lib64/libc.so.6(fread+0x8f)[0x14f319b9610f]
+[ct1pt-tnode002:20249] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:20249] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14f319b49505]
+[ct1pt-tnode002:20249] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:20249] *** End of error message ***
+==== backtrace (tid:  20251) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000008fbdb __GI___mempcpy()  :0
+ 2 0x000000000007a70e _IO_file_xsgetn()  :0
+ 3 0x000000000006f10f __GI__IO_fread()  :0
+ 4 0x0000000000401c30 main()  ???:0
+ 5 0x0000000000022505 __libc_start_main()  ???:0
+ 6 0x0000000000400cf9 _start()  ???:0
+=================================
+[ct1pt-tnode002:20251] *** Process received signal ***
+[ct1pt-tnode002:20251] Signal: Segmentation fault (11)
+[ct1pt-tnode002:20251] Signal code:  (-6)
+[ct1pt-tnode002:20251] Failing at address: 0x99cf0400004f1b
+[ct1pt-tnode002:20251] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x15520764b5f0]
+[ct1pt-tnode002:20251] [ 1] /lib64/libc.so.6(+0x8fbdb)[0x1552072fdbdb]
+[ct1pt-tnode002:20251] [ 2] /lib64/libc.so.6(+0x7a70e)[0x1552072e870e]
+[ct1pt-tnode002:20251] [ 3] /lib64/libc.so.6(fread+0x8f)[0x1552072dd10f]
+[ct1pt-tnode002:20251] [ 4] ./mpi_blur_scal.x[0x401c30]
+[ct1pt-tnode002:20251] [ 5] /lib64/libc.so.6(__libc_start_main+0xf5)[0x155207290505]
+[ct1pt-tnode002:20251] [ 6] ./mpi_blur_scal.x[0x400cf9]
+[ct1pt-tnode002:20251] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 14 with PID 5439 on node ct1pt-tnode005 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+,2.56754,9.20659
+1,101,241.942,241.821,241.762
+2,101,242.201,242.263,242.215
+3,101,241.86,243.04,241.885
+4,101,241.982,243.244,243.014
+5,101,241.989,243.144,243.195
+6,101,242.103,243.398,243.324
+7,101,242.368,243.395,243.484
+8,101,242.137,242.056,244.133
+9,101,242.089,242.068,243.618
+10,101,242.449,243.693,243.7
+11,101,242.198,243.242,243.795
+12,101,242.537,242.253,242.237
+13,101,242.527,248.057,257.268
+14,101,266.828,265.664,265.514
+15,101,266.52,266.566,268.537
+16,101,265.058,264.66,242.541
+17,101,243.429,243.23,244.073
+18,101,248.122,242.741,244.974
+19,101,248.832,244.339,242.898
+20,101,270.995,264.249,268.502
+21,101,291.211,294.13,290.125
+22,101,319.06,313.082,321.992
+23,101,333.127,342.729,341.342
+24,101,360.856,370.015,355.55
+#P,kernel_dim,iter1,iter2,iter3
+1,11,2.70836,2.83271,2.70359
+2,11,2.75175,2.75493,2.75457
+3,11,2.79105,2.78693,2.78612
+4,11,2.82196,2.82697,2.8265
+5,11,2.91286,2.91258,2.8563
+6,11,2.95349,2.89242,2.92768
+7,11,3.02421,2.94916,2.99376
+8,11,2.96935,2.97406,3.12455
+9,11,3.02406,3.02046,3.02157
+10,11,3.03806,3.07185,3.0564
+11,11,3.07879,3.08221,3.07743
+12,11,3.1096,3.13965,3.17825
+13,11,3.12943,3.28645,3.27935
+14,11,3.14574,3.32812,3.17389
+15,11,3.21822,3.42147,3.61644
+16,11,3.45914,3.23973,3.71228
+17,11,3.62102,3.25023,3.59026
+18,11,4.72138,3.47689,3.94936
+19,11,5.62627,4.10017,4.08865
+20,11,3.88941,3.85876,4.10263
+21,11,5.43857,4.21931,6.07442
+22,11,7.45814,5.18655,4.59955
+23,11,8.02506,5.36865,4.29782
+24,11,7.45573,3.61658,4.89428
+1,101,242.187,241.576,241.569
+2,101,242.044,242.038,242.034
+3,101,241.798,242.043,241.934
+4,101,241.979,242.155,242.176
+5,101,241.989,242.25,242.018
+6,101,242.06,242.125,242.032
+7,101,242.135,242.286,242.143
+8,101,242.116,242.198,242.416
+9,101,242.371,242.299,242.345
+10,101,242.398,242.499,242.548
+11,101,242.64,242.424,242.31
+12,101,242.681,242.408,242.293
+13,101,242.521,242.405,242.401
+14,101,242.652,242.54,242.563
+15,101,242.969,242.683,242.58
+16,101,242.414,242.594,242.655
+17,101,247.384,242.748,242.536
+18,101,243.145,244.14,243.918
+19,101,244.015,243.812,243.815
+20,101,244.171,244.187,243.726
+21,101,245.032,244.065,243.832
+22,101,246.685,244.022,243.888
+23,101,244.289,242.843,242.611
+24,101,249.028,244.513,243.658
+#P,kernel_dim,iter1,iter2,iter3
+1,11,11.5383,10.979,14.5593
+2,11,10.0082,11.1323,10.9877
+3,11,12.0345,9.72889,9.21863
+4,11,9.38794,14.9448,9.80569
+5,11,9.42171,10.7039,9.92917
+6,11,11.9842,18.468,16.5699
+7,11,4.2658,15.6269,19.44
+8,11,3.01347,17.4505,10.7645
+9,11,19.2545,19.7634,9.67371
+10,11,9.44141,17.763,27.4456
+11,11,9.06389,0.390586,0.291305
+12,11,10.6568,15.6744,9.48606
+13,11,9.47448,17.2773,10.6996
+14,11,10.1988,16.1682,13.9927
+15,11,25.1145,12.4002,10.2259
+16,11,10.0521,11.6633,15.064
+17,11,10.7206,16.3907,16.2659
+18,11,3.28996,3.34493,3.30714
+19,11,3.94598,3.70991,3.35154
+20,11,4.36703,5.48683,3.37491
+21,11,3.4208,4.17587,3.40017
+22,11,3.99267,3.44977,3.76519
+23,11,3.40569,4.01467,4.17411
+24,11,3.5071,3.71812,4.02342
+1,101,241.621,241.655,241.794
+2,101,242.263,242.34,242.591
+3,101,241.922,242.318,242.454
+4,101,241.982,243.237,243.162
+5,101,242.052,243.449,243.194
+6,101,242.158,243.427,243.429
+7,101,242.262,243.256,243.429
+8,101,242.282,243.475,243.303
+9,101,242.089,243.308,81.9975
+10,101,242.601,243.711,244.85
+11,101,242.43,242.285,243.693
+12,101,242.26,243.972,82.0716
+13,101,244.043,243.71,243.816
+14,101,242.757,86.6378,87.9507
+15,101,242.644,242.414,245.043
+16,101,244.672,242.619,244.187
+17,101,242.673,244.223,242.558
+18,101,243.015,244.043,244.567
+19,101,242.532,89.3809,90.7956
+20,101,242.557,244.703,244.435
+21,101,243.259,92.4936,92.4617
+22,101,242.749,242.903,245.322
+23,101,95.1972,95.4775,95.3596
+24,101,244.345,245.592,243.765
+/var/spool/pbs/aux/15070.192.168.10.5
