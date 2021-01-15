@@ -394,8 +394,42 @@ int main(int argc,char* argv[]) {
  
 	#pragma omp single // one thread that finished previous tasks earlier opens the file and writes the header
 	{	
-	free(m); // free ptr m
+	   free(m); // free ptr m
         free(k); // free ptr k
+
+
+	  // ++++++++++++START: producing the output name for the image (according to the assignment requests)
+	  int len_mystring=strlen(input_file)+ 20 + (int) (floor(log10(abs(d))) + 1) +(int) (floor(log10(abs(d))) + 1);
+	  char mystring[len_mystring];
+
+		   char kern_str[(int) (floor(log10(abs(d))) + 1) +1];
+		   char type_string[2];  // one more position for end of string
+		   sprintf(kern_str, "%d", d);
+		   sprintf(type_string, "%d", type_kernel );
+		   input_file[strlen(input_file)-4]='\0'; // wanna get rid of .pgm
+		   if (type_kernel==1) {
+		           snprintf(mystring, sizeof(mystring), "%s.b_%s_%sx%s_02.pgm", input_file, type_string, kern_str, kern_str);
+		           if (argc<=5){ // no output_file given in input
+		                   output_file=malloc( (len_mystring)*sizeof(char) );
+		                   strcpy(output_file, mystring);
+		           }
+		           printf("output default name for this specific image: %s", (mystring) );
+		   }
+		   else { // different kernels...ff not present
+		           snprintf(mystring, sizeof(mystring), "%s.b_%s_%sx%s.pgm", input_file, type_string, kern_str, kern_str);
+		           if (argc<=4){ // no output_file given in input
+		                   output_file=malloc( (len_mystring)*sizeof(char) );
+		                   strcpy(output_file, mystring);
+		           }
+		           printf("output default name for this specific image: %s", (mystring) );
+		   }
+	  //+++++++++++++END: producing the output name
+
+
+
+
+
+
 
 
 
