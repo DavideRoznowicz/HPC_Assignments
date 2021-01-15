@@ -1,11 +1,11 @@
 /*
-	File:     myblur.c 
+	File:     omp_blur.c 
 	Author:   Davide Roznowicz
 	Version:  OpenMP
-	Compilation (example):          // load gnu>4.9.9 to use proc_bind clause
+	Compiling (example):          // load gnu>4.9.9 to use proc_bind clause
 			 		module load gnu/9.3.0
-		         		export OMP_NUM_THREADS=24; gcc -std=gnu99 -fopenmp myblur.c -o myblur.x;
-					./myblur.x test_picture.pgm 31
+		         		export OMP_NUM_THREADS=24; gcc -std=gnu99 -fopenmp omp_blur.c -o omp_blur.x;
+					./omp_blur.x test_picture.pgm 31
 
 */
 
@@ -50,27 +50,14 @@
 		  (double)ts.tv_nsec * 1e-9)
 #endif
 
-#ifdef OUTPUT
-#define PRINTF(...) printf(__VA_ARGS__)
-#else
-#define PRINTF(...)
-#endif
-
-#define CPU_ID_ENTRY_IN_PROCSTAT 39
-#define HOSTNAME_MAX_LENGTH      200
 
 
 
-int read_proc__self_stat ( int, int * );
-int get_cpu_id           ( void       );
-
-
-
-
-
-
+// kind of kernels available
 enum tipi{mean,weight,gaussian};
 
+
+// acessory function to gaussian kernel
 int binomialCoeff(int n,int k) { 
   int res=1; 
   if(k>n-k) 
@@ -81,6 +68,7 @@ int binomialCoeff(int n,int k) {
   return res; 
 }
 
+// accessory function to gaussian kernel
 int* printPascal(int n) { 
   int* t=malloc(n*n*sizeof(int));
   n--;
@@ -91,7 +79,7 @@ int* printPascal(int n) {
 
 
 
-
+// print kernel matrix
 void print_kernel(double* matrix,int d) {
   for(int i=0;i<d;i++) {
     for(int j=0;j<d;j++)
@@ -99,17 +87,6 @@ void print_kernel(double* matrix,int d) {
     printf("\n");
   }
 }
-
-
-// print sum of kernel matrix entries
-void print_sum(double* matrix,int d) {
-  double acck=0;
-  for(int i=0;i<d;i++)
-    for(int j=0;j<d;j++)
-      acck+=matrix[i*d+j];
-  printf("%f\n",acck);
-}
-
 
 
 
@@ -122,62 +99,99 @@ int main(int argc,char* argv[]) {
 
 
   // first parsing is made by master thread
+  float ff, w;                  // variables for weight kernel
+  int type_kernel=weight;
+  int d;			// kernel dimension
+  char* input_file;             // name of input file
+  char* output_file;            // name of output file
 
 
-  //sistemo gli input
+
+  //+++++++++++START: parsing different command-line args according to assignment
+  type_kernel=atoi(argv[1]);            // avg, weight, gaussian -  0,1,2
+  d=atoi(argv[2]);                      // dimension of kernel
+  if (type_kernel==1) {                 // only in weight case
+  	ff=atof(argv[3]);       	// ff only present for type_kernel==1
+  	input_file=malloc( (strlen(argv[4])+1) * sizeof(char) );
+  	input_file=argv[4];
+  	if (argc>5) {
+  		output_file=malloc( (strlen(argv[5])+1) * sizeof(char) );
+  		output_file=argv[5];
+  		printf("inp %s\n", (input_file) );
+  	}
+  }
+  else {  // argv[1]!=1
+  	input_file=malloc( (strlen(argv[3])+1) * sizeof(char) );
+  	input_file=argv[3];
+  	if (argc>4) {
+  		output_file=malloc( (strlen(argv[4])+1) * sizeof(char) );
+                output_file=argv[4];
+	}
+  }//++++++++++++END: parsing command-line args  
+  
+
+
+
+
+
+/*
+  // dealing with input args
   if(argc<2) {
-    printf("ERRORE ERRORE MANCA IL NOME DEL FILE\n");
+    printf("missing name of file\n");
     return -1;
   }
   int d=3;
   if(argc>2) {
     d=atoi(argv[2]);
     if( d%2==0) {
-      printf("NON VALIDO; DEVE ESSERE UN NUMERO DISPARI; UTILIZZO QUELLO DI DEF=3");
+      printf("not expected number: gotta be odd; using default=3");
       d=3;
     }
-    printf("DIM KERNEL D=%d\n",d);
+    printf("kernel dimension D=%d\n",d);
   }
   else {
-    printf("DIM KERNEL DEFAULT=3\n");
+    printf("default kernel dimension=3\n");
   }
-  
-  FILE* f;
+  */
+
+
+
+  FILE* f; // master thread opens file to start parsing
   char c;
   char type[2];
   int stop=0;
-  f=fopen(argv[1],"r");//parsing tipo immagine
-  fscanf(f,"%s\n",type);  //parsing magic number
-  printf("tipo: %s\n",type);
+  f=fopen(argv[1],"r");   // open file: "read mode"
+  fscanf(f,"%s\n",type);  // parsing magic number
+  printf("type: %s\n",type);
 
-  //parsing commenti
-  while(!stop) { //entro nel loop
-    fread(&c, sizeof(char),1, f); //leggo un carattere
-    fseek(f,-sizeof(char),SEEK_CUR); //torno indietro di uno
-    while(c=='#') { //se il carattere è # leggo tutto fino a \n,altrimenti esco
+  // +++++++++START PARSING COMMENTS
+  while(!stop) {
+    fread(&c, sizeof(char),1, f); // read a char
+    fseek(f,-sizeof(char),SEEK_CUR); // go back one char
+    while(c=='#') { // if char is  #, reading it all up to \n, otherwise exiting
       while(c!='\n') { 
 	fread(&c,sizeof(char),1,f);
       }
       fread(&c,sizeof(char),1,f);
-      fseek(f,-sizeof(char),SEEK_CUR); //torno indietro di uno
+      fseek(f,-sizeof(char),SEEK_CUR); // go back one char
     }
     stop=1;
   }
+  // +++++++++END PARSING COMMENTS
 
 
+  // parsing dimensions: nx, ny
+  int nx; // width of the image
+  int ny; // height of the image
+  fscanf(f,"%d %d\n",&nx,&ny); // parsing of dimensions
+  printf("nx %d ny %d\n",nx,ny); 
 
-  //parsing dimensioni: nx, ny
-  int nx;
-  int ny;
-  fscanf(f,"%d %d\n",&nx,&ny);
-  printf("nx %d ny %d\n",nx,ny);
 
-
-  //parsing livello massimo: maxval
+  //parsing maxval
   int maxval=0;
-  fscanf(f,"%d\n",&maxval);
-  printf("maxval max %d\n",maxval);
-  printf("SPESSORE BORDO ESTERNO %d\n",d/2);
+  fscanf(f,"%d\n",&maxval); // parsing maxval
+  printf("maxval %d\n",maxval);
+  printf("half-size %d\n",d/2);
   int offset=d/2;
   int nx_o=nx+d-1;
   int ny_o=ny+d-1;
@@ -187,15 +201,15 @@ int main(int argc,char* argv[]) {
 
  
   
-  //alloco matrice con spazio bordi e inizializzo a 0
+  // allocating matrix encircled by zeros 0 (considered an offset), but not initialized yet
 
-  // malloc because we are paying attention "first touch" policy
-  unsigned short int* m=malloc(nx_o*ny_o*sizeof(short int)); // initial matrix m wit offset (to be convoluted)
+  // malloc because we are paying attention to "first touch" policy
+  unsigned short int* m=malloc(nx_o*ny_o*sizeof(short int)); // initial matrix m with offset (to be convoluted)
   unsigned short int* m1=malloc(nx*ny*sizeof(short int)); // final matrix m1 (obtained after convolution)
   float* k=malloc(d*d*sizeof(float)); // kernel matrix ptr
   unsigned short int* tmp_array; // temporary array for speeding up reading
   float acc=0; // accumulator for single point blurring 
-  FILE* fc; // declaring shared variable fc 
+  FILE* fc; // declaring shared variable fc: it will be used for writing in the end
 
   float ff, w;  // variables for weight kernel
   float acck=0; // accumulator for kernel matrix
@@ -203,13 +217,18 @@ int main(int argc,char* argv[]) {
   float division_acck;
   int* pascal;
   int type_kernel=weight; // options: mean, gaussian, weight 
-  int tot_threads;
+  int tot_threads; // total number of spawned threads
 
+  //various useful tmp vars
+  int ktmp;
+  int mtmp;
+  int m1tmp;
+  int ptmp;
 
 
   struct timespec ts; // for time storage
   double tend;
-  double tstart = CPU_TIME; // start time for parallel region
+  double tstart = CPU_TIME; // starting time for parallel region
 
 
 #pragma omp parallel shared(acc) proc_bind(close) // if we are among cores, close allows us to reduce time to retrieve data from memory
@@ -217,39 +236,40 @@ int main(int argc,char* argv[]) {
 	
 
 
-//*************START   initialize zero matrix, enabling "first touch" for data in m
+//*************START   initialize zeros only on the "contour" of the matrix; enabling "first touch" for data in m
 
 
-	// need initialize first offset lines of zeros by first thread (master)
+	// need to initialize to zero the first offset lines by first thread (master)
 	#pragma omp master
 	{
 		for (int i=0; i<offset; i++){
+			mtmp=i*nx_o;
 			for (int j=0; j<nx_o; j++){
-	        		m[i*nx_o+j]=0;
+	        		m[mtmp+j]=0;
 	        	}
 		}
 	}
 
 	#pragma omp for schedule(static) nowait  // with static, equal-size chuncks are assigned to threads (n-th chunck to n-th thread)
         for (int i=offset;i<ny_o-offset;i++){ // i runs over rows
-
+		mtmp=i*nx_o;
                 for (int j=0; j<offset; j++){
-                        m[i*nx_o+j]=0;
+                        m[mtmp+j]=0;
                 }
 
                 for (int j=nx_o-offset; j<nx_o; j++){
-                        m[i*nx_o+j]=0;
+                        m[mtmp+j]=0;
                 }
         } 
 
-	if (omp_get_thread_num()==omp_get_num_threads()-1){ // only last thread should initialize the last zero(offset) lines to enforce first touch
+	if (omp_get_thread_num()==omp_get_num_threads()-1){ // need to initialize to zero the first offset lines by last thread
                 for (int i=ny_o-offset; i<ny_o; i++){
+			mtmp=i*nx_o;
                         for (int j=0; j<nx_o; j++){
-                                m[i*nx_o+j]=0;
+                                m[mtmp+j]=0;
                         }
                 }
         }
-
 
 
 
@@ -263,22 +283,21 @@ int main(int argc,char* argv[]) {
         unsigned short int tmp;
         #pragma omp for ordered schedule(static) private(tmp) nowait
         for(int i=offset;i<ny_o-offset;i++){ // i runs over rows
-        	#pragma omp ordered  // forcing ordering as fread requires oredered data reading from opened file f
+        	#pragma omp ordered  // forcing ordering as fread requires to be able to read data in order
         	{
 		fread(tmp_array, sizeof(short int), nx, f);
+		mtmp=i*nx_o;	
 		for(int j=offset;j<nx_o-offset;j++) { // j runs over columns
         		tmp=__bswap_16(tmp_array[j-offset]);
-        		m[i*nx_o+j]=tmp;
+        		m[mtmp+j]=tmp; // allocating to matrix m, enabling first touch policy
 		}
                 }
         }
         
 
 
-
-
-
 //*************END   initialize zero matrix, enabling "first touch" for data in m
+
 
 
 
@@ -292,7 +311,7 @@ int main(int argc,char* argv[]) {
 		{
 			division_size=1.0/size;
 		}
-		#pragma omp for schedule(dynamic) // we don't care about the order here because the kernel matrix is used by any thread
+		#pragma omp for schedule(dynamic)  // we don't care about the order here because the kernel matrix is used by any thread
 		for(int i=0;i<d;i++){
 			for(int j=0; j<d; j++){
 				k[i*d+j]=division_size;
@@ -307,7 +326,7 @@ int main(int argc,char* argv[]) {
 			ff=0.2; // ff default
 			w=(1-ff)/(size-1);
 		}
-		#pragma omp for schedule(dynamic) // we don't care about the order here because the kernel matrix is used by any thread
+		#pragma omp for schedule(dynamic)  // we don't care about the order here because the kernel matrix is used by any thread
 		for(int i=0;i<d;i++) // run over rows
 			for (int j=0;j<d; j++) // run over columns
 				k[i*d+j]=w;
@@ -327,12 +346,14 @@ int main(int argc,char* argv[]) {
 		#pragma omp for schedule(dynamic)
 		for (int i=0; i<=d;i++)
 			pascal[i]=binomialCoeff(d,i);
-		#pragma omp for reduction(+: acck) schedule(dynamic) // we don't care about the order here because the kernel matrix is used by any thread
-		for(int i=0;i<d;i++)
+		#pragma omp for reduction(+: acck) schedule(dynamic) 
+		// we don't care about the order here because the kernel matrix is used by any thread
+		for(int i=0;i<d;i++){
 			for(int j=0;j<d;j++) {
-				k[i*d+j]=pascal[i]*pascal[j];
+				k[i*d+j]=ptmp*pascal[j];
 				acck+=k[i*d+j];
 			}
+		}
 		#pragma omp single
 		{
 			division_acck=1.0/acck;
@@ -348,49 +369,58 @@ int main(int argc,char* argv[]) {
 
 
 
-	/*
-	#pragma omp single
-	{
-		print_kernel(k,d);
-	}	
-	*/
-	#pragma omp for reduction(+: acc) firstprivate(k, m)// avoiding data race on acc
+	// ++++++++++++++++START OF COMPUTATIONS for blurring
+
+	#pragma omp for reduction(+: acc) private(ktmp, mtmp, m1tmp) firstprivate(k, m)  // reduction in order to avoid data race on acc
 	for(int i=offset;i<ny_o-offset;i++) {
+		m1tmp=(i-offset)*nx-offset;
 		for(int j=offset;j<nx_o-offset;j++) {
 			acc=0;
 			for(int ii=-offset;ii<=offset;ii++) {
+				ktmp=(ii+offset)*d+offset;
+				mtmp=(i+ii)*nx_o+j;
 				for(int jj=-offset;jj<=offset;jj++) {
-					acc+=k[(ii+offset)*d+(jj+offset)]*m[(i+ii)*nx_o+(j+jj)];
+					acc+=k[ktmp+jj]*m[mtmp+jj];
 				}
 			}
-			m1[(i-offset)*nx+(j-offset)]=__bswap_16( (unsigned short int) acc );
+			m1[m1tmp+j]=__bswap_16( (unsigned short int) acc );
 			
 		}
 	}
 
+	// ++++++++++++++++END OF COMPUTATIONS for blurring
+	
 
-	#pragma omp single // one thread that finished earlier previous tasks opens the file and writes the header
+ 
+	#pragma omp single // one thread that finished previous tasks earlier opens the file and writes the header
 	{	
 	free(m); // free ptr m
         free(k); // free ptr k
 
-	fc=fopen("omp_after.pgm","w");
-	fprintf(fc,"P5\n%d %d\n%d\n", nx, ny,maxval);
-	fclose(fc);
-	fc=fopen("omp_after.pgm","ab"); // open file for output at the end of file ( P5, nx, ny, maxval added before) : a=append, b=binary mode
+
+
+	// ++++++++++START OF WRITING 
+
+	fc=fopen("omp_after.pgm","w");  // image name to write
+	fprintf(fc,"P5\n%d %d\n%d\n", nx, ny,maxval);  // writing magic number, dimensions and maxval
+	fclose(fc);  // closing file
+	fc=fopen("omp_after.pgm","ab"); // reopen file for output, but in binary mode: a=append, b=binary mode
 	}
 
 	#pragma omp master
 	{
 
-	fwrite(m1,sizeof(short int),nx*ny,fc);
-	fclose(fc);
+	fwrite(m1,sizeof(short int),nx*ny,fc); // writing the whole matrix in just one shot by master thread
+	fclose(fc);  
 
 	}
 
-} // end of parallel
+	// ++++++++++END OF WRITING	
 
-  tend = CPU_TIME; // end time for parallel region
+
+} // end of parallel region
+
+  tend = CPU_TIME; // end time for parallel region, for master thread
   printf("\ntime for %d threads : %g sec\n\n", tot_threads, tend-tstart);
   
 return 0;  
