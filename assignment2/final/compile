@@ -1,0 +1,35 @@
+#! /bin/bash
+
+# Davide Roaznowicz
+# Compiling both mpi and openmp
+
+
+
+
+module load gnu/9.3.0
+
+#export OMP_NUM_THREADS=10
+
+echo THIS IS OPENMP ...
+
+OPTIMIZATIONS=-O3
+
+# compiling for openmp 
+gcc $OPTIMIZATIONS -std=gnu99 -fopenmp blur.omp.c -o blur.omp -lm
+
+
+
+
+
+
+
+module load openmpi/4.0.3/gnu/9.3.0
+
+echo THIS IS MPI RUNNING ...
+
+OPTIMIZATIONS=-O1
+#compiling for mpi
+mpicc $OPTIMIZATIONS blur.mpi.c -o blur.mpi -lm
+
+
+
