@@ -1,11 +1,6 @@
-Some more infos that might come out useful:
+# Directory organization
 
-
-
-
-
-
-File organization in the folder: The files that were specifically requested (with a specific name required) are present with the right name.
+File organization in the folder: The files that were specifically requested in "Assignment2.pdf" and "Final details for Assignment 2.pdf" (with a specific name required) are present with the right name.
 Some additional files are present, together with some others that were requested but without any name indication:
 
 - create_image.c		file used to create a new image of specific size, proportionate to the number of cores/threads (used for weak scalability)
@@ -23,7 +18,7 @@ Some additional files are present, together with some others that were requested
 
 
 
-Example (bash script) for compiling and then running MPI/OpenMP:
+## Example (bash script) for compiling and then running MPI/OpenMP:
 
 
 procs=4				# number of cores
@@ -35,7 +30,7 @@ output_file="image_after.pgm"	# if output_file is specified, then the name for t
 				# otherwise the name is univocally determined according to the assignment instructions
 
 
-# Compiling/Running MPI:
+## Compiling/Running MPI:
 
 module load openmpi/4.0.3/gnu/9.3.0
 mpicc -O1 blur.mpi.c -o blur.mpi -lm
@@ -43,7 +38,7 @@ mpirun --mca btl ^openib -np ${procs} ./blur.mpi $kernel_type $kernel_size $ff $
 
 
 
-# Compiling/Running OpenMP:
+## Compiling/Running OpenMP:
 
 module load openmpi/4.0.3/gnu/9.3.0
 export OMP_NUM_THREADS=5
