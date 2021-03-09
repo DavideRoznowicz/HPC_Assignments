@@ -1,0 +1,244 @@
+
+ # walltime on processor 1 : 293.84770137 
+
+ # walltime on processor 2 : 304.22306459 
+
+ # walltime on processor 3 : 304.89472218 
+
+ # walltime on processor 4 : 304.89757975 
+
+ # walltime on processor 5 : 304.89750864 
+
+ # walltime on processor 6 : 304.88793523 
+
+ # walltime on processor 7 : 304.89768923 
+
+ # walltime on processor 8 : 304.89740462 
+
+ # walltime on processor 9 : 304.89471466 
+
+ # walltime on processor 10 : 304.89763674 
+
+ # walltime on processor 11 : 304.89767388 
+
+ # walltime on processor 12 : 304.89737297 
+
+ # walltime on processor 13 : 304.89778918 
+
+ # walltime on processor 14 : 304.89785542 
+
+ # walltime on processor 15 : 304.89787223 
+
+ # walltime on processor 16 : 304.89718974 
+
+ # walltime on processor 17 : 304.89749080 
+
+ # walltime on processor 18 : 304.88022908 
+
+ # walltime on processor 19 : 304.89748873 
+
+ # walltime on processor 20 : 304.89231341 
+
+ # walltime on processor 21 : 304.89764916 
+
+ # walltime on processor 22 : 304.89790344 
+
+ # walltime on processor 23 : 304.89767694 
+
+ # walltime on processor 24 : 304.89804038 
+
+ # walltime on processor 25 : 304.89759898 
+
+ # walltime on processor 26 : 304.89758978 
+
+ # walltime on processor 27 : 304.88526724 
+
+ # walltime on processor 28 : 304.89749473 
+
+ # walltime on processor 29 : 304.89784118 
+
+ # walltime on processor 30 : 304.89783748 
+
+ # walltime on processor 31 : 304.89800369 
+
+ # walltime on processor 32 : 304.89761060 
+
+ # walltime on processor 33 : 304.89814295 
+
+ # walltime on processor 34 : 304.89777785 
+
+ # walltime on processor 35 : 304.89810154 
+
+ # walltime on processor 36 : 304.89816233 
+
+ # walltime on processor 37 : 304.88547623 
+
+ # walltime on processor 38 : 304.89798202 
+
+
+ # walltime on processor 40 : 304.88544411 
+
+ # walltime on processor 41 : 304.89423763 
+ # walltime on processor 39 : 304.89801425 
+
+ # walltime on processor 42 : 304.89823532 
+
+ # walltime on processor 43 : 304.89788142 
+
+ # walltime on processor 44 : 304.88964116 
+
+ # walltime on processor 45 : 304.89803822 
+
+ # walltime on processor 46 : 304.89824846 
+
+ # walltime on processor 47 : 304.89831504 
+
+ # of trials = 480000000000 , estimate of pi is 3.141591460 
+
+ # walltime on master processor : 304.89798954 
+ ~14616.07 usr 23.66 system 5:06.18 total 4781% CPU 
+
+
+
+[ct1pg-gnode001:8136 :0:8136]       ud_ep.c:255  Fatal: UD endpoint 0x14e37c017110 to <no debug data>: unhandled timeout error
+==== backtrace (tid:   8136) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x0000000000046dde uct_ud_grh_get_dgid()  ???:0
+ 2 0x0000000000048a8e ucs_callbackq_put_id_noflag()  ???:0
+ 3 0x000000000002300a ucp_worker_progress()  ???:0
+ 4 0x0000000000005433 mca_pml_ucx_send()  ???:0
+ 5 0x000000000008ae38 PMPI_Ssend()  ???:0
+ 6 0x0000000000400d5d main()  ???:0
+ 7 0x0000000000022505 __libc_start_main()  ???:0
+ 8 0x0000000000400a59 _start()  ???:0
+=================================
+[ct1pg-gnode001:08136] *** Process received signal ***
+[ct1pg-gnode001:08136] Signal: Aborted (6)
+[ct1pg-gnode001:08136] Signal code:  (-6)
+[ct1pg-gnode001:08136] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x14e39b1cd5f0]
+[ct1pg-gnode001:08136] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x14e39ae26337]
+[ct1pg-gnode001:08136] [ 2] /lib64/libc.so.6(abort+0x148)[0x14e39ae27a28]
+[ct1pg-gnode001:08136] [ 3] /lib64/libucs.so.0(ucs_fatal_error_message+0x55)[0x14e38a1f27f5]
+[ct1pg-gnode001:08136] [ 4] /lib64/libucs.so.0(+0x4d995)[0x14e38a1f2995]
+[ct1pg-gnode001:08136] [ 5] /lib64/ucx/libuct_ib.so.0(+0x46dde)[0x14e389b62dde]
+[ct1pg-gnode001:08136] [ 6] /lib64/libucs.so.0(+0x48a8e)[0x14e38a1eda8e]
+[ct1pg-gnode001:08136] [ 7] /lib64/libucp.so.0(ucp_worker_progress+0x5a)[0x14e38a97400a]
+[ct1pg-gnode001:08136] [ 8] /opt/area/shared/programs/x86_64/openmpi/4.0.3/gnu/9.3.0/lib/openmpi/mca_pml_ucx.so(mca_pml_ucx_send+0x2e3)[0x14e38b1c2433]
+[ct1pg-gnode001:08136] [ 9] /opt/area/shared/programs/x86_64/openmpi/4.0.3/gnu/9.3.0/lib/libmpi.so.40(PMPI_Ssend+0x118)[0x14e39b464e38]
+[ct1pg-gnode001:08136] [10] ./mpi_pi.x[0x400d5d]
+[ct1pg-gnode001:08136] [11] /lib64/libc.so.6(__libc_start_main+0xf5)[0x14e39ae12505]
+[ct1pg-gnode001:08136] [12] ./mpi_pi.x[0x400a59]
+[ct1pg-gnode001:08136] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 41 with PID 0 on node ct1pg-gnode001 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+ ~303.28 usr 0.78 system 5:05.94 total 99% CPU 
+
+
+
+
+ # walltime on processor 1 : 294.73747932 
+
+ # walltime on processor 2 : 301.88591539 
+
+ # walltime on processor 3 : 301.88600894 
+
+ # walltime on processor 5 : 301.90326970 
+
+ # walltime on processor 4 : 301.90300783 
+
+ # walltime on processor 9 : 302.10875099 
+
+ # walltime on processor 10 : 302.10869077 
+
+ # walltime on processor 6 : 302.10857627 
+
+ # walltime on processor 7 : 302.10833457 
+
+ # walltime on processor 8 : 302.10858991 
+
+ # walltime on processor 11 : 304.31002886 
+
+ # walltime on processor 12 : 304.32716563 
+
+ # walltime on processor 13 : 304.32742468 
+
+ # walltime on processor 14 : 304.32760086 
+
+ # walltime on processor 15 : 305.18661342 
+
+ # walltime on processor 16 : 305.19777525 
+
+ # walltime on processor 17 : 305.18593728 
+
+ # walltime on processor 18 : 305.19837738 
+
+ # walltime on processor 19 : 305.19779283 
+
+ # walltime on processor 20 : 305.19835181 
+
+ # walltime on processor 21 : 305.19829060 
+
+ # walltime on processor 22 : 305.18585572 
+
+ # walltime on processor 23 : 305.19590890 
+
+ # walltime on processor 24 : 305.19815653 
+
+ # walltime on processor 25 : 305.19801302 
+
+ # walltime on processor 26 : 305.19841120 
+
+ # walltime on processor 27 : 305.18614874 
+
+ # walltime on processor 28 : 305.19838944 
+
+ # walltime on processor 29 : 305.19823517 
+
+ # walltime on processor 30 : 305.19787029 
+
+ # walltime on processor 31 : 305.19816158 
+
+ # walltime on processor 32 : 305.19834290 
+
+ # walltime on processor 33 : 305.19849174 
+
+ # walltime on processor 34 : 305.19837012 
+
+ # walltime on processor 35 : 305.19827495 
+
+ # walltime on processor 36 : 305.19818078 
+
+ # walltime on processor 37 : 305.19811484 
+
+ # walltime on processor 39 : 305.18986643 
+
+ # walltime on processor 38 : 305.19840209 
+
+ # walltime on processor 40 : 305.19821946 
+
+ # walltime on processor 41 : 307.06493410 
+
+ # walltime on processor 42 : 307.07717804 
+
+ # walltime on processor 43 : 307.07754227 
+
+ # walltime on processor 44 : 307.07736450 
+
+ # walltime on processor 45 : 307.06524582 
+
+ # of trials = 480000000000 , estimate of pi is 3.141591460 
+
+ # walltime on master processor : 307.07213620 
+
+ # walltime on processor 46 : 307.06493277 
+
+ # walltime on processor 47 : 307.06524755 
+ ~14615.51 usr 23.31 system 5:08.32 total 4747% CPU 
+
+
+

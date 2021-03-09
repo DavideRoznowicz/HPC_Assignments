@@ -1,0 +1,282 @@
+
+ # walltime on processor 1 : 0.78967055 
+
+ # walltime on processor 2 : 0.78951754 
+
+ # walltime on processor 3 : 0.78948492 
+
+ # walltime on processor 4 : 0.78965219 
+
+ # walltime on processor 5 : 0.78959018 
+
+ # walltime on processor 6 : 0.78936058 
+
+ # walltime on processor 7 : 0.78962575 
+
+ # walltime on processor 8 : 0.78938115 
+
+ # walltime on processor 9 : 0.78952785 
+
+ # walltime on processor 10 : 0.78939714 
+
+ # walltime on processor 11 : 0.78956568 
+
+ # walltime on processor 12 : 0.78941258 
+
+ # walltime on processor 13 : 0.78966699 
+
+ # walltime on processor 14 : 0.78947793 
+
+ # walltime on processor 15 : 0.78933119 
+
+ # walltime on processor 16 : 0.78950402 
+
+ # walltime on processor 17 : 0.78946774 
+
+ # walltime on processor 18 : 0.78975004 
+
+ # walltime on processor 19 : 0.78954099 
+
+ # walltime on processor 20 : 0.77728095 
+
+ # walltime on processor 21 : 0.79054867 
+
+ # walltime on processor 22 : 0.79017621 
+
+ # walltime on processor 23 : 0.79037551 
+
+ # walltime on processor 24 : 0.79057504 
+
+ # walltime on processor 25 : 0.79025814 
+
+ # walltime on processor 26 : 0.79053971 
+
+ # walltime on processor 27 : 0.77804176 
+
+ # walltime on processor 28 : 0.77837412 
+
+ # walltime on processor 29 : 0.79644990 
+
+ # walltime on processor 30 : 0.80877546 
+
+ # walltime on processor 31 : 0.79580603 
+
+ # walltime on processor 32 : 0.79685820 
+
+ # walltime on processor 33 : 0.80862657 
+
+ # walltime on processor 34 : 0.80875265 
+
+ # walltime on processor 35 : 0.79651092 
+
+ # walltime on processor 36 : 0.80870233 
+
+ # walltime on processor 37 : 0.80880900 
+
+ # walltime on processor 38 : 0.80490925 
+
+ # walltime on processor 39 : 0.80915128 
+
+ # walltime on processor 40 : 0.79669601 
+
+ # walltime on processor 41 : 0.80870725 
+
+ # walltime on processor 42 : 0.80902061 
+
+ # walltime on processor 43 : 0.80899170 
+
+ # of trials = 999999968 , estimate of pi is 3.141491805 
+
+ # walltime on master processor : 0.80902926 
+ ~38.86 usr 19.92 system 0:01.95 total 3010% CPU 
+
+
+
+
+ # walltime on processor 1 : 0.67947037 
+
+ # walltime on processor 2 : 0.67977089 
+
+ # walltime on processor 3 : 0.67973644 
+
+ # walltime on processor 4 : 0.68022989 
+
+ # walltime on processor 5 : 0.68727482 
+
+ # walltime on processor 6 : 0.72523125 
+
+ # walltime on processor 7 : 0.72497864 
+
+ # walltime on processor 8 : 0.71245305 
+
+ # walltime on processor 9 : 0.72507968 
+
+ # walltime on processor 10 : 0.72521472 
+
+ # walltime on processor 11 : 0.72527599 
+
+ # walltime on processor 12 : 0.72519336 
+
+ # walltime on processor 13 : 0.72529054 
+
+ # walltime on processor 14 : 0.71026692 
+
+ # walltime on processor 15 : 0.72524580 
+
+ # walltime on processor 16 : 0.72540905 
+
+ # walltime on processor 17 : 0.71245585 
+
+ # walltime on processor 18 : 0.72502234 
+
+ # walltime on processor 19 : 0.72541122 
+
+ # walltime on processor 20 : 0.72506743 
+
+ # walltime on processor 21 : 0.72537668 
+
+ # walltime on processor 22 : 0.73377057 
+
+ # walltime on processor 23 : 0.73225929 
+
+ # walltime on processor 24 : 0.74462385 
+
+ # walltime on processor 25 : 0.74508009 
+
+ # walltime on processor 26 : 0.73299828 
+
+ # walltime on processor 27 : 0.74484062 
+
+ # walltime on processor 28 : 0.74465695 
+
+ # walltime on processor 29 : 0.75085465 
+
+ # walltime on processor 30 : 0.75094207 
+
+ # walltime on processor 31 : 0.75095734 
+
+ # walltime on processor 33 : 0.73805079 
+
+ # walltime on processor 32 : 0.75065293 
+
+ # walltime on processor 34 : 0.75069262 
+
+ # walltime on processor 35 : 0.73811313 
+
+ # walltime on processor 36 : 0.75082272 
+
+ # walltime on processor 37 : 0.75063709 
+
+ # walltime on processor 38 : 0.75083424 
+
+ # walltime on processor 39 : 0.75080011 
+
+ # walltime on processor 40 : 0.73936439 
+
+ # walltime on processor 41 : 0.73878334 
+
+ # of trials = 999999968 , estimate of pi is 3.141491805 
+
+ # walltime on master processor : 0.75692934 
+
+ # walltime on processor 43 : 0.75693010 
+
+ # walltime on processor 42 : 0.75676229 
+ ~36.36 usr 19.97 system 0:01.90 total 2962% CPU 
+
+
+
+
+ # walltime on processor 1 : 0.69815204 
+
+ # walltime on processor 2 : 0.69826777 
+
+ # walltime on processor 3 : 0.69826408 
+
+ # walltime on processor 4 : 0.69829668 
+
+ # walltime on processor 5 : 0.71205570 
+
+ # walltime on processor 6 : 0.69939735 
+
+ # walltime on processor 7 : 0.71184594 
+
+ # walltime on processor 8 : 0.71200991 
+
+ # walltime on processor 9 : 0.71167083 
+
+ # walltime on processor 10 : 0.71181454 
+
+ # walltime on processor 11 : 0.71651240 
+
+ # walltime on processor 12 : 0.72898780 
+
+ # walltime on processor 13 : 0.71621255 
+
+ # walltime on processor 14 : 0.72058968 
+
+ # walltime on processor 15 : 0.72880319 
+
+ # walltime on processor 16 : 0.72904364 
+
+ # walltime on processor 17 : 0.72894648 
+
+ # walltime on processor 18 : 0.72904302 
+
+ # walltime on processor 19 : 0.72921088 
+
+ # walltime on processor 20 : 0.72886968 
+
+ # walltime on processor 21 : 0.71640729 
+
+ # walltime on processor 22 : 0.71633557 
+
+ # walltime on processor 23 : 0.71097773 
+
+ # walltime on processor 24 : 0.72906588 
+
+ # walltime on processor 25 : 0.72899779 
+
+ # walltime on processor 26 : 0.72889192 
+
+ # walltime on processor 27 : 0.72910798 
+
+ # walltime on processor 28 : 0.72906063 
+
+ # walltime on processor 29 : 0.72907726 
+
+ # walltime on processor 30 : 0.72896678 
+
+ # walltime on processor 31 : 0.72931099 
+
+ # walltime on processor 32 : 0.72918593 
+
+ # walltime on processor 33 : 0.72937047 
+
+ # walltime on processor 34 : 0.71684843 
+
+ # walltime on processor 35 : 0.72934481 
+
+ # walltime on processor 36 : 0.72938100 
+
+ # walltime on processor 38 : 0.71769858 
+
+ # walltime on processor 39 : 0.73016764 
+
+ # walltime on processor 40 : 0.73053674 
+
+ # walltime on processor 37 : 0.73022551 
+
+ # walltime on processor 41 : 0.73044642 
+
+ # walltime on processor 42 : 0.73026693 
+
+ # walltime on processor 43 : 0.71790607 
+
+ # of trials = 999999968 , estimate of pi is 3.141491805 
+
+ # walltime on master processor : 0.73038848 
+ ~36.37 usr 17.87 system 0:01.81 total 2981% CPU 
+
+
+

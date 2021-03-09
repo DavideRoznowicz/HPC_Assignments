@@ -1,0 +1,24 @@
+
+ # of trials = 100000000000 , estimate of pi is 3.141595182 
+
+ # walltime : 2625.52000000 
+ ~2625.52 usr 0.00 system 43:45.77 total 99% CPU 
+
+
+
+
+ # of trials = 100000000000 , estimate of pi is 3.141595182 
+
+ # walltime : 2625.46000000 
+ ~2625.46 usr 0.00 system 43:45.71 total 99% CPU 
+
+
+
+
+ # of trials = 100000000000 , estimate of pi is 3.141595182 
+
+ # walltime : 2628.78000000 
+ ~2628.79 usr 0.00 system 43:49.04 total 99% CPU 
+
+
+

@@ -1,0 +1,90 @@
+
+ # walltime on processor 1 : 2591.42493371 
+
+ # of trials = 1200000000000 , estimate of pi is 3.141593259 
+
+ # walltime on master processor : 2591.42530787 
+
+ # walltime on processor 2 : 2591.42485329 
+
+ # walltime on processor 3 : 2591.42513165 
+
+ # walltime on processor 4 : 2591.42476527 
+
+ # walltime on processor 5 : 2591.42522464 
+
+ # walltime on processor 6 : 2591.42528242 
+
+ # walltime on processor 7 : 2591.42525535 
+
+ # walltime on processor 8 : 2591.42528627 
+
+ # walltime on processor 9 : 2591.42529672 
+
+ # walltime on processor 10 : 2591.42537338 
+
+ # walltime on processor 11 : 2591.42528059 
+ ~31107.05 usr 24.51 system 43:11.89 total 1201% CPU 
+
+
+
+
+ # walltime on processor 1 : 2584.72024365 
+
+ # walltime on processor 2 : 2584.72024143 
+
+ # walltime on processor 3 : 2584.71978594 
+
+ # of trials = 1200000000000 , estimate of pi is 3.141593259 
+
+ # walltime on master processor : 2584.72005334 
+
+ # walltime on processor 4 : 2584.71988921 
+
+ # walltime on processor 5 : 2584.71981415 
+
+ # walltime on processor 6 : 2584.72029085 
+
+ # walltime on processor 7 : 2584.72029433 
+
+ # walltime on processor 8 : 2584.71984022 
+
+ # walltime on processor 9 : 2584.72020965 
+
+ # walltime on processor 10 : 2584.72021213 
+
+ # walltime on processor 11 : 2584.72032772 
+ ~31025.44 usr 21.88 system 43:05.19 total 1200% CPU 
+
+
+
+
+ # walltime on processor 1 : 2575.10230575 
+
+ # walltime on processor 2 : 2575.10211367 
+
+ # walltime on processor 3 : 2575.10240976 
+
+ # walltime on processor 4 : 2575.10228521 
+
+ # walltime on processor 5 : 2575.10242167 
+
+ # walltime on processor 6 : 2575.10240956 
+
+ # walltime on processor 7 : 2575.10238750 
+
+ # walltime on processor 8 : 2575.10240639 
+
+ # of trials = 1200000000000 , estimate of pi is 3.141593259 
+
+ # walltime on master processor : 2575.10245471 
+
+ # walltime on processor 9 : 2575.10241447 
+
+ # walltime on processor 10 : 2575.10247869 
+
+ # walltime on processor 11 : 2575.10242990 
+ ~30901.55 usr 7.29 system 42:55.57 total 1200% CPU 
+
+
+

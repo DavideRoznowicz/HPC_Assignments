@@ -1,0 +1,90 @@
+
+ # walltime on processor 1 : 216.01652912 
+
+ # walltime on processor 3 : 216.07020003 
+
+ # walltime on processor 4 : 216.07033614 
+
+ # walltime on processor 5 : 216.07029414 
+
+ # walltime on processor 6 : 216.07041938 
+
+
+ # walltime on processor 7 : 216.07026702 
+ # walltime on processor 2 : 216.07030384 
+
+ # walltime on processor 9 : 216.09351077 
+
+ # walltime on processor 10 : 216.09310809 
+
+ # walltime on processor 8 : 216.09301800 
+
+ # of trials = 99999999996 , estimate of pi is 3.141595917 
+
+ # walltime on master processor : 216.59731985 
+
+ # walltime on processor 11 : 216.59737739 
+ ~2595.40 usr 4.14 system 3:37.02 total 1197% CPU 
+
+
+
+
+ # walltime on processor 1 : 216.81231741 
+
+ # walltime on processor 2 : 216.81240850 
+
+ # walltime on processor 3 : 216.81238298 
+
+ # walltime on processor 4 : 216.81237023 
+
+ # walltime on processor 5 : 216.81230896 
+
+ # walltime on processor 6 : 216.81242535 
+
+ # of trials = 99999999996 , estimate of pi is 3.141595917 
+
+ # walltime on master processor : 216.81249854 
+
+ # walltime on processor 7 : 216.81235057 
+
+ # walltime on processor 8 : 216.81232939 
+
+ # walltime on processor 9 : 216.81232614 
+
+ # walltime on processor 10 : 216.81231185 
+
+ # walltime on processor 11 : 216.81214300 
+ ~2603.08 usr 3.87 system 3:37.26 total 1199% CPU 
+
+
+
+
+ # walltime on processor 1 : 215.56903480 
+
+ # walltime on processor 3 : 215.60267743 
+
+ # walltime on processor 2 : 215.60270123 
+
+ # walltime on processor 4 : 215.60273475 
+
+ # walltime on processor 5 : 215.60272103 
+
+ # walltime on processor 6 : 215.98766681 
+
+
+ # walltime on processor 8 : 215.98814257 
+ # walltime on processor 7 : 215.98813962 
+
+ # walltime on processor 9 : 215.98808159 
+
+ # walltime on processor 10 : 215.98811713 
+
+ # of trials = 99999999996 , estimate of pi is 3.141595917 
+
+ # walltime on master processor : 215.98814765 
+
+ # walltime on processor 11 : 215.98822388 
+ ~2590.55 usr 2.64 system 3:36.42 total 1198% CPU 
+
+
+

@@ -1,0 +1,701 @@
+---
+title: "Report"
+author: "Davide Roznowicz"
+date: "2/11/2020"
+output:
+  # html_document:
+  #   css: style.css
+  #   toc: yes
+  pdf_document:
+    highlight: tango
+    keep_tex: yes
+    toc: yes
+institute: University of Trieste
+subtitle: Assignment 1 - HPC
+fontsize: 10pt
+---
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.align = 'center', warning=FALSE, message=FALSE, fig.asp=0.625, dev='png', global.par = TRUE, dev.args=list(pointsize=10), fig.path = 'figs/')
+library(MASS)
+```
+```{r setup, include=FALSE}
+library(knitr)
+local({
+  hook_plot = knit_hooks$get('plot')
+  knit_hooks$set(plot = function(x, options) {
+    paste0('\n\n----\n\n', hook_plot(x, options))
+  })
+})
+
+
+
+
+
+```
+
+
+
+# Section 1: theoretical model
+## Analysis and visual comparisons between naive and enhanced parallel algorithms 
+
+In order not to repeat similar plots a lot of times, I decided to insert the enhanced version together with the naive one (in the same plot) from the very beginning. However, the explanation concerning how the enhanced algorithm was thought and built will be provided only after these visual representations.
+
+The first series of plots shows the total time the algorithms (serial, naive and enhanced) need to perform the assigned task, varying the number of cores P from 0 to 100 on the x-axis. N is fixed: the first value given to to it is $10^{4}$, then $10^{5}$, $10^{6}$, $10^{7}$. 
+The time is calculated in the following way:
+$$T_{serial}= T_{read} + N*T_{comp}$$
+$$T_{naive}(P)= T_{comp}\times (P -1 + \frac{N}{P}) + T_{read} + 2(P-1)\times T_{comm}$$
+$$T_{enhanced}(P)= 2\times T_{comm}\times \lceil{log_2(P)}\rceil)+T_{read}+(\frac{N}{P}+\lceil{log2(P)}\rceil)\times T_{comp}$$
+Notice that, despite the fact that the exercise does not show $T_{read}$ in $T_{serial}$ equation, I believe it should be taken into consideration anyway: that's way it has been inserted into the equation.
+
+```{r time_plots_naive_&_enhanced, echo = F}
+
+# serial algo
+SerialTime <- function(N,P,T_comp,T_read,T_comm){
+  T_s <- T_read+N*T_comp
+}
+
+# naive parallel algo
+NaiveTime <- function(N,P,T_comp,T_read,T_comm){
+  T_P <- T_comp*(P-1+N/P)+T_read+2*(P-1)*T_comm
+}
+
+# enhanced parallel algo
+EnhancedTime <- function(N,P,T_comp,T_read,T_comm){
+  T_P <- 2*T_comm*(ceiling(log2(P)))+T_read+(N/P+ceiling(log2(P)))*T_comp
+}
+
+# fixed params
+T_comp <- 2*1e-09
+T_read <- 1e-04
+T_comm <- 1e-06
+
+
+t_n <- vector(length=100)
+P_seq <- seq(1:100)
+N_vect <- c(1e04,1e05,1e06,1e07)
+t_serial <- matrix(nrow=length(N_vect),ncol=length(P_seq))
+t_naive <- matrix(nrow=length(N_vect),ncol=length(P_seq))
+t_enhanced <- matrix(nrow=length(N_vect),ncol=length(P_seq))
+count <- 1
+# N fixed; P on xaxis; scalability on yaxis
+for (N in N_vect){
+  for (P in P_seq){
+    t_serial[count,P] <- SerialTime(N,P,T_comp,T_read,T_comm)
+    t_naive[count,P] <- NaiveTime(N,P,T_comp,T_read,T_comm)
+    t_enhanced[count,P] <- EnhancedTime(N,P,T_comp,T_read,T_comm)
+  }
+  count <- count+1
+}
+
+# plot comparison: Total Time
+for (k in 1:length(N_vect)){
+  plot(P_seq,t_naive[k,], xlab="P cores", log="y", sub="log scale on time", ylab="time", main=paste("Total Time with N =",  N_vect[k], sep=" "), type="p", col="red", ylim=c(min(t_naive[k,], t_enhanced[k,], t_serial[k,]), max(t_naive[k,], t_enhanced[k,], t_serial[k,])))
+  points(P_seq,t_enhanced[k,], col="blue")
+  points(P_seq, t_serial[k,], col="green")
+  legend("topleft", c("naive algo","enhanced algo", "serial algo"), cex=0.8, pch=1, col=c("red", "blue", "green"))
+  
+}
+
+```
+
+The second series of plots shows the scalability of the algorithms (serial, naive and enhanced), varying the number of cores P on the x-axis. N is fixed again to the previously mentioned values.
+
+```{r scalability_plots_naive_&_enhanced, echo = F}
+
+S_naive <- matrix(nrow=length(N_vect),ncol=length(P_seq))
+S_enhanced <- matrix(nrow=length(N_vect),ncol=length(P_seq))
+
+scalabNaive <- function(t_naive, t_serial){
+  S_naive <- t_serial/t_naive
+}
+scalabEnhanced <- function(t_enhanced, t_serial){
+  S_enhanced <- t_serial/t_enhanced
+}
+
+# compute scalability curves for both naive and enhanced algo
+for (k in 1:length(N_vect)){
+  plot(P_seq, scalabNaive(t_naive[k,], t_serial[k,]), xlab="P cores", ylab="S(P)", main=paste("Scalability with N =",  N_vect[k], sep=" "), type="p", col="red", ylim=c(min(scalabNaive(t_naive[k,], t_serial[k,]), scalabEnhanced(t_enhanced[k,], t_serial[k,])), max(scalabNaive(t_naive[k,], t_serial[k,]), scalabEnhanced(t_enhanced[k,], t_serial[k,]))))
+  points(P_seq, scalabEnhanced(t_enhanced[k,], t_serial[k,]), col="blue")
+  legend("bottomright", c("naive algo","enhanced algo"), cex=0.8, pch=1, col=c("red", "blue"))
+}
+
+```
+
+## For which values of N do you see the algorithm scaling ?
+
+We easily notice that the higher N is, the better the parallel algorithms scale. Except for N and P very small, case in which $T_{comm}$ represents a large and unnecessary overhead, the enhanced algorithm tends to be far more scalable than the naive version.
+
+
+## For which values of P does the algorithm produce the best results ?
+
+Notice: the considered range for P is [1,100], as stated in the exercise requests.
+
+```{r best_P, echo = F}
+
+for (k in 1:length(N_vect)){
+  P_best_naive <- which.max(scalabNaive(t_naive[k,], t_serial[k,]))
+  P_best_enhanced <- which.max(scalabEnhanced(t_enhanced[k,], t_serial[k,]))
+  print(paste("if N =", N_vect[k],", the best P for naive algo is :", P_best_naive))
+  print(paste("if N =", N_vect[k],", the best P for enhanced algo is :", 
+              P_best_enhanced, sep=" "))
+
+}
+```
+
+Therefore it is clear that if N grows, so does the best P both for naive and enhanced algorithms. As pointed before, the communication time is a huge overhead for the naive algorithm: in fact, unless N is very large (and also $\frac{N}{P}$ is large), its scalability curve tends to flatten almost immediately and then go down. This happens because the increasing number of cores cannot sustain easily the rapid growth of $T_{comm}$, that is by the way three orders of magnitude more influential than $T_{comp}$.
+Instead, if N is large enough, the scalabily curve of the enhanced algorithm is much more "resilient" than the one belonging to the naive version, thus the best P tends to be much higher: this is mainly associated with the improvements concerning the designed communication system, such that it is not linearly dependent on P, but instead logarithmically dependent.
+
+
+## Can you try to modify the algorithm sketched above to increase its scalability ? (hints: try to think of a better communication algorithm)
+
+The enhanced version of the naive algorithm is designed thinking that there is no particular sense in compelling the master core to send all the "messagges" sequentially. Instead it seems much more convenient to let other cores "help" the master in spreading the assigned task. Thus, the optimal choice appears to be the following:
+
+1. After reading the task, the $master$ should send half of the numbers to $core_1$ and keep the other half for itself; 
+2. the $master$ and $core_1$ send half of their remaining numbers to $core_2$ and $core_3$ respectively;
+3. the $master$, $core_1$, $core_2$, $core_3$ send half of their remaining numbers to $core_4$, $core_5$, $core_6$, $core_7$ respectively;
+4. ... so on up to reaching $core_{P-1}$;
+5. the sums are crunched by the P cores (each core has the same amount of numbers);
+6. the computed P-1 sums are sent back to master following the route provided in the first four phases but in reverse order; at each step the partial sums are computed in the slave cores and then sent to another core as described before; this is repeated until only the $master$ and $core_1$ have the partial sums ($master$ has the sum of half of the amount of the original N numbers, while $core_1$ has the other half);
+7. $core_1$ gives to the $master$ its partial sum and the $master$ computes the final sum;
+
+This way many of the "steps" for fully spreading an equal amount of numbers to each core are done in parallel and not just sequentially like in the naive algorithm.
+
+Therefore: 
+
+* $\sum_{k=0}^{steps-1} 2^k \geq P-1$
+* $\frac{1-2^{steps}}{1-2} \geq P-1$
+* $2^{steps}-1 \geq P-1$
+* $2^{steps} \geq P$
+* $steps \geq \frac{\log(P)}{\log(2)}$
+* $steps \geq \log_2{P}$
+
+However, due to the discrete context, $\lceil{\log_{2}{P}}\rceil$ should be considered instead of $\log_2{P}$.
+Thus, the minimum is $steps=\lceil{\log_{2}{P}}\rceil$.
+
+* Read N and distribute N to P-1 slaves ===> $T_{read}+\lceil{\log_{2}{P}}\rceil \times T_{comm}$
+* $\frac{N}{P}$ sum over each processors (including master) ===> $T_{comp}\times\frac{N}{P}$
+* Slaves send partial sum ===> $\lceil{\log_{2}{P}}\rceil \times T_{comm}$
+* Slaves perform partial sums while sending back the numbers to the $master$ ===> $(\lceil{\log_{2}{P}}\rceil-1) \times T_{comp}$
+* Master performs one final sum ===> $T_{comp}$
+
+The final model: $$T_{enhanced}(P)= 2\times T_{comm}\times \lceil{log_2(P)}\rceil)+T_{read}+(\frac{N}{P}+\lceil{log2(P)}\rceil)\times T_{comp}$$
+This enhanced algorithm not only improves the communication time because of a faster way to send the equal amount of numbers to each core (and then in the reverse process of getting them back), but also manages to crunch the partial sums at the slaves level, in order to process everything in parallel as much as possible.
+
+
+
+
+## performance-model.csv
+
+The considered range for P is [1,100], as stated in the exercise requests. In the .csv the following results have been written down:
+
+```{r best_P_csv, echo = F}
+
+# serial algo
+SerialTime <- function(N,P,T_comp,T_read,T_comm){
+  T_s <- T_read+N*T_comp
+}
+
+# naive parallel algo
+NaiveTime <- function(N,P,T_comp,T_read,T_comm){
+  T_P <- T_comp*(P-1+N/P)+T_read+2*(P-1)*T_comm
+}
+
+# enhanced parallel algo
+EnhancedTime <- function(N,P,T_comp,T_read,T_comm){
+  T_P <- 2*T_comm*(ceiling(log2(P)))+T_read+(N/P+ceiling(log2(P)))*T_comp
+}
+
+# fixed params
+T_comp <- 2*1e-09
+T_read <- 1e-04
+T_comm <- 1e-06
+
+
+t_n <- vector(length=100)
+P_seq <- seq(1:100)
+N_vect <- c(20000,100000,200000,1000000,20000000)
+t_serial <- matrix(nrow=length(N_vect),ncol=length(P_seq))
+t_naive <- matrix(nrow=length(N_vect),ncol=length(P_seq))
+t_enhanced <- matrix(nrow=length(N_vect),ncol=length(P_seq))
+count <- 1
+# N fixed; P on xaxis; scalability on yaxis
+for (N in N_vect){
+  for (P in P_seq){
+    t_serial[count,P] <- SerialTime(N,P,T_comp,T_read,T_comm)
+    t_naive[count,P] <- NaiveTime(N,P,T_comp,T_read,T_comm)
+    t_enhanced[count,P] <- EnhancedTime(N,P,T_comp,T_read,T_comm)
+  }
+  count <- count+1
+}
+
+
+S_naive <- matrix(nrow=length(N_vect),ncol=length(P_seq))
+S_enhanced <- matrix(nrow=length(N_vect),ncol=length(P_seq))
+
+scalabNaive <- function(t_naive, t_serial){
+  S_naive <- t_serial/t_naive
+}
+scalabEnhanced <- function(t_enhanced, t_serial){
+  S_enhanced <- t_serial/t_enhanced
+}
+
+for (k in 1:length(N_vect)){
+  P_best_naive <- which.max(scalabNaive(t_naive[k,], t_serial[k,]))
+  P_best_enhanced <- which.max(scalabEnhanced(t_enhanced[k,], t_serial[k,]))
+  print(paste("if N =", N_vect[k],", the best P for naive algo is :", P_best_naive))
+  print(paste("if N =", N_vect[k],", the best P for enhanced algo is :", 
+              P_best_enhanced, sep=" "))
+
+}
+
+
+```
+
+
+
+
+
+
+# Section 2 : play with MPI program
+## 2.1: compute strong scalability of a mpi_pi.c program
+
+```{r be, echo = F}
+addavg <- function(ss_df){
+  for (i in 1:13){
+    ss_df[i,"avg"] <- (ss_df[i,3]+ss_df[i,4]+ss_df[i,5])/3
+    ss_df[i,"error_bar"] <- (max(ss_df[i,3],ss_df[i,4],ss_df[i,5])-min(ss_df[i,3],ss_df[i,4],ss_df[i,5]))/2
+  }
+  ss_df
+}
+
+
+
+##########################
+########################## Strong
+
+ss10to08=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/strong-scalability-10to08.csv", header=TRUE, sep=",")
+names(ss10to08)[1]="avg"
+ss10to08 <- addavg(ss10to08)
+
+ss10to09=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/strong-scalability-10to09.csv", header=TRUE, sep=",")
+names(ss10to09)[1]="avg"
+ss10to09 <- addavg(ss10to09)
+
+ss10to10=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/strong-scalability-10to10.csv", header=TRUE, sep=",")
+names(ss10to10)[1]="avg"
+ss10to10 <- addavg(ss10to10)
+
+ss10to11=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/strong-scalability-10to11.csv", header=TRUE, sep=",")
+names(ss10to11)[1]="avg"
+ss10to11 <- addavg(ss10to11)
+
+
+
+
+```
+
+### Single core serial versus single core parallel
+
+The serial calculation of pi with $10^8$ iterations takes ~2.620 seconds, both for internally measured walltime and externally computed elapsed time (by /usr/bin/time).
+Instead the parallel calculation of pi with $10^8$ iterations takes ~2.575 as walltime that is quite close to the serial version. However the total elapsed time is higher ~2.830 seconds. 
+This is because, despite the fact that there are no communication times among the cores (there is a single core), we should take into account the overhead associated with starting the parallel version of the program (system calls, starting machinaries...) : system time is not negligible (~0.13 seconds) as it was before in the serial context. Moreover, the elapsed time is larger than the walltime also because it includes printing the outcome of the simulation. Of course, as a consequence, $\%CPU=\frac{user}{elapsed}$ is lower in the parallel version.
+
+
+### Strong scalability
+
+The walltime related to the master core will be used to fill in the .csv and perform the requested analysis: in fact, as we are interested in the highest time among the cores, the master seems to be a good choice.
+
+Let's look at some plots comparing the walltime (average among the three runs) and elapsed time against the number of cores. The serial walltime is also added for further comparison. 
+```{r ss_time, echo = F}
+P_seq <- c(1,4,8,12,16,20,24,28,32,36,40,44,48)
+N_seq <- c(1e08, 1e09, 1e10, 1e11)
+serial <- c(2.62, 26.25, 262.42, 2625.52)
+
+######################### Strong scal: walltime
+#########################
+#########################
+
+ss10to08_elapsed=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/elapsed-strong-scalability-10to08.csv", header=TRUE, sep=",")
+names(ss10to08_elapsed)[1]="P"
+
+
+ss10to09_elapsed=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/elapsed-strong-scalability-10to09.csv", header=TRUE, sep=",")
+names(ss10to09_elapsed)[1]="P"
+
+ss10to10_elapsed=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/elapsed-strong-scalability-10to10.csv", header=TRUE, sep=",")
+names(ss10to10_elapsed)[1]="P"
+
+ss10to11_elapsed=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/elapsed-strong-scalability-10to11.csv", header=TRUE, sep=",")
+names(ss10to11_elapsed)[1]="P"
+
+
+#################à
+# turn 4:23:56 into seconds
+
+#ss10to08_elapsed
+df <- data.frame(Date = ss10to08_elapsed[,"elapsed"])
+mydate <- strptime(df$Date, "%M:%S")
+library(lubridate)
+x <- ymd_hms(mydate)
+ls <- nchar(ss10to08_elapsed[,"elapsed"]) #length string
+sub <- substr(ss10to08_elapsed[,"elapsed"],ls-1,ls)
+ss10to08_elapsed <- data.frame(P=P_seq, elapsed=as.double(paste((second(x)+60*minute(x)),sub,sep=".")))
+#ss10to08_elapsed
+
+################
+
+#ss10to09_elapsed
+df <- data.frame(Date = ss10to09_elapsed[,"elapsed"])
+mydate <- strptime(df$Date, "%M:%S")
+library(lubridate)
+x <- ymd_hms(mydate)
+ls <- nchar(ss10to09_elapsed[,"elapsed"]) #length string
+sub <- substr(ss10to09_elapsed[,"elapsed"],ls-1,ls)
+ss10to09_elapsed <- data.frame(P=P_seq, elapsed=as.double(paste((second(x)+60*minute(x)),sub,sep=".")))
+#ss10to09_elapsed
+
+#ss10to10_elapsed
+df <- data.frame(Date = ss10to10_elapsed[,"elapsed"])
+mydate <- strptime(df$Date, "%M:%S")
+library(lubridate)
+x <- ymd_hms(mydate)
+ls <- nchar(ss10to10_elapsed[,"elapsed"]) #length string
+sub <- substr(ss10to10_elapsed[,"elapsed"],ls-1,ls)
+ss10to10_elapsed <- data.frame(P=P_seq, elapsed=as.double(paste((second(x)+60*minute(x)),sub,sep=".")))
+#ss10to10_elapsed
+
+#ss10to11_elapsed
+df <- data.frame(Date = ss10to11_elapsed[,"elapsed"])
+mydate <- strptime(df$Date, "%M:%S")
+library(lubridate)
+x <- ymd_hms(mydate)
+ls <- nchar(ss10to11_elapsed[,"elapsed"]) #length string
+sub <- substr(ss10to11_elapsed[,"elapsed"],ls-1,ls)
+ss10to11_elapsed <- data.frame(P=P_seq, elapsed=as.double(paste((second(x)+60*minute(x)),sub,sep=".")))
+#ss10to11_elapsed
+
+k=1
+plot(P_seq, ss10to08[,"avg"], xlab="P cores", ylab="Time", log="y", sub="log scale on time", main=paste("Time with N =",  N_seq[k], sep=" "), type="p", col="red" )
+  points(P_seq, ss10to08_elapsed[,"elapsed"], col="blue")
+  points(P_seq, (1+numeric(length(P_seq)))*serial[k], col="green")
+  legend("bottomleft", c("parallel walltime","parallel elapsed", "serial walltime"), cex=0.8, pch=1, col=c("red", "blue", "green"))
+
+k=2
+plot(P_seq, ss10to09[,"avg"], xlab="P cores", ylab="Time", log="y", sub="log scale on time", main=paste("Time with N =",  N_seq[k], sep=" "), type="p", col="red" )
+  points(P_seq, ss10to09_elapsed[,"elapsed"], col="blue")
+  points(P_seq, (1+numeric(length(P_seq)))*serial[k], col="green")
+  legend("bottomleft", c("parallel walltime","parallel elapsed", "serial walltime"), cex=0.8, pch=1, col=c("red", "blue", "green"))
+
+k=3
+plot(P_seq, ss10to10[,"avg"], xlab="P cores", ylab="Time", log="y", sub="log scale on time", main=paste("Time with N =",  N_seq[k], sep=" "), type="p", col="red" )
+  points(P_seq, ss10to10_elapsed[,"elapsed"], col="blue")
+  points(P_seq, (1+numeric(length(P_seq)))*serial[k], col="green")
+  legend("bottomleft", c("parallel walltime","parallel elapsed", "serial walltime"), cex=0.8, pch=1, col=c("red", "blue", "green"))
+  
+
+k=4
+plot(P_seq, ss10to11[,"avg"], xlab="P cores", ylab="Time", log="y", sub="log scale on time", main=paste("Time with N =",  N_seq[k], sep=" "), type="p", col="red" )
+  points(P_seq, ss10to11_elapsed[,"elapsed"], col="blue")
+  points(P_seq, (1+numeric(length(P_seq)))*serial[k], col="green")
+  legend("bottomleft", c("parallel walltime","parallel elapsed", "serial walltime"), cex=0.8, pch=1, col=c("red", "blue", "green"))
+
+
+
+
+```
+
+As previously stated, the walltime dotted line for the parallel version is always below the elapsed time, given the fact that it doesn't take into consideration neither printing time nor additional system overhead. The latter is particularly consistent when dealing with small sizes of N; when N grows the relative weight of this factor for the simulation time gets less visible.
+Notice that in the serial version, even though N changes, the system time remains ~0.00 while walltime and elapsed time are almost the same.
+
+
+Now let's look at scalability plots: 4 scalability curves for each size of N are drawn in the same chart.
+As a matter of comparison, the walltime is chosen to compute the scalability funcion: otherwise there would be some components such as printing or system that might skew the outcome as they also include some factors that are constant (but difficult to see). 
+Choosing the walltime allows us to focus on scalability by spotting how communication times among cores (included in walltime) affect the curves.
+As one-core-benchmark for computing scalability we opt for the parallel version since the time is very close to the serial one.
+Lines connecting the dots are drawn because points would be too confusing for visualization.
+```{r ss_scal, echo = F}
+
+N_vect <- N_seq
+scalab <- function(t_P){
+  S <- ((1+numeric(length(t_P)))*t_P[1])/t_P
+}
+
+# compute scalability curves
+t_P8 <- ss10to08[,"avg"]
+t_P9 <- ss10to09[,"avg"]
+t_P10 <- ss10to10[,"avg"]
+t_P11 <- ss10to11[,"avg"]
+plot(P_seq, scalab(t_P8), xlab="P cores", ylab="S(P)", ylim=c(0,40), main=paste("Strong scalability with N =",  N_vect[1],N_vect[2],N_vect[3],N_vect[4], sep=" "), type="l", col="red") #N_vect[1],N_vect[2],N_vect[3],N_vect[4]
+  lines(P_seq, scalab(t_P9), col="blue")
+  lines(P_seq, scalab(t_P10), col="green")
+  lines(P_seq, scalab(t_P11), col="orange")
+  legend("bottomright", c("10to8","10to9","10to10","10to11"), cex=0.8, pch=10, col=c("red", "blue","green","orange"))
+
+
+
+```
+
+We easily notice that the higher N is, the better the parallel algorithm scales and approximates a straight line. Up to 24 cores there's almost perfect speed-up for all the involved sizes of N; later some break-points appear according to the size of N. When N is small, communication times heavily affect the outcome, thus the curves flatten. Some swings are evident in the final parts of the curves: these are due to some noise particularly evident when the time to perform the simulation is in the order of a couple of seconds for one core (e.g. $N=10^8$).
+
+
+
+## 2.2: identify a model for the parallel overhead
+
+Looking back at the time charts for strong scalability, it seems that there is a linear dependence on P: in fact, after fixing N, we have that as P grows so does the absolute difference among walltime and total elapsed time. The main time components included in "elapsed" but not in "walltime" are the system and the printing. Despite the fact there might be constant terms, the number of printed sentences seems increasing proportionally to the number of cores; similarly, the time required to spawn and synchronize parallel tasks gives the impression to be somehow expanding with P.
+Let's try to visualize the plots of this absolute difference; then let's fit a regression model:
+```{r ws_overhead, echo = F}
+
+P_seq <- c(1,4,8,12,16,20,24,28,32,36,40,44,48)
+N_seq <- c(1e08, 1e09, 1e10, 1e11)
+serial <- c(2.62, 26.25, 262.42, 2625.52)
+#########################################
+
+k=1
+diffr <-abs(ss10to08_elapsed[,"elapsed"]-ss10to08[,"avg"])
+mod1 <- lm(diffr ~ P_seq)
+
+plot(P_seq, diffr, xlab="P cores", ylab="Time", main=paste("Time difference with N =",  N_seq[k], sep=" "), type="p", col="blue" )
+  legend("bottomright", c("difference"), cex=0.8, pch=1, col=c("blue"))
+  abline(mod1,col=2, lwd=2)
+########### reg1
+ 
+summary(mod1) 
+  
+##########
+  
+  
+  
+  
+k=2
+diffr2 <- abs(ss10to09_elapsed[,"elapsed"]-ss10to09[,"avg"])
+mod2 <- lm(diffr2 ~ P_seq)
+plot(P_seq, diffr2, xlab="P cores", ylab="Time", main=paste("Time difference with N =",  N_seq[k], sep=" "), type="p", col="blue" )
+  legend("bottomright", c("difference"), cex=0.8, pch=1, col=c("blue"))
+  abline(mod2, col=2, lwd=2)
+summary(mod2)
+  
+  
+
+
+k=3
+diffr3 <- abs(ss10to10_elapsed[,"elapsed"]-ss10to10[,"avg"])
+mod3 <- lm(diffr3 ~ P_seq)
+plot(P_seq, diffr3, xlab="P cores", ylab="Time", main=paste("Time difference with N =",  N_seq[k], sep=" "), type="p", col="blue" )
+  legend("bottomright", c("difference"), cex=0.8, pch=1, col=c("blue"))
+  abline(mod3, col=2, lwd=2)
+summary(mod3)
+
+
+k=4
+diffr4 <- abs(ss10to11_elapsed[,"elapsed"]-ss10to11[,"avg"])
+mod4 <- lm(diffr4 ~ P_seq)
+plot(P_seq, diffr4, xlab="P cores", ylab="Time", main=paste("Time difference with N =",  N_seq[k], sep=" "), type="p", col="blue" )
+  legend("bottomright", c("difference"), cex=0.8, pch=1, col=c("blue"))
+  abline(mod4, col=2, lwd=2)
+summary(mod4)
+
+
+# put in vector
+# c intercept
+c <- numeric(4);c[1] <- mod1$coefficients[1];c[2] <-  mod2$coefficients[1]; c[3] <-  mod3$coefficients[1];c[4] <-  mod4$coefficients[1]
+stdc <- sd(c)
+meanc <- mean(c)
+
+# k slope
+k <- numeric(4);k[1] <- mod1$coefficients[2];k[2] <-  mod2$coefficients[2]; k[3] <-  mod3$coefficients[2];k[4] <-  mod4$coefficients[2]
+stdk <- sd(k)
+meank <- mean(k)
+
+
+
+
+```
+
+At first glance it would look like a regression line works perfectly. This is confirmed by the stats of the regression showing very similar slope coefficients (values between 0.018804 and 0.020355) for each computed regression: therefore it seems N doesn't have meaningful impact in the overhead function. Moreover we discover that the p-values associated with the slope coefficients are very small (order of $10^{-9}$): thus we reject the hypothesis of coeff$=0$. Also the intercept coefficients are not far from each other (between 0.156191 and 0.234349).
+We can conclude that there is a strong relationship of linear dependence on P and precisely:  $$T_{overhead}(P)\approx c + k\times P$$
+where the intercept $c$ is likely to be in the 95% confidence interval 0.1863731 $\pm$ 0.03194011; while the slope coefficient $k$ should be included in 0.01962321 $\pm$ 0.0007708309.
+
+
+
+
+
+## 2.3: weak scaling
+
+Let's look at the plots for weak scalability.
+
+```{r ws_time, echo = F}
+P_seq <- c(1,4,8,12,16,20,24,28,32,36,40,44,48)
+N_seq <- c(1e08, 1e09, 1e10, 1e11)
+serial <- c(2.62, 26.25, 262.42, 2625.52)
+
+#############################
+
+addavgws11 <- function(ss_df){
+  for (i in 1:4){
+    ss_df[i,"avg"] <- (ss_df[i,3]+ss_df[i,4]+ss_df[i,5])/3
+    ss_df[i,"error_bar"] <- (max(ss_df[i,3],ss_df[i,4],ss_df[i,5])-min(ss_df[i,3],ss_df[i,4],ss_df[i,5]))/2
+  }
+  ss_df
+}
+
+
+
+
+##########################
+########################## Weak
+  
+ws10to08=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/weak-scalability-10to08.csv", header=TRUE, sep=",")
+names(ws10to08)[1]="avg"
+ws10to08 <- addavg(ws10to08)
+
+ws10to09=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/weak-scalability-10to09.csv", header=TRUE, sep=",")
+names(ws10to09)[1]="avg"
+ws10to09 <- addavg(ws10to09)
+
+ws10to10=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/weak-scalability-10to10.csv", header=TRUE, sep=",")
+names(ws10to10)[1]="avg"
+ws10to10 <- addavg(ws10to10)
+
+ws10to11=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/weak-scalability-10to11.csv", header=TRUE, sep=",")
+names(ws10to11)[1]="avg"
+ws10to11 <- addavgws11(ws10to11)
+  
+
+
+######################### Weak scal: walltime
+#########################
+#########################
+
+ws10to08_elapsed=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/elapsed-weak-scalability-10to08.csv", header=TRUE, sep=",")
+names(ws10to08_elapsed)[1]="P"
+
+
+ws10to09_elapsed=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/elapsed-weak-scalability-10to09.csv", header=TRUE, sep=",")
+names(ws10to09_elapsed)[1]="P"
+
+ws10to10_elapsed=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/elapsed-weak-scalability-10to10.csv", header=TRUE, sep=",")
+names(ws10to10_elapsed)[1]="P"
+
+ws10to11_elapsed=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/elapsed-weak-scalability-10to11.csv", header=TRUE, sep=",")
+names(ws10to11_elapsed)[1]="P"
+
+
+#################à
+# turn 4:23:56 into seconds
+
+#ws10to08_elapsed
+df <- data.frame(Date = ws10to08_elapsed[,"elapsed"])
+mydate <- strptime(df$Date, "%M:%S")
+library(lubridate)
+x <- ymd_hms(mydate)
+ls <- nchar(ws10to08_elapsed[,"elapsed"]) #length string
+sub <- substr(ws10to08_elapsed[,"elapsed"],ls-1,ls)
+ws10to08_elapsed <- data.frame(P=P_seq, elapsed=as.double(paste((second(x)+60*minute(x)),sub,sep=".")))
+#ws10to08_elapsed
+
+################
+
+#ws10to09_elapsed
+df <- data.frame(Date = ws10to09_elapsed[,"elapsed"])
+mydate <- strptime(df$Date, "%M:%S")
+library(lubridate)
+x <- ymd_hms(mydate)
+ls <- nchar(ws10to09_elapsed[,"elapsed"]) #length string
+sub <- substr(ws10to09_elapsed[,"elapsed"],ls-1,ls)
+ws10to09_elapsed <- data.frame(P=P_seq, elapsed=as.double(paste((second(x)+60*minute(x)),sub,sep=".")))
+#ws10to09_elapsed
+
+#ws10to10_elapsed
+df <- data.frame(Date = ws10to10_elapsed[,"elapsed"])
+mydate <- strptime(df$Date, "%M:%S")
+library(lubridate)
+x <- ymd_hms(mydate)
+ls <- nchar(ws10to10_elapsed[,"elapsed"]) #length string
+sub <- substr(ws10to10_elapsed[,"elapsed"],ls-1,ls)
+ws10to10_elapsed <- data.frame(P=P_seq, elapsed=as.double(paste((second(x)+60*minute(x)),sub,sep=".")))
+#ws10to10_elapsed
+
+#ws10to11_elapsed
+df <- data.frame(Date = ws10to11_elapsed[,"elapsed"])
+mydate <- strptime(df$Date, "%M:%S")
+library(lubridate)
+x <- ymd_hms(mydate)
+ls <- nchar(ws10to11_elapsed[,"elapsed"]) #length string
+sub <- substr(ws10to11_elapsed[,"elapsed"],ls-1,ls)
+ws10to11_elapsed <- data.frame(P=c(1,12,24,48), elapsed=as.double(paste((second(x)+60*minute(x)),sub,sep=".")))
+#ws10to11_elapsed
+
+#ws10to11
+#ws10to11_elapsed
+
+
+
+######Computing Time
+k=1
+plot(P_seq, ws10to08[,"avg"], xlab="P cores", ylab="Time", ylim=c(0,4.5),main=paste("Time with N =",  N_seq[k], sep=" "), type="p", col="red" )
+  points(P_seq, ws10to08_elapsed[,"elapsed"], col="blue")
+  legend("bottomright", c("parallel walltime","parallel elapsed"), cex=0.8, pch=1, col=c("red", "blue"))
+
+k=2
+plot(P_seq, ws10to09[,"avg"], xlab="P cores", ylab="Time", ylim=c(0,33), main=paste("Time with N =",  N_seq[k], sep=" "), type="p", col="red" )
+  points(P_seq, ws10to09_elapsed[,"elapsed"], col="blue")
+  legend("bottomright", c("parallel walltime","parallel elapsed"), cex=0.8, pch=1, col=c("red", "blue"))
+
+k=3
+plot(P_seq, ws10to10[,"avg"], xlab="P cores", ylab="Time", ylim=c(0,310), main=paste("Time with N =",  N_seq[k], sep=" "), type="p", col="red" )
+  points(P_seq, ws10to10_elapsed[,"elapsed"], col="blue")
+  legend("bottomright", c("parallel walltime","parallel elapsed"), cex=0.8, pch=1, col=c("red", "blue"))
+  
+
+k=4
+plot(c(1,12,24,48), ws10to11[,"avg"], xlab="P cores", ylab="Time", ylim=c(0,3100) ,main=paste("Time with N =",  N_seq[k], sep=" "), type="p", col="red" )
+  points(c(1,12,24,48), ws10to11_elapsed[,"elapsed"], col="blue")
+  legend("bottomright", c("parallel walltime","parallel elapsed"), cex=0.8, pch=1, col=c("red", "blue"))
+
+
+
+
+```
+
+According to perfect weak scalability, time should remain constant; actually in the plots we see that there are no perfect horizontal lines: that's because walltime includes communication time among the cores lifting the overall time as P increases (logarithmically according to the enhanced model described in the first section).
+
+
+Let's look at the plots for weak scalability (weak efficiency function) using walltime as before.
+```{r ws_scal, echo = F}
+
+N_vect <- N_seq
+weakeff <- function(t_P){
+  S <- ((1+numeric(length(t_P)))*t_P[1])/t_P
+}
+
+# compute scalability curves
+t_P8 <- ws10to08[,"avg"]
+t_P9 <- ws10to09[,"avg"]
+t_P10 <- ws10to10[,"avg"]
+t_P11 <- ws10to11[,"avg"]
+plot(P_seq, weakeff(t_P8), xlab="P cores", ylab="W(P)", ylim=c(0,1), main=paste("Weak scalability with N =",  N_vect[1],N_vect[2],N_vect[3],N_vect[4], sep=" "), type="l", col="red") #N_vect[1],N_vect[2],N_vect[3],N_vect[4]
+  lines(P_seq, scalab(t_P9), col="blue")
+  lines(P_seq, scalab(t_P10), col="green")
+  lines(c(1,12,24,48), scalab(t_P11), col="orange")
+  legend("bottomleft", c("10to8","10to9","10to10","10to11"), cex=0.8, pch=10, col=c("red", "blue","green","orange"))
+
+
+```
+
+Again, theoretically speaking $\frac{T(1)}{T(P)}$ should stay constant. However as expected, we see curves slightly skewed towards the bottom of the chart.
+The line referred to weak efficiency for $N=10^{11}$ is not so accurate because of the very few data points available. Despite this fact, the curves tend to share a very similar and close path: it is probably due to the fact that we were required to increse the number of iterations linearly with the number of cores, thus approaching the straight line limit (here it would be a horizonatal line) as in strong scalability (when the number N was big).
+
+
+
+
+
+
+
+
+
+
+
+
+
+

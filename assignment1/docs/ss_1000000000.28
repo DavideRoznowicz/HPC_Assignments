@@ -1,0 +1,186 @@
+
+ # walltime on processor 1 : 1.03070013 
+
+ # walltime on processor 2 : 1.03075235 
+
+ # walltime on processor 3 : 1.03073350 
+
+ # walltime on processor 4 : 1.03056683 
+
+ # walltime on processor 5 : 1.03070320 
+
+ # walltime on processor 6 : 1.03069007 
+
+ # walltime on processor 7 : 1.01832007 
+
+ # walltime on processor 8 : 1.03068115 
+
+ # walltime on processor 9 : 1.03036788 
+
+ # walltime on processor 10 : 1.03051786 
+
+ # walltime on processor 11 : 1.03061610 
+
+ # walltime on processor 12 : 1.03068496 
+
+ # walltime on processor 13 : 1.03067575 
+
+ # walltime on processor 14 : 1.03077576 
+
+ # walltime on processor 15 : 1.03087518 
+
+ # walltime on processor 16 : 1.03087069 
+
+ # walltime on processor 17 : 1.03083351 
+
+ # walltime on processor 18 : 1.03098759 
+
+ # walltime on processor 19 : 1.02306123 
+
+ # walltime on processor 20 : 1.03819678 
+
+ # walltime on processor 22 : 1.05076064 
+
+ # walltime on processor 23 : 1.05047960 
+
+ # walltime on processor 21 : 1.05062502 
+
+ # walltime on processor 24 : 1.05068815 
+
+ # walltime on processor 25 : 1.05061405 
+
+ # walltime on processor 26 : 1.05058018 
+
+ # of trials = 999999980 , estimate of pi is 3.141513895 
+
+ # walltime on master processor : 1.05064595 
+
+ # walltime on processor 27 : 1.05082616 
+ ~31.26 usr 8.37 system 0:01.75 total 2258% CPU 
+
+
+
+
+ # walltime on processor 1 : 0.98838905 
+
+ # walltime on processor 2 : 0.99681125 
+
+ # walltime on processor 3 : 0.99685307 
+
+ # walltime on processor 4 : 0.99715755 
+
+ # walltime on processor 5 : 0.99690703 
+
+ # walltime on processor 6 : 0.99705818 
+
+ # walltime on processor 7 : 1.04365373 
+
+ # walltime on processor 8 : 1.04384479 
+
+ # walltime on processor 9 : 1.03087796 
+
+ # walltime on processor 10 : 1.04390017 
+
+ # walltime on processor 11 : 1.04375578 
+
+ # walltime on processor 12 : 1.04381412 
+
+ # walltime on processor 13 : 1.05893177 
+
+ # walltime on processor 14 : 1.05879766 
+
+ # walltime on processor 15 : 1.05890306 
+
+ # walltime on processor 16 : 1.05897125 
+
+ # walltime on processor 17 : 1.05885320 
+
+ # walltime on processor 18 : 1.05891301 
+
+ # walltime on processor 19 : 1.05902736 
+
+ # walltime on processor 20 : 1.05896611 
+
+ # walltime on processor 21 : 1.05895253 
+
+ # walltime on processor 22 : 1.05887386 
+
+ # walltime on processor 23 : 1.05883253 
+
+ # walltime on processor 24 : 1.05884493 
+
+
+ # walltime on processor 26 : 1.05904501 
+ # walltime on processor 25 : 1.05913336 
+
+ # of trials = 999999980 , estimate of pi is 3.141513895 
+
+ # walltime on master processor : 1.06275367 
+
+ # walltime on processor 27 : 1.06302961 
+ ~31.44 usr 8.30 system 0:01.77 total 2241% CPU 
+
+
+
+
+ # walltime on processor 1 : 0.96624663 
+
+ # walltime on processor 2 : 1.02471316 
+
+ # walltime on processor 4 : 1.03176192 
+
+ # walltime on processor 5 : 1.03221567 
+
+ # walltime on processor 6 : 1.03225272 
+
+ # walltime on processor 7 : 1.03226590 
+
+ # walltime on processor 8 : 1.03219357 
+
+ # walltime on processor 9 : 1.03239300 
+
+ # walltime on processor 3 : 1.03239587 
+
+ # walltime on processor 10 : 1.03255117 
+
+ # walltime on processor 11 : 1.03288365 
+
+ # walltime on processor 12 : 1.03299327 
+
+ # walltime on processor 13 : 1.03318381 
+
+ # walltime on processor 14 : 1.03310561 
+
+ # walltime on processor 15 : 1.03311696 
+
+ # walltime on processor 16 : 1.03314850 
+
+ # walltime on processor 17 : 1.03312838 
+
+ # walltime on processor 18 : 1.03300972 
+
+ # walltime on processor 19 : 1.03308773 
+
+ # walltime on processor 20 : 1.03318671 
+
+ # walltime on processor 21 : 1.03316274 
+
+ # walltime on processor 22 : 1.03324588 
+
+ # walltime on processor 23 : 1.03320031 
+
+ # walltime on processor 24 : 1.03339788 
+
+ # walltime on processor 25 : 1.03308042 
+
+ # walltime on processor 26 : 1.03314797 
+
+ # of trials = 999999980 , estimate of pi is 3.141513895 
+
+ # walltime on master processor : 1.03319105 
+
+ # walltime on processor 27 : 1.03318111 
+ ~30.97 usr 8.47 system 0:01.73 total 2279% CPU 
+
+
+

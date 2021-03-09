@@ -1,0 +1,188 @@
+
+ # walltime on processor 1 : 2678.34934774 
+
+ # walltime on processor 2 : 2680.21295080 
+
+ # walltime on processor 3 : 2680.21291394 
+
+ # walltime on processor 4 : 2681.90827625 
+
+ # walltime on processor 5 : 2681.90800222 
+
+ # walltime on processor 6 : 2681.90816061 
+
+ # walltime on processor 7 : 2681.90811311 
+
+ # walltime on processor 8 : 2681.90809804 
+
+ # walltime on processor 9 : 2681.90809712 
+
+ # walltime on processor 10 : 2780.09182842 
+
+ # walltime on processor 11 : 2780.09174113 
+
+ # walltime on processor 12 : 2780.09197508 
+
+ # walltime on processor 13 : 2780.09190009 
+
+ # walltime on processor 14 : 2780.09201240 
+
+ # walltime on processor 15 : 2780.09189637 
+
+ # of trials = 2400000000000 , estimate of pi is 3.141592368 
+
+ # walltime on master processor : 2780.09229509 
+
+ # walltime on processor 16 : 2780.09215065 
+
+ # walltime on processor 17 : 2780.09203419 
+
+ # walltime on processor 18 : 2780.09214902 
+
+ # walltime on processor 19 : 2780.09214514 
+
+ # walltime on processor 20 : 2780.09219993 
+
+ # walltime on processor 21 : 2780.09211394 
+
+ # walltime on processor 22 : 2780.09213628 
+
+ # walltime on processor 23 : 2780.09213548 
+ ~65842.64 usr 13.77 system 46:20.72 total 2368% CPU 
+
+
+
+
+ # walltime on processor 1 : 2676.03968724 
+[ct1pg-gnode001:29815:0:29815]       ud_ep.c:255  Fatal: UD endpoint 0x1461e0003aa0 to <no debug data>: unhandled timeout error
+==== backtrace (tid:  29815) ====
+ 0 0x000000000004ee05 ucs_debug_print_backtrace()  ???:0
+ 1 0x0000000000046dde uct_ud_grh_get_dgid()  ???:0
+ 2 0x0000000000048a8e ucs_callbackq_put_id_noflag()  ???:0
+ 3 0x000000000002300a ucp_worker_progress()  ???:0
+ 4 0x0000000000005433 mca_pml_ucx_send()  ???:0
+ 5 0x000000000008ae38 PMPI_Ssend()  ???:0
+ 6 0x0000000000400d5d main()  ???:0
+ 7 0x0000000000022505 __libc_start_main()  ???:0
+ 8 0x0000000000400a59 _start()  ???:0
+=================================
+[ct1pg-gnode001:29815] *** Process received signal ***
+[ct1pg-gnode001:29815] Signal: Aborted (6)
+[ct1pg-gnode001:29815] Signal code:  (-6)
+[ct1pg-gnode001:29815] [ 0] /lib64/libpthread.so.0(+0xf5f0)[0x1461ff2155f0]
+[ct1pg-gnode001:29815] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x1461fee6e337]
+[ct1pg-gnode001:29815] [ 2] /lib64/libc.so.6(abort+0x148)[0x1461fee6fa28]
+[ct1pg-gnode001:29815] [ 3] /lib64/libucs.so.0(ucs_fatal_error_message+0x55)[0x1461ee1f27f5]
+[ct1pg-gnode001:29815] [ 4] /lib64/libucs.so.0(+0x4d995)[0x1461ee1f2995]
+[ct1pg-gnode001:29815] [ 5] /lib64/ucx/libuct_ib.so.0(+0x46dde)[0x1461edb62dde]
+[ct1pg-gnode001:29815] [ 6] /lib64/libucs.so.0(+0x48a8e)[0x1461ee1eda8e]
+[ct1pg-gnode001:29815] [ 7] /lib64/libucp.so.0(ucp_worker_progress+0x5a)[0x1461ee97400a]
+[ct1pg-gnode001:29815] [ 8] /opt/area/shared/programs/x86_64/openmpi/4.0.3/gnu/9.3.0/lib/openmpi/mca_pml_ucx.so(mca_pml_ucx_send+0x2e3)[0x1461ef1c2433]
+[ct1pg-gnode001:29815] [ 9] /opt/area/shared/programs/x86_64/openmpi/4.0.3/gnu/9.3.0/lib/libmpi.so.40(PMPI_Ssend+0x118)[0x1461ff4ace38]
+[ct1pg-gnode001:29815] [10] ./mpi_pi.x[0x400d5d]
+[ct1pg-gnode001:29815] [11] /lib64/libc.so.6(__libc_start_main+0xf5)[0x1461fee5a505]
+[ct1pg-gnode001:29815] [12] ./mpi_pi.x[0x400a59]
+[ct1pg-gnode001:29815] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+
+ # walltime on processor 2 : 2677.81443704 
+
+ # walltime on processor 3 : 2677.81430648 
+
+ # walltime on processor 4 : 2677.81423263 
+
+ # walltime on processor 5 : 2677.81439022 
+
+ # walltime on processor 6 : 2677.81447513 
+
+ # walltime on processor 7 : 2677.81426764 
+
+ # walltime on processor 8 : 2677.81379596 
+
+ # walltime on processor 9 : 2677.81439868 
+
+ # walltime on processor 11 : 2677.81453494 
+
+ # walltime on processor 12 : 2677.81439336 
+
+ # walltime on processor 13 : 2677.81440100 
+
+ # walltime on processor 14 : 2677.81454660 
+
+ # walltime on processor 15 : 2677.81435360 
+
+ # walltime on processor 16 : 2677.81435541 
+
+ # walltime on processor 17 : 2677.81455557 
+
+ # walltime on processor 18 : 2677.81458919 
+
+ # walltime on processor 19 : 2677.81457452 
+
+ # walltime on processor 20 : 2677.81456091 
+
+ # walltime on processor 21 : 2677.81467808 
+--------------------------------------------------------------------------
+mpirun noticed that process rank 10 with PID 0 on node ct1pg-gnode001 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+ ~2678.81 usr 3.00 system 44:40.31 total 100% CPU 
+
+
+
+
+ # walltime on processor 1 : 2677.96238589 
+
+ # walltime on processor 2 : 2677.96253291 
+
+ # walltime on processor 3 : 2677.96241018 
+
+ # walltime on processor 4 : 2677.96253147 
+
+ # walltime on processor 5 : 2677.96263238 
+
+ # walltime on processor 6 : 2677.96253308 
+
+ # walltime on processor 7 : 2677.96265575 
+
+ # walltime on processor 8 : 2677.96256425 
+
+ # walltime on processor 9 : 2677.96252274 
+
+ # walltime on processor 10 : 2677.96249067 
+
+ # walltime on processor 11 : 2677.96247919 
+
+ # walltime on processor 12 : 2677.96253222 
+
+ # walltime on processor 13 : 2677.96257957 
+
+ # walltime on processor 14 : 2677.96252333 
+
+ # walltime on processor 15 : 2677.96256710 
+
+ # walltime on processor 16 : 2677.96252193 
+
+ # walltime on processor 17 : 2677.96247697 
+
+ # of trials = 2400000000000 , estimate of pi is 3.141592368 
+
+ # walltime on master processor : 2678.07553875 
+
+ # walltime on processor 18 : 2678.07551165 
+
+ # walltime on processor 19 : 2678.07535836 
+
+ # walltime on processor 20 : 2678.07544155 
+
+ # walltime on processor 21 : 2678.07546448 
+
+ # walltime on processor 22 : 2678.07484323 
+
+ # walltime on processor 23 : 2678.07525963 
+ ~64270.00 usr 11.37 system 44:38.69 total 2399% CPU 
+
+
+

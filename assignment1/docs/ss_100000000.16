@@ -1,0 +1,114 @@
+
+ # walltime on processor 1 : 0.16281490 
+
+ # walltime on processor 2 : 0.16503533 
+
+ # walltime on processor 4 : 0.16879564 
+
+ # walltime on processor 3 : 0.16892718 
+
+ # walltime on processor 5 : 0.16887164 
+
+ # walltime on processor 6 : 0.16894720 
+
+ # walltime on processor 7 : 0.16890051 
+
+ # walltime on processor 8 : 0.16902539 
+
+ # walltime on processor 9 : 0.16887402 
+
+ # walltime on processor 10 : 0.16880704 
+
+ # walltime on processor 11 : 0.16897492 
+
+ # walltime on processor 12 : 0.16894890 
+
+ # walltime on processor 13 : 0.16894681 
+
+ # walltime on processor 14 : 0.16906466 
+
+ # of trials = 100000000 , estimate of pi is 3.141383000 
+
+ # walltime on master processor : 0.16894262 
+
+ # walltime on processor 15 : 0.16892953 
+ ~3.65 usr 3.29 system 0:00.61 total 1132% CPU 
+
+
+
+
+ # walltime on processor 1 : 0.16483037 
+
+ # walltime on processor 3 : 0.16496555 
+
+ # walltime on processor 2 : 0.16473770 
+
+ # walltime on processor 5 : 0.17048246 
+
+ # walltime on processor 6 : 0.17017401 
+
+ # walltime on processor 7 : 0.17057256 
+
+ # walltime on processor 4 : 0.16264963 
+
+ # walltime on processor 8 : 0.17063247 
+
+ # walltime on processor 9 : 0.17061941 
+
+ # walltime on processor 10 : 0.17068485 
+
+ # walltime on processor 11 : 0.17067559 
+
+ # walltime on processor 12 : 0.17071899 
+
+ # walltime on processor 13 : 0.17004781 
+
+ # walltime on processor 14 : 0.17016125 
+
+ # of trials = 100000000 , estimate of pi is 3.141383000 
+
+ # walltime on master processor : 0.17057471 
+
+ # walltime on processor 15 : 0.17057806 
+ ~3.58 usr 3.27 system 0:00.60 total 1127% CPU 
+
+
+
+
+ # walltime on processor 2 : 0.16527418 
+
+ # walltime on processor 1 : 0.16508129 
+
+ # walltime on processor 4 : 0.16566563 
+
+ # walltime on processor 5 : 0.16554020 
+
+ # walltime on processor 6 : 0.16573005 
+
+ # walltime on processor 7 : 0.16567806 
+
+ # walltime on processor 8 : 0.16572796 
+
+ # walltime on processor 9 : 0.16572797 
+
+ # walltime on processor 3 : 0.16524555 
+
+ # walltime on processor 10 : 0.16571396 
+
+ # walltime on processor 11 : 0.16575598 
+
+ # walltime on processor 12 : 0.16571260 
+
+ # walltime on processor 13 : 0.16571054 
+
+ # of trials = 100000000 , estimate of pi is 3.141383000 
+
+ # walltime on master processor : 0.16713976 
+
+ # walltime on processor 14 : 0.16714972 
+
+ # walltime on processor 15 : 0.16717104 
+ ~3.54 usr 3.19 system 0:00.60 total 1121% CPU 
+
+
+

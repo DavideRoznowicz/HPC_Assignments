@@ -1,0 +1,90 @@
+
+ # walltime on processor 1 : 258.04917848 
+
+ # walltime on processor 2 : 258.04922183 
+
+ # walltime on processor 3 : 258.04911868 
+
+ # walltime on processor 4 : 258.04930062 
+
+ # of trials = 120000000000 , estimate of pi is 3.141594611 
+
+ # walltime on master processor : 258.04933742 
+
+ # walltime on processor 5 : 258.04906855 
+
+ # walltime on processor 6 : 258.04934877 
+
+ # walltime on processor 7 : 258.04933746 
+
+ # walltime on processor 8 : 258.04936222 
+
+ # walltime on processor 9 : 258.04944813 
+
+ # walltime on processor 10 : 258.04941523 
+
+ # walltime on processor 11 : 258.04930583 
+ ~3098.41 usr 4.93 system 4:18.49 total 1200% CPU 
+
+
+
+
+ # walltime on processor 1 : 260.72783775 
+
+ # walltime on processor 2 : 260.72798635 
+
+ # walltime on processor 3 : 260.72808743 
+
+ # walltime on processor 4 : 260.72802226 
+
+ # walltime on processor 5 : 260.72805384 
+
+ # walltime on processor 6 : 260.72819192 
+
+ # walltime on processor 7 : 260.72814087 
+
+ # walltime on processor 9 : 261.90368130 
+
+ # walltime on processor 10 : 261.90417443 
+
+ # of trials = 120000000000 , estimate of pi is 3.141594611 
+
+ # walltime on master processor : 261.90421057 
+
+ # walltime on processor 8 : 261.90409814 
+
+ # walltime on processor 11 : 261.90418498 
+ ~3136.22 usr 4.09 system 4:22.33 total 1197% CPU 
+
+
+
+
+ # walltime on processor 1 : 258.76314532 
+
+ # walltime on processor 3 : 259.13426182 
+
+ # walltime on processor 4 : 259.13417406 
+
+ # walltime on processor 5 : 259.13421457 
+
+ # walltime on processor 2 : 259.13409477 
+
+ # walltime on processor 6 : 260.21175115 
+
+ # walltime on processor 7 : 260.21177106 
+
+ # walltime on processor 8 : 260.21143208 
+
+ # walltime on processor 9 : 260.21188338 
+
+ # walltime on processor 10 : 260.21166836 
+
+ # of trials = 120000000000 , estimate of pi is 3.141594611 
+
+ # walltime on master processor : 260.21190904 
+
+ # walltime on processor 11 : 260.21164720 
+ ~3117.90 usr 3.44 system 4:20.65 total 1197% CPU 
+
+
+

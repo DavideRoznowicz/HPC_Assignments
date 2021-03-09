@@ -1,0 +1,82 @@
+---
+title: "R Notebook"
+output: pdf
+---
+
+
+```{r}
+addavg <- function(ss_df){
+  for (i in 1:13){
+    ss_df[i,"avg"] <- (ss_df[i,3]+ss_df[i,4]+ss_df[i,5])/3
+    ss_df[i,"error_bar"] <- (max(ss_df[i,3],ss_df[i,4],ss_df[i,5])-min(ss_df[i,3],ss_df[i,4],ss_df[i,5]))/2
+  }
+  ss_df
+}
+
+
+
+##########################
+########################## Strong
+
+ss10to08=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/strong-scalability-10to08.csv", header=TRUE, sep=",")
+names(ss10to08)[1]="avg"
+ss10to08 <- addavg(ss10to08)
+
+ss10to09=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/strong-scalability-10to09.csv", header=TRUE, sep=",")
+names(ss10to09)[1]="avg"
+ss10to09 <- addavg(ss10to09)
+
+ss10to10=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/strong-scalability-10to10.csv", header=TRUE, sep=",")
+names(ss10to10)[1]="avg"
+ss10to10 <- addavg(ss10to10)
+
+ss10to11=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/strong-scalability-10to11.csv", header=TRUE, sep=",")
+names(ss10to11)[1]="avg"
+ss10to11 <- addavg(ss10to11)
+
+
+addavgws11 <- function(ss_df){
+  for (i in 1:4){
+    ss_df[i,"avg"] <- (ss_df[i,3]+ss_df[i,4]+ss_df[i,5])/3
+    ss_df[i,"error_bar"] <- (max(ss_df[i,3],ss_df[i,4],ss_df[i,5])-min(ss_df[i,3],ss_df[i,4],ss_df[i,5]))/2
+  }
+  ss_df
+}
+
+
+
+
+##########################
+########################## Weak
+  
+ws10to08=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/weak-scalability-10to08.csv", header=TRUE, sep=",")
+names(ws10to08)[1]="avg"
+ws10to08 <- addavg(ws10to08)
+
+ws10to09=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/weak-scalability-10to09.csv", header=TRUE, sep=",")
+names(ws10to09)[1]="avg"
+ws10to09 <- addavg(ws10to09)
+
+ws10to10=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/weak-scalability-10to10.csv", header=TRUE, sep=",")
+names(ws10to10)[1]="avg"
+ws10to10 <- addavg(ws10to10)
+
+ws10to11=read.csv("~/Scrivania/File_Davide/UNITS/HPC/my_git/assignment1/docs/weak-scalability-10to11.csv", header=TRUE, sep=",")
+names(ws10to11)[1]="avg"
+ws10to11 <- addavgws11(ws10to11)
+
+
+###########################
+
+write.csv(ss10to08,'ss10to08.csv')
+write.csv(ss10to09,'ss10to09.csv')
+write.csv(ss10to10,'ss10to10.csv')
+write.csv(ss10to11,'ss10to11.csv')
+
+write.csv(ws10to08,'ws10to08.csv')
+write.csv(ws10to09,'ws10to09.csv')
+write.csv(ws10to10,'ws10to10.csv')
+write.csv(ws10to11,'ws10to11.csv')
+
+```
+
