@@ -1,6 +1,6 @@
 # Directory organization
 
-File organization in the folder: The files that were specifically requested in "Assignment2.pdf" and "Final details for Assignment 2.pdf" (with a specific name required) are present with the right name.
+File organization in the folder: The files that were specifically requested in [Assignment2.pdf](../Assignment2.pdf) and "Final details for Assignment 2.pdf" (with a specific name required) are present with the right name.
 Some additional files are present, together with some others that were requested but without any name indication:
 
 - create_image.c		file used to create a new image of specific size, proportionate to the number of cores/threads (used for weak scalability)
