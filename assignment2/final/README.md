@@ -1,6 +1,6 @@
 # Directory organization
 
-File organization in the folder: The files that were specifically requested in [Assignment2.pdf](../Assignment2.pdf) and [Final details for Assignment 2.pdf](../"Final\details\for\Assignment\2.pdf") (with a specific name required) are present with the right name.
+File organization in the folder: The files that were specifically requested in [Assignment2.pdf](../Assignment2.pdf) and [Final details for Assignment 2.pdf](<https://github.com/DavideRoznowicz/HPC_Assignments/blob/master/assignment2/Final%20details%20for%20Assignment%202.pdf>) (with a specific name required) are present with the right name.
 Some additional files are present, together with some others that were requested but without any name indication:
 
 - create_image.c		file used to create a new image of specific size, proportionate to the number of cores/threads (used for weak scalability)
@@ -12,7 +12,6 @@ Some additional files are present, together with some others that were requested
 - ss_omp.csv			file containing the results of the strong scalability for omp
 - ww_mpi.csv			file containing the results of the weak scalability for mpi
 - ww_omp.csv			file containing the results of the weak scalability for omp
-
 
 
 
