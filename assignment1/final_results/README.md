@@ -6,7 +6,7 @@ gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-39)
 
 
 
-To compile mpi_pi.c the following module has been loaded:\
+To compile mpi_pi.c the following module has been loaded:
 openmpi/4.0.3/gnu/9.3.0
 
 
