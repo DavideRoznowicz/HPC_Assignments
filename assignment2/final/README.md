@@ -21,28 +21,28 @@ Some additional files are present, together with some others that were requested
 ## Example (bash script) for compiling and then running MPI/OpenMP:
 
 
-procs=4				# number of cores
-kernel_type=1			# type of kernel: average, weight, gaussian - 0,1,2
-kernel_size=101			# dimensions of the square kernel
-ff='0.2'			# ff should be specified only if kernel_type=1, otherwise it must not
-image=test_picture.pgm		# input image
-output_file="image_after.pgm"	# if output_file is specified, then the name for the image in output will be exactly <output_file>;
+procs=4				# number of cores\
+kernel_type=1			# type of kernel: average, weight, gaussian - 0,1,2\
+kernel_size=101			# dimensions of the square kernel\
+ff='0.2'			# ff should be specified only if kernel_type=1, otherwise it must not\
+image=test_picture.pgm		# input image\
+output_file="image_after.pgm"	# if output_file is specified, then the name for the image in output will be exactly <output_file>\
 				# otherwise the name is univocally determined according to the assignment instructions
 
 
 ## Compiling/Running MPI:
 
-module load openmpi/4.0.3/gnu/9.3.0
-mpicc -O1 blur.mpi.c -o blur.mpi -lm
+module load openmpi/4.0.3/gnu/9.3.0\
+mpicc -O1 blur.mpi.c -o blur.mpi -lm\
 mpirun --mca btl ^openib -np ${procs} ./blur.mpi $kernel_type $kernel_size $ff $image #$output_file
 
 
 
 ## Compiling/Running OpenMP:
 
-module load openmpi/4.0.3/gnu/9.3.0
-export OMP_NUM_THREADS=5
-gcc -O3 -std=gnu99 -fopenmp blur.omp.c -o blur.omp -lm
+module load openmpi/4.0.3/gnu/9.3.0\
+export OMP_NUM_THREADS=5\
+gcc -O3 -std=gnu99 -fopenmp blur.omp.c -o blur.omp -lm\
 ./blur.omp $kernel_type $kernel_size $ff $image #$output_file
 
 
