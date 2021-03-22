@@ -3,5 +3,5 @@
 The blurring of a .pgm image was performed, using different kernels, in both MPI and OpenMP.
 Scalability analysis and various timings for different test cases were carefully examined.
 
-A much more thorough description is present in the [folder](final) directory, which contains
+A much more thorough description is present in [this folder](final), which contains
 the actual codes and all the details for delivery.
